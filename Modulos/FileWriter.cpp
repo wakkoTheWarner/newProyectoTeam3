@@ -65,6 +65,7 @@ void FileWriter::writeToFile(const std::string& filename, const std::string& fil
 }
 
 std::wstring FileWriter::capitalizeAll(std::wstring s){
+    // Convertir todos los caracteres de la cadena a mayúsculas.
     std::transform(s.begin(), s.end(), s.begin(), [](wchar_t c){ return std::towupper(c); });
     return s;
 }

@@ -99,6 +99,7 @@ void FileParser::parseFile(const std::string& filePath) {
             }
             date = start_month + L"-" + end_month + L" " + std::to_wstring(end_date.tm_year + 1900);
         }
+        // Si se han encontrado el curso, el CRN y la fecha, terminar el bucle
         if (!course.empty() && !crn.empty() && !date.empty()) {
             break;
         }
