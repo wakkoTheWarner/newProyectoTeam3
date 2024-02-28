@@ -17,6 +17,7 @@
 class TableHeaderExtractor {
 public:
     std::vector<std::wstring> extractHeader(const std::string& filePath);
+    std::wstring trimTrailingSpaces(const std::wstring& str);
 };
 
 #endif //NEWPROYECTOTEAM3_TABLEHEADEREXTRACTOR_H

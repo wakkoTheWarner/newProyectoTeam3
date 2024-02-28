@@ -19,38 +19,55 @@
 #include <iomanip>
 
 void FileParser::parseFile(const std::string& filePath) {
-    // Set the locale to accept special characters
+    // Establecer la configuración regional para aceptar caracteres especiales
     std::setlocale(LC_ALL, "");
 
+    // Abrir el archivo
     std::wifstream file(filePath);
+    // Si no se puede abrir el archivo, mostrar un mensaje de error y terminar la función
     if (!file.is_open()) {
-        std::wcout << L"Unable to open file" << std::endl;
+        std::wcout << L"No se puede abrir el archivo" << std::endl;
         return;
     }
 
-    // Use UTF-8
+    // Usar UTF-8
     std::locale utf8_locale(std::locale(), new std::codecvt_utf8<wchar_t>());
     file.imbue(utf8_locale);
 
+    // Crear una línea y una tabla para almacenar los datos
     std::wstring line;
     std::vector<std::vector<std::wstring>> table;
 
+    // Crear expresiones regulares para buscar el curso, el CRN y la fecha
     std::wregex course_re(L"([A-Z]+\\s\\d+)"), crn_re(L"CRN:\\s*(\\d+)"), date_re(L"Duration:\\s*(.+)");
 
+    // Leer el archivo línea por línea
     while (std::getline(file, line)) {
         std::wsmatch match;
+        // Si la línea contiene el curso, almacenarlo
         if (std::regex_search(line, match, course_re) && match.size() > 1) {
             course = match.str(1);
         }
+        // Si la línea contiene el CRN, almacenarlo
         if (std::regex_search(line, match, crn_re) && match.size() > 1) {
             crn = match.str(1);
         }
+        // Si la línea contiene la fecha, almacenarla
         if (std::regex_search(line, match, date_re) && match.size() > 1) {
             std::wstring date_str = match.str(1);
             std::tm start_date = {}, end_date = {};
-            std::wistringstream ss(date_str);
-            //ss >> std::get_time(&start_date, L"%d %b, %Y") >> std::get_time(&end_date, L"- %d %b, %Y");
 
+            // Crear una expresión regular para buscar el año
+            std::wregex year_re(L"\\d{4}");
+            std::wsmatch year_match;
+
+            // Crear una expresión regular para buscar el año
+            if (std::regex_search(date_str, year_match, year_re) && year_match.size() > 0) {
+                // Almacenar el año en la fecha de inicio y fin
+                end_date.tm_year = std::stoi(year_match.str(0)) - 1900;
+            }
+
+            // Crear variables para los meses de inicio y fin
             std::wstring start_month, end_month;
             switch (start_date.tm_mon) {
                 case 0: start_month = L"ENERO"; break;
@@ -88,14 +105,17 @@ void FileParser::parseFile(const std::string& filePath) {
     }
 }
 
+// Devolver el curso
 std::wstring FileParser::getCourse() const {
     return course;
 }
 
+// Devolver el CRN
 std::wstring FileParser::getCRN() const {
     return crn;
 }
 
+// Devolver la fecha
 std::wstring FileParser::getDate() const {
     return date;
 }

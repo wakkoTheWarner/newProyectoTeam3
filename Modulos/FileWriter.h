@@ -13,7 +13,8 @@
 
 class FileWriter {
 public:
-    void writeToFile(const std::string& filename, const std::string& filePath, const std::locale utf8_locale, const FileParser& parser, const std::vector<std::wstring>& header, const std::vector<std::vector<std::wstring>>& content);
+    void writeToFile(const std::string& filename, const std::string& filePath, const std::locale utf8_locale, const FileParser& parser, const std::vector<std::wstring>& header, const std::vector<std::vector<std::wstring>>& content , const std::string& nombreInstitucion, const std::string& recinto, const std::string& profesor);
+    std::wstring capitalizeAll(std::wstring s);
 };
 
 #endif //NEWPROYECTOTEAM3_FILEWRITER_H
