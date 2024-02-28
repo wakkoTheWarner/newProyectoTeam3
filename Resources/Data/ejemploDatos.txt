@@ -1,0 +1,28 @@
+Course Information
+NEURAL NETWORKS - COMP 1234 0
+CRN:	12345
+Duration:	22 Jan, 2024 - 18 May, 2024
+Status:	Open
+
+Enrollment Counts
+ 	Maximum	Actual	Remaining
+Enrollment:	29	11	18
+Cross List: 	0	0	0
+
+Summary Class List
+Record
+Number	Student Name	ID	Reg Status	Level	Credits	Midterm	Final	Grade Detail	 
+1	ALVAREZ RIVERA, CARLOS	Z00123456	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+2	BURGOS, CASTRO, GUILLERMO J.  	Y00654321	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+3	Carrero, Luis 	X00112233	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+4	CASTRO MORALES, ALEJANDRA M.	T00332211	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+5	DIAZ MEDINA, JOSE 	Z00214365	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+6	FIGUEROA ABREU, JUAN P. 	X00121212	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+7	Galindez Reyes, Carlos F. 	T00555333	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+8	Gárgamel del Bosque, Efraín 	Z00111111	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+9	GARCIA MENDEZ, MARIA L. 	Z00222222	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+10	GOMEZ PRATS, JUAN 	X12345678	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+11	ORTIZ NOTARIO, ANDY 	Z87654321	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available	 
+
+
+
