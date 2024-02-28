@@ -1,6 +1,10 @@
-//
-// Created by eduar on 2/27/2024.
-//
+/**
+ * Objetivo:
+ * Precondiciones:
+ * Postcondiciones:
+ * Autor:
+ * Fecha de finalización:
+ **/
 
 #include "TableHeaderExtractor.h"
 #include <fstream>

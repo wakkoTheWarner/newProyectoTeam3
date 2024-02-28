@@ -1,3 +1,11 @@
+/**
+ * Objetivo:
+ * Precondiciones:
+ * Postcondiciones:
+ * Autor:
+ * Fecha de finalización:
+ **/
+
 #include <iostream>
 #include "Modulos/FileParser.h"
 #include "Modulos/TableHeaderExtractor.h"
