@@ -13,17 +13,10 @@
 #include "Modulos/FileReader.h"
 #include "Modulos/FileWriter.h"
 
-/**
- * La función principal del programa.
- * Maneja las operaciones de lectura, análisis y escritura de archivos.
- *
- * @return int - Devuelve 0 si el programa se ejecuta con éxito.
- */
 int main() {
     // Establecer el idioma local.
     std::setlocale(LC_ALL, "");
 
-    // Variables para almacenar las rutas de los archivos y las entradas del usuario.
     std::string filePath;
     std::string nombreInstitucion;
     std::string recinto;
@@ -35,10 +28,24 @@ int main() {
     std::getline(std::cin, filePath);
 
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
-    // Si el usuario solo ha proporcionado un nombre de archivo, anteponer la ruta del directorio predeterminado.
-    // Si el usuario ha proporcionado una ruta completa, agregar ".txt" si no está ya allí.
+    if (filePath.empty()) {
+        filePath = "../Resources/Data/ejemploDatos.txt";
+    } else if (filePath.find('/') == std::string::npos && filePath.find('\\') == std::string::npos) {
+        if (filePath.find(".txt") == std::string::npos) {
+            // El usuario solo ha proporcionado un nombre de archivo, anteponer la ruta del directorio predeterminado
+            filePath = "../Resources/Data/" + filePath + ".txt";
+        } else {
+            filePath = "../Resources/Data/" + filePath;
+        }
+    } else {
+        if (filePath.find(".txt") == std::string::npos) {
+            // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
+            filePath += ".txt";
+        }
+        // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
+        filePath;
+    }
 
-    // Abrir el archivo.
     std::ifstream ifile;
     ifile.open(filePath);
 
@@ -48,19 +55,21 @@ int main() {
         return 0;
     }
 
-    // Crear un lector de archivos y leer el archivo.
+    // Crear un lector de archivos.
     FileReader reader;
+    // Leer el archivo.
     std::vector<std::vector<std::wstring>> content = reader.readFile(filePath);
 
-    // Crear un analizador de archivos y analizar el archivo.
+    // Crear un analizador de archivos.
     FileParser parser;
+    // Analizar el archivo.
     parser.parseFile(filePath);
 
-    // Crear un extractor de encabezados de tabla y extraer el encabezado del archivo.
+    // Crear un extractor de encabezados de tabla.
     TableHeaderExtractor extractor;
+    // Extraer el encabezado del archivo.
     std::vector<std::wstring> header = extractor.extractHeader(filePath);
 
-    // Solicitar las entradas del usuario.
     std::cout << "Nombre de Institucion: ";
     std::getline(std::cin, nombreInstitucion);
     std::cout << "Recinto: ";
@@ -73,8 +82,23 @@ int main() {
     std::getline(std::cin, outputFilePath);
 
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
-    // Si el usuario solo ha proporcionado un nombre de archivo, anteponer la ruta del directorio predeterminado.
-    // Si el usuario ha proporcionado una ruta completa, agregar ".csv" si no está ya allí.
+    if (outputFilePath.empty()) {
+        outputFilePath = "../Resources/Output/ejemploDatos.csv";
+    } else if (outputFilePath.find('/') == std::string::npos && outputFilePath.find('\\') == std::string::npos) {
+        if (outputFilePath.find(".csv") == std::string::npos) {
+            // El usuario solo ha proporcionado un nombre de archivo, anteponer la ruta del directorio predeterminado
+            outputFilePath = "../Resources/Output/" + outputFilePath + ".csv";
+        } else {
+            outputFilePath = "../Resources/Output/" + outputFilePath;
+        }
+    } else {
+        if (outputFilePath.find(".csv") == std::string::npos) {
+            // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
+            outputFilePath += ".csv";
+        }
+        // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
+        outputFilePath;
+    }
 
     // Crear un escritor de archivos.
     FileWriter writer;
