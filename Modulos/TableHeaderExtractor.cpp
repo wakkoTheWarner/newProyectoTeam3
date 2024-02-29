@@ -52,14 +52,16 @@ std::vector<std::wstring> TableHeaderExtractor::extractHeader(const std::string&
             // Crear una cadena de caracteres ancha para almacenar cada palabra
             std::wstring word;
 
-            // Leer la línea palabra por palabra, separada por tabulaciones
-            while (std::getline(iss, word, L'\t')) {
-                // Eliminar los espacios al final de la palabra
-                word = trimTrailingSpaces(word);
-
-                // Agregar la palabra al encabezado
-                header.push_back(word);
-            }
+            // Inserta la cadena "NUM" en el vector de encabezado
+            header.push_back(L"NUM");
+            // Inserta la cadena "NOMBRE" en el vector de encabezado
+            header.push_back(L"NOMBRE");
+            // Inserta la cadena "ID" en el vector de encabezado
+            header.push_back(L"ID");
+            // Inserta la cadena "Email" en el vector de encabezado
+            header.push_back(L"Email");
+            // Inserta la cadena "Telefono" en el vector de encabezado
+            header.push_back(L"Telefono");
 
             // Salir del bucle una vez que se ha encontrado el encabezado
             break;

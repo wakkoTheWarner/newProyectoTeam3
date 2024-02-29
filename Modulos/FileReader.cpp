@@ -40,6 +40,12 @@ std::vector<std::vector<std::wstring>> FileReader::readFile(const std::string& f
     // Leer el archivo línea por línea.
     while (std::getline(file, line)) {
 
+        // Si la línea contiene "** Registered **", omitir la parte de la línea que sigue a esta cadena.
+        std::size_t pos = line.find(L"** Registered **");
+        if (pos != std::wstring::npos) {
+            line = line.substr(0, pos);
+        }
+
         // Si la línea no está vacía y no comienza con un dígito, omitirla.
         if (!line.empty() && !iswdigit(line[0])) {
             continue;

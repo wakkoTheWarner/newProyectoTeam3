@@ -11,4 +11,5 @@ add_executable(newProyectoTeam3 main.cpp
         Modulos/FileParser.cpp
         Modulos/FileParser.h
         Modulos/TableHeaderExtractor.cpp
-        Modulos/TableHeaderExtractor.h)
+        Modulos/TableHeaderExtractor.h
+)
