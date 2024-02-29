@@ -65,11 +65,13 @@ int main() {
 
     // Get the semester and course number from the FileParser
     std::wstring semesterW = fileParser.getDate();
-    std::wstring courseNumberW = fileParser.getCourse();
+    std::wstring courseNameW = fileParser.getCourse();
+    std::wstring crnW = fileParser.getCRN();
 
     // Convert the semester and course number from wide string to string
     std::string semester(semesterW.begin(), semesterW.end());
-    std::string courseNumber(courseNumberW.begin(), courseNumberW.end());
+    std::string courseName(courseNameW.begin(), courseNameW.end());
+    std::string crn(crnW.begin(), crnW.end());
 
     std::cout << "Nombre de Institucion: ";
     std::getline(std::cin, nombreInstitucion);
@@ -102,7 +104,7 @@ int main() {
     }
 
     HeaderMaker headerMaker;
-    std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, departamento, semester, profesor, courseNumber);
+    std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, departamento, semester, profesor, courseName, crn);
 
     FileWriter fileWriter;
     fileWriter.writeToFile(students, outputFilePath, header);

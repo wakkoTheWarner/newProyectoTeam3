@@ -11,9 +11,9 @@
 #include <cctype>
 #include <iostream>
 
-std::string HeaderMaker::makeHeader(const std::string& universityName, const std::string& campusLocation, const std::string& departmentName, const std::string& semester, const std::string& professorName, const std::string& courseNumber) {
-    if (semester.empty() || courseNumber.empty()) {
-        std::cerr << "Error: No se han proporcionado todos los datos necesarios para crear el encabezado. Faltan los datos del semestre o el numero del curso." << std::endl;
+std::string HeaderMaker::makeHeader(const std::string& universityName, const std::string& campusLocation, const std::string& departmentName, const std::string& semester, const std::string& professorName, const std::string& courseName, const std::string& crn) {
+    if (semester.empty() || courseName.empty() || crn.empty()) {
+        std::cerr << "Error: No se han proporcionado todos los datos necesarios para crear el encabezado. Falta el semestre, el nombre del curso o el seccion." << std::endl;
     }
 
     std::string universityNameUpper = universityName;
@@ -21,7 +21,8 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
     std::string departmentNameUpper = departmentName;
     std::string semesterUpper = semester;
     std::string professorNameUpper = professorName;
-    std::string courseNumberUpper = courseNumber;
+    std::string courseNameUpper = courseName;
+    std::string crnUpper = crn;
 
     if (universityName.empty() || campusLocation.empty() || departmentName.empty() || professorName.empty()) {
         std::cout << "! -- ADVERTENCIA: No se han proporcionado todos los datos necesarios para crear el encabezado. -- !" << std::endl;
@@ -53,14 +54,15 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
     std::transform(departmentNameUpper.begin(), departmentNameUpper.end(), departmentNameUpper.begin(), ::toupper);
     std::transform(semesterUpper.begin(), semesterUpper.end(), semesterUpper.begin(), ::toupper);
     std::transform(professorNameUpper.begin(), professorNameUpper.end(), professorNameUpper.begin(), ::toupper);
-    std::transform(courseNumberUpper.begin(), courseNumberUpper.end(), courseNumberUpper.begin(), ::toupper);
+    std::transform(courseNameUpper.begin(), courseNameUpper.end(), courseNameUpper.begin(), ::toupper);
+    std::transform(crnUpper.begin(), crnUpper.end(), crnUpper.begin(), ::toupper);
 
     std::string header = "," + universityNameUpper + "\n"
                          + "," + campusLocationUpper + "\n"
                          + "," + departmentNameUpper + "\n\n"
                          + "SEMESTRE: " + semesterUpper + "\n"
                          + "PROF: " + professorNameUpper + "\n"
-                         + "CURSO: " + courseNumberUpper + "\n\n"
+                         + "CURSO: " + courseNameUpper + " (" + crnUpper + ")\n\n"
                          + "NUM,NOMBRE,ID,Email,Telefono\n";
     return header;
 }
