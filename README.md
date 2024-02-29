@@ -6,8 +6,7 @@ This C++ project is a university student registration system. It reads student d
 ## 📋**To-Do**
 ### Coding Requirements
  - [✔️] Develop a C++ application that processes content from a Studlist-generated page, saved in a text file, into a CSV format compatible with Excel.
- - [] The application must request additional information not included in the Studlist file (e.g., name of the institution, campus) from the user.
-    - Might be missing department.
+ - [✔️] The application must request additional information not included in the Studlist file (e.g., name of the institution, campus) from the user.
  - [✔️] The application should prompt the user for the name of the input text file and the output CSV file.
  - [] Ensure the application can handle any number of student records, from 1 to many.
     - Not tested yet.
