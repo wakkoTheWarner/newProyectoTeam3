@@ -12,8 +12,8 @@
 #include <iostream>
 
 std::string HeaderMaker::makeHeader(const std::string& universityName, const std::string& campusLocation, const std::string& departmentName, const std::string& semester, const std::string& professorName, const std::string& courseNumber) {
-    if (departmentName.empty() || semester.empty() || courseNumber.empty()) {
-        std::cerr << "Error: No se han proporcionado todos los datos necesarios para crear el encabezado. Faltan los datos del departamento, el semestre o el numero del curso." << std::endl;
+    if (semester.empty() || courseNumber.empty()) {
+        std::cerr << "Error: No se han proporcionado todos los datos necesarios para crear el encabezado. Faltan los datos del semestre o el numero del curso." << std::endl;
     }
 
     std::string universityNameUpper = universityName;
@@ -23,11 +23,12 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
     std::string professorNameUpper = professorName;
     std::string courseNumberUpper = courseNumber;
 
-    if (universityName.empty() || campusLocation.empty() || professorName.empty()) {
-        std::cout << " ! -- ADVERTENCIA: No se han proporcionado todos los datos necesarios para crear el encabezado. -- !" << std::endl;
+    if (universityName.empty() || campusLocation.empty() || departmentName.empty() || professorName.empty()) {
+        std::cout << "! -- ADVERTENCIA: No se han proporcionado todos los datos necesarios para crear el encabezado. -- !" << std::endl;
         std::cout << "! -- Se usaran valores predeterminados para los datos faltantes. -- !\n" << std::endl;
         std::string defaultUniversityName = "Universidad ABC123";
         std::string defaultCampusLocation = "Recinto de Isla Mona";
+        std::string defaultDepartmentName = "Departamento De Ciencias En Computadoras";
         std::string defaultProfessorName = "Pepito Perez";
 
         if (universityName.empty()) {
@@ -36,6 +37,10 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
 
         if (campusLocation.empty()) {
             campusLocationUpper = defaultCampusLocation;
+        }
+
+        if (departmentName.empty()) {
+            departmentNameUpper = defaultDepartmentName;
         }
 
         if (professorName.empty()) {
@@ -50,12 +55,12 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
     std::transform(professorNameUpper.begin(), professorNameUpper.end(), professorNameUpper.begin(), ::toupper);
     std::transform(courseNumberUpper.begin(), courseNumberUpper.end(), courseNumberUpper.begin(), ::toupper);
 
-    std::string header = ", " + universityNameUpper + "\n"
-                         + ", " + campusLocationUpper + "\n"
-                         + ", " + departmentNameUpper + "\n\n"
+    std::string header = "," + universityNameUpper + "\n"
+                         + "," + campusLocationUpper + "\n"
+                         + "," + departmentNameUpper + "\n\n"
                          + "SEMESTRE: " + semesterUpper + "\n"
                          + "PROF: " + professorNameUpper + "\n"
                          + "CURSO: " + courseNumberUpper + "\n\n"
-                         + "NUM, NOMBRE, ID, Email, Telefono\n";
+                         + "NUM,NOMBRE,ID,Email,Telefono\n";
     return header;
 }

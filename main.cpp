@@ -20,6 +20,7 @@ int main() {
     std::string filePath;
     std::string nombreInstitucion;
     std::string recinto;
+    std::string departamento;
     std::string profesor;
     std::string outputFilePath;
 
@@ -74,6 +75,8 @@ int main() {
     std::getline(std::cin, nombreInstitucion);
     std::cout << "Recinto: ";
     std::getline(std::cin, recinto);
+    std::cout << "Departamento: ";
+    std::getline(std::cin, departamento);
     std::cout << "Profesor: ";
     std::getline(std::cin, profesor);
 
@@ -99,7 +102,7 @@ int main() {
     }
 
     HeaderMaker headerMaker;
-    std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, "DEPARTAMENTO DE CIENCIAS EN COMPUTADORAS", semester, profesor, courseNumber);
+    std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, departamento, semester, profesor, courseNumber);
 
     FileWriter fileWriter;
     fileWriter.writeToFile(students, outputFilePath, header);
