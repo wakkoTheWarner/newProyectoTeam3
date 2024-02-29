@@ -4,8 +4,6 @@ project(newProyectoTeam3)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(newProyectoTeam3 main.cpp
-        Modulos/FileParser.cpp
-        Modulos/FileParser.h
         Modulos/FileReader.cpp
         Modulos/FileReader.h
         Modulos/FileWriter.cpp
@@ -14,4 +12,6 @@ add_executable(newProyectoTeam3 main.cpp
         Modulos/Students.h
         Modulos/HeaderMaker.cpp
         Modulos/HeaderMaker.h
+        Modulos/FileParser.cpp
+        Modulos/FileParser.h
 )

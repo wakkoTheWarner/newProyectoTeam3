@@ -9,26 +9,20 @@
 #ifndef NEWPROYECTOTEAM3_FILEPARSER_H
 #define NEWPROYECTOTEAM3_FILEPARSER_H
 
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <locale>
+
 #include <string>
-#include <codecvt>
-#include <clocale>
-#include <regex>
-#include <iomanip>
 
 class FileParser {
-private:
-    std::wstring course, crn, date;
-
 public:
-    void parseFile(const std::string& filePath);
-    std::wstring getCourse() const;
-    std::wstring getCRN() const;
-    std::wstring getDate() const;
+    struct CourseInfo {
+        std::string courseName;
+        std::string crn;
+        std::string duration;
+    };
+
+    CourseInfo parseFile(const std::string& filePath);
+    std::string modifyDuration(std::string duration);
+    std::string monthTranslator(std::string month);
 };
 
 #endif //NEWPROYECTOTEAM3_FILEPARSER_H

@@ -8,10 +8,15 @@
 
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 #include "Modulos/FileParser.h"
 #include "Modulos/HeaderMaker.h"
 #include "Modulos/FileReader.h"
 #include "Modulos/FileWriter.h"
+
+std::string filePathVerifier(std::string filePath);
+
+std::string outputFilePathVerifier(std::string outputFilePath);
 
 int main() {
     // Establecer el idioma local.
@@ -24,12 +29,54 @@ int main() {
     std::string profesor;
     std::string outputFilePath;
 
-    std::wcout << L"Ingresa la ruta del archivo: ";
-    std::wstring wFilePath;
-    std::getline(std::wcin, wFilePath);
+    std::cout << "Ingresa la ruta del archivo: ";
+    std::getline(std::cin, filePath);
 
-    filePath = std::string(wFilePath.begin(), wFilePath.end());
+    filePath = filePathVerifier(filePath);
 
+    std::ifstream ifile;
+    ifile.open(filePath);
+
+    // Verificar si el archivo se abrió correctamente.
+    if (!ifile.is_open()){
+        std::cerr << "Error al abrir el archivo \"" << filePath << "\". Por favor, verifica la ruta del archivo e intenta de nuevo.\n";
+        return 0;
+    }
+
+    FileReader fileReader;
+    std::vector<Student> students = fileReader.readFile(filePath);
+
+    FileParser fileParser;
+    FileParser::CourseInfo courseInfo = fileParser.parseFile(filePath);
+
+    std::cout << "Nombre de Institucion: ";
+    std::getline(std::cin, nombreInstitucion);
+    std::cout << "Recinto: ";
+    std::getline(std::cin, recinto);
+    std::cout << "Departamento: ";
+    std::getline(std::cin, departamento);
+    std::cout << "Profesor: ";
+    std::getline(std::cin, profesor);
+
+    // Solicitar al usuario la ruta y nombre del archivo de salida.
+    std::cout << "Ingresa la ruta y nombre del archivo de salida: ";
+    std::getline(std::cin, outputFilePath);
+
+    outputFilePath = outputFilePathVerifier(outputFilePath);
+
+    HeaderMaker headerMaker;
+    std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, departamento, courseInfo.duration, profesor, courseInfo.courseName, courseInfo.crn);
+
+    FileWriter fileWriter;
+    fileWriter.writeToFile(students, outputFilePath, header);
+
+    // Informar al usuario que los datos se han exportado.
+    std::cout << "Los datos se han exportado al archivo " + outputFilePath << std::endl;
+
+    return 0;
+}
+
+std::string filePathVerifier(std::string filePath) {
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
     if (filePath.empty()) {
         filePath = "../Resources/Data/ejemploDatos.txt";
@@ -47,45 +94,14 @@ int main() {
         }
     }
 
-    std::ifstream ifile;
-    ifile.open(filePath);
-
-    // Verificar si el archivo se abrió correctamente.
-    if (!ifile.is_open()){
-        std::cerr << "Error al abrir el archivo \"" << filePath << "\". Por favor, verifica la ruta del archivo e intenta de nuevo.\n";
-        return 0;
+    if (filePath.find('\"') != std::string::npos) {
+        filePath.erase(std::remove(filePath.begin(), filePath.end(), '\"'), filePath.end());
     }
 
-    FileReader fileReader;
-    std::vector<Student> students = fileReader.readFile(filePath);
+    return filePath;
+}
 
-    // Create a FileParser object and parse the file
-    FileParser fileParser;
-    fileParser.parseFile(filePath);
-
-    // Get the semester and course number from the FileParser
-    std::wstring semesterW = fileParser.getDate();
-    std::wstring courseNameW = fileParser.getCourse();
-    std::wstring crnW = fileParser.getCRN();
-
-    // Convert the semester and course number from wide string to string
-    std::string semester(semesterW.begin(), semesterW.end());
-    std::string courseName(courseNameW.begin(), courseNameW.end());
-    std::string crn(crnW.begin(), crnW.end());
-
-    std::cout << "Nombre de Institucion: ";
-    std::getline(std::cin, nombreInstitucion);
-    std::cout << "Recinto: ";
-    std::getline(std::cin, recinto);
-    std::cout << "Departamento: ";
-    std::getline(std::cin, departamento);
-    std::cout << "Profesor: ";
-    std::getline(std::cin, profesor);
-
-    // Solicitar al usuario la ruta y nombre del archivo de salida.
-    std::cout << "Ingresa la ruta y nombre del archivo de salida: ";
-    std::getline(std::cin, outputFilePath);
-
+std::string outputFilePathVerifier(std::string outputFilePath) {
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
     if (outputFilePath.empty()) {
         outputFilePath = "../Resources/Output/ejemploDatos.csv";
@@ -103,15 +119,9 @@ int main() {
         }
     }
 
-    HeaderMaker headerMaker;
-    std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, departamento, semester, profesor, courseName, crn);
+    if (outputFilePath.find('\"') != std::string::npos) {
+        outputFilePath.erase(std::remove(outputFilePath.begin(), outputFilePath.end(), '\"'), outputFilePath.end());
+    }
 
-    FileWriter fileWriter;
-    fileWriter.writeToFile(students, outputFilePath, header);
-
-    // Informar al usuario que los datos se han exportado.
-    std::wstring outputFilePathW(outputFilePath.begin(), outputFilePath.end());
-    std::wcout << L"Los datos se han exportado al archivo " + outputFilePathW << std::endl;
-
-    return 0;
+    return outputFilePath;
 }
