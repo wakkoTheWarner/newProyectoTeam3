@@ -3,6 +3,25 @@
 
 This C++ project is a university student registration system. It reads student data from a file, processes it, and writes the processed data to another file. The data includes student names, IDs, registration status, level, and credits. The user is prompted to input the institution's name, campus, and professor's name. The processed data, including the institution's name, campus, department, semester, professor's name, course, and the table of students' information, is then written to a new file named "output.csv".
 
+## 📋**To-Do**
+### Coding Requirements
+ - [✔️] Develop a C++ application that processes content from a Studlist-generated page, saved in a text file, into a CSV format compatible with Excel.
+ - [] The application must request additional information not included in the Studlist file (e.g., name of the institution, campus) from the user.
+    - Might be missing department.
+ - [✔️] The application should prompt the user for the name of the input text file and the output CSV file.
+ - [] Ensure the application can handle any number of student records, from 1 to many.
+    - Not tested yet.
+ - [] The program must be well-documented, with detailed comments on functions and methods, including objective, pre-conditions, post-conditions, argument descriptions, author, and date of completion.
+    - [] Word Documentation
+    - [] Comment Documentation
+    - [] Function Documentation
+
+### Turnable Requirements:
+ - [] A single file containing all the program code.
+ - [] A video (5-10 minutes, mp4 format) demonstrating the application's functionality, including a walkthrough of the code and examples of executions. The video must have clear voice explanations and legible on-screen text.
+ - [] Test files used in the video and for program testing, showcasing the application's capability to load and process data.
+ - [] A peer evaluation document as provided by the professor, filled out and submitted individually.
+ - [] All files (code, video, tests, peer evaluation) must be named according to the format COMP3800MemberCpp## and compressed into a single folder for submission.
 
 ## 📕main.cpp
 
