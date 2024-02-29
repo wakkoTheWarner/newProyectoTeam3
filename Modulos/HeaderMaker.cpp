@@ -13,7 +13,7 @@
 
 std::string HeaderMaker::makeHeader(const std::string& universityName, const std::string& campusLocation, const std::string& departmentName, const std::string& semester, const std::string& professorName, const std::string& courseNumber) {
     if (departmentName.empty() || semester.empty() || courseNumber.empty()) {
-        return "Error: No se han proporcionado todos los datos necesarios para crear el encabezado. Faltan los datos del departamento, el semestre o el numero del curso.";
+        std::cerr << "Error: No se han proporcionado todos los datos necesarios para crear el encabezado. Faltan los datos del departamento, el semestre o el numero del curso." << std::endl;
     }
 
     std::string universityNameUpper = universityName;
@@ -24,7 +24,8 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
     std::string courseNumberUpper = courseNumber;
 
     if (universityName.empty() || campusLocation.empty() || professorName.empty()) {
-        std::cout << " ! -- Advertencia: No se han proporcionado todos los datos necesarios para crear el encabezado. Se usaran valores predeterminados. -- !" << std::endl;
+        std::cout << " ! -- ADVERTENCIA: No se han proporcionado todos los datos necesarios para crear el encabezado. -- !" << std::endl;
+        std::cout << "! -- Se usaran valores predeterminados para los datos faltantes. -- !\n" << std::endl;
         std::string defaultUniversityName = "Universidad ABC123";
         std::string defaultCampusLocation = "Recinto de Isla Mona";
         std::string defaultProfessorName = "Pepito Perez";
