@@ -1,6 +1,10 @@
-//
-// Created by eduar on 2/27/2024.
-//
+/**
+ * Objetivo:
+ * Precondiciones:
+ * Postcondiciones:
+ * Autor:
+ * Fecha de finalización:
+ **/
 
 #ifndef NEWPROYECTOTEAM3_FILEPARSER_H
 #define NEWPROYECTOTEAM3_FILEPARSER_H

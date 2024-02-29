@@ -9,7 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include "Modulos/FileParser.h"
-#include "Modulos/TableHeaderExtractor.h"
+#include "Modulos/HeaderMaker.h"
 #include "Modulos/FileReader.h"
 #include "Modulos/FileWriter.h"
 
@@ -42,8 +42,6 @@ int main() {
             // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
             filePath += ".txt";
         }
-        // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
-        filePath;
     }
 
     std::ifstream ifile;
@@ -55,20 +53,20 @@ int main() {
         return 0;
     }
 
-    // Crear un lector de archivos.
-    FileReader reader;
-    // Leer el archivo.
-    std::vector<std::vector<std::wstring>> content = reader.readFile(filePath);
+    FileReader fileReader;
+    std::vector<Student> students = fileReader.readFile(filePath);
 
-    // Crear un analizador de archivos.
-    FileParser parser;
-    // Analizar el archivo.
-    parser.parseFile(filePath);
+    // Create a FileParser object and parse the file
+    FileParser fileParser;
+    fileParser.parseFile(filePath);
 
-    // Crear un extractor de encabezados de tabla.
-    TableHeaderExtractor extractor;
-    // Extraer el encabezado del archivo.
-    std::vector<std::wstring> header = extractor.extractHeader(filePath);
+    // Get the semester and course number from the FileParser
+    std::wstring semesterW = fileParser.getDate();
+    std::wstring courseNumberW = fileParser.getCourse();
+
+    // Convert the semester and course number from wide string to string
+    std::string semester(semesterW.begin(), semesterW.end());
+    std::string courseNumber(courseNumberW.begin(), courseNumberW.end());
 
     std::cout << "Nombre de Institucion: ";
     std::getline(std::cin, nombreInstitucion);
@@ -96,16 +94,13 @@ int main() {
             // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
             outputFilePath += ".csv";
         }
-        // El usuario ha proporcionado una ruta completa, anteponer la ruta del directorio predeterminado
-        outputFilePath;
     }
 
-    // Crear un escritor de archivos.
-    FileWriter writer;
-    // Crear un objeto de configuración regional para UTF-8.
-    std::locale utf8_locale(std::locale(), new std::codecvt_utf8<wchar_t>());
-    // Escribir los datos en un archivo de salida.
-    writer.writeToFile(outputFilePath, filePath, utf8_locale, parser, header, content, nombreInstitucion, recinto, profesor);
+    HeaderMaker headerMaker;
+    std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, "DEPARTAMENTO DE CIENCIAS EN COMPUTADORAS", semester, profesor, courseNumber);
+
+    FileWriter fileWriter;
+    fileWriter.writeToFile(students, outputFilePath, header);
 
     // Informar al usuario que los datos se han exportado.
     std::wstring outputFilePathW(outputFilePath.begin(), outputFilePath.end());
