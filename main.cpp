@@ -15,7 +15,7 @@
 
 int main() {
     // Establecer el idioma local.
-    std::setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Spanish");
 
     std::string filePath;
     std::string nombreInstitucion;
@@ -23,9 +23,11 @@ int main() {
     std::string profesor;
     std::string outputFilePath;
 
-    // Solicitar al usuario la ruta del archivo.
     std::wcout << L"Ingresa la ruta del archivo: ";
-    std::getline(std::cin, filePath);
+    std::wstring wFilePath;
+    std::getline(std::wcin, wFilePath);
+
+    filePath = std::string(wFilePath.begin(), wFilePath.end());
 
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
     if (filePath.empty()) {
