@@ -72,104 +72,104 @@ CMakeFiles/newProyectoTeam3.dir/main.cpp.obj: CMakeFiles/newProyectoTeam3.dir/fl
 CMakeFiles/newProyectoTeam3.dir/main.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/main.cpp
 CMakeFiles/newProyectoTeam3.dir/main.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/newProyectoTeam3.dir/main.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/main.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\main.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\main.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/main.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\main.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\main.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp
 
 CMakeFiles/newProyectoTeam3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/main.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp > CMakeFiles\newProyectoTeam3.dir\main.cpp.i
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp > CMakeFiles\newProyectoTeam3.dir\main.cpp.i
 
 CMakeFiles/newProyectoTeam3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/main.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp -o CMakeFiles\newProyectoTeam3.dir\main.cpp.s
-
-CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj: CMakeFiles/newProyectoTeam3.dir/flags.make
-CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/FileParser.cpp
-CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileParser.cpp
-
-CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileParser.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.i
-
-CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileParser.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.s
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp -o CMakeFiles\newProyectoTeam3.dir\main.cpp.s
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj: CMakeFiles/newProyectoTeam3.dir/flags.make
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/FileReader.cpp
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileReader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileReader.cpp
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileReader.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.i
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileReader.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.i
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileReader.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.s
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileReader.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileReader.cpp.s
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj: CMakeFiles/newProyectoTeam3.dir/flags.make
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/FileWriter.cpp
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileWriter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileWriter.cpp
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileWriter.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.i
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileWriter.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.i
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileWriter.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.s
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileWriter.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileWriter.cpp.s
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj: CMakeFiles/newProyectoTeam3.dir/flags.make
 CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/Students.cpp
 CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\Students.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\Students.cpp
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\Students.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.i
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\Students.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.i
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\Students.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.s
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\Students.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\Students.cpp.s
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj: CMakeFiles/newProyectoTeam3.dir/flags.make
 CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/HeaderMaker.cpp
 CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\HeaderMaker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\HeaderMaker.cpp
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\HeaderMaker.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.i
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\HeaderMaker.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.i
 
 CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\HeaderMaker.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.s
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\HeaderMaker.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\HeaderMaker.cpp.s
+
+CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj: CMakeFiles/newProyectoTeam3.dir/flags.make
+CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/FileParser.cpp
+CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileParser.cpp
+
+CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.i"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileParser.cpp > CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.i
+
+CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.s"
+	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\Modulos\FileParser.cpp -o CMakeFiles\newProyectoTeam3.dir\Modulos\FileParser.cpp.s
 
 # Object files for target newProyectoTeam3
 newProyectoTeam3_OBJECTS = \
 "CMakeFiles/newProyectoTeam3.dir/main.cpp.obj" \
-"CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj" \
 "CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj" \
 "CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj" \
 "CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj" \
-"CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj"
+"CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj" \
+"CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj"
 
 # External object files for target newProyectoTeam3
 newProyectoTeam3_EXTERNAL_OBJECTS =
 
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/main.cpp.obj
-newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/Modulos/FileReader.cpp.obj
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/Modulos/FileWriter.cpp.obj
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/Modulos/Students.cpp.obj
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/Modulos/HeaderMaker.cpp.obj
+newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/Modulos/FileParser.cpp.obj
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/build.make
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/linkLibs.rsp
 newProyectoTeam3.exe: CMakeFiles/newProyectoTeam3.dir/objects1.rsp
