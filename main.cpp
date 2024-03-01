@@ -5,25 +5,25 @@
 #include <sstream>
 #include <vector>
 
-/* -- Empieza Declaraci√≥n de funciones -- */
+/* -- Empieza DeclaraciÛn de funciones -- */
 
 std::string filePathVerifier(std::string filePath);
 
 std::string outputFilePathVerifier(std::string outputFilePath);
 
-/* -- Termina Declaraci√≥n de funciones -- */
+/* -- Termina DeclaraciÛn de funciones -- */
 
-/* -- Empieza Declaraci√≥n de clases -- */
+/* -- Empieza DeclaraciÛn de clases -- */
 
 class Student {
 public:
     // Constructor de la clase Student. Inicializa todos los atributos con los valores proporcionados.
     Student(int num, const std::string& name, std::string& studentId, const std::string& registrationStatus, const std::string& level, const std::string& credits, const std::string& midterm, const std::string& final, const std::string& gradeDetail);
 
-    // Devuelve el n√∫mero del estudiante.
+    // Devuelve el n˙mero del estudiante.
     int getNum() const;
 
-    // Establece el n√∫mero del estudiante.
+    // Establece el n˙mero del estudiante.
     void setNum(int num);
 
     // Devuelve el nombre del estudiante.
@@ -32,10 +32,10 @@ public:
     // Establece el nombre del estudiante.
     void setName(const std::string &name);
 
-    // Devuelve la identificaci√≥n del estudiante.
+    // Devuelve la identificaciÛn del estudiante.
     const std::string &getId() const;
 
-    // Establece la identificaci√≥n del estudiante.
+    // Establece la identificaciÛn del estudiante.
     void setId(const std::string &id);
 
     // Devuelve el estado de registro del estudiante.
@@ -50,48 +50,48 @@ public:
     // Establece el nivel del estudiante.
     void setLevel(const std::string &level);
 
-    // Devuelve los cr√©ditos del estudiante.
+    // Devuelve los crÈditos del estudiante.
     const std::string &getCredits() const;
 
-    // Establece los cr√©ditos del estudiante.
+    // Establece los crÈditos del estudiante.
     void setCredits(const std::string &credits);
 
-    // Devuelve la calificaci√≥n de mitad de per√≠odo del estudiante.
+    // Devuelve la calificaciÛn de mitad de perÌodo del estudiante.
     const std::string &getMidterm() const;
 
-    // Establece la calificaci√≥n de mitad de per√≠odo del estudiante.
+    // Establece la calificaciÛn de mitad de perÌodo del estudiante.
     void setMidterm(const std::string &midterm);
 
-    // Devuelve la calificaci√≥n final del estudiante.
+    // Devuelve la calificaciÛn final del estudiante.
     const std::string &getFinal() const;
 
-    // Establece la calificaci√≥n final del estudiante.
+    // Establece la calificaciÛn final del estudiante.
     void setFinal(const std::string &final);
 
-    // Devuelve los detalles de la calificaci√≥n del estudiante.
+    // Devuelve los detalles de la calificaciÛn del estudiante.
     const std::string &getGradeDetail() const;
 
-    // Establece los detalles de la calificaci√≥n del estudiante.
+    // Establece los detalles de la calificaciÛn del estudiante.
     void setGradeDetail(const std::string &gradeDetail);
 
 private:
-    // N√∫mero del estudiante.
+    // N˙mero del estudiante.
     int num;
     // Nombre del estudiante.
     std::string name;
-    // Identificaci√≥n del estudiante.
+    // IdentificaciÛn del estudiante.
     std::string studentId;
     // Estado de registro del estudiante.
     std::string registrationStatus;
     // Nivel del estudiante.
     std::string level;
-    // Cr√©ditos del estudiante.
+    // CrÈditos del estudiante.
     std::string credits;
-    // Calificaci√≥n de mitad de per√≠odo del estudiante.
+    // CalificaciÛn de mitad de perÌodo del estudiante.
     std::string midterm;
-    // Calificaci√≥n final del estudiante.
+    // CalificaciÛn final del estudiante.
     std::string final;
-    // Detalles de la calificaci√≥n del estudiante.
+    // Detalles de la calificaciÛn del estudiante.
     std::string gradeDetail;
 };
 
@@ -102,62 +102,62 @@ public:
 
 class FileParser {
 public:
-    // Estructura para almacenar la informaci√≥n del curso
+    // Estructura para almacenar la informaciÛn del curso
     struct CourseInfo {
         std::string courseName; // Nombre del curso
-        std::string crn; // N√∫mero de registro del curso (CRN)
-        std::string duration; // Duraci√≥n del curso
+        std::string crn; // N˙mero de registro del curso (CRN)
+        std::string duration; // DuraciÛn del curso
     };
 
-    // Funci√≥n para analizar el archivo y obtener la informaci√≥n del curso
+    // FunciÛn para analizar el archivo y obtener la informaciÛn del curso
     CourseInfo parseFile(const std::string& filePath);
 
-    // Funci√≥n para modificar la duraci√≥n del curso
+    // FunciÛn para modificar la duraciÛn del curso
     std::string modifyDuration(std::string duration);
 
-    // Funci√≥n para traducir los meses al espa√±ol
+    // FunciÛn para traducir los meses al espaÒol
     std::string monthTranslator(std::string month);
 };
 
 class HeaderMaker {
 public:
-    // Funci√≥n para crear el encabezado con los datos proporcionados
+    // FunciÛn para crear el encabezado con los datos proporcionados
     std::string makeHeader(const std::string& universityName, const std::string& campusLocation, const std::string& departmentName, const std::string& semester, const std::string& professorName, const std::string& courseName, const std::string& crn);
 };
 
 class FileWriter {
 public:
-    // Funci√≥n para escribir en el archivo los datos de los estudiantes, la ruta del archivo y el encabezado
+    // FunciÛn para escribir en el archivo los datos de los estudiantes, la ruta del archivo y el encabezado
     void writeToFile(const std::vector<Student>& students, const std::string& filePath, const std::string& header);
 };
 
-/* -- Termina Declaraci√≥n de clases -- */
+/* -- Termina DeclaraciÛn de clases -- */
 
 /* -- Empieza main -- */
 
 /**
- * Objetivo: El c√≥digo de main() solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita informaci√≥n adicional al usuario, y finalmente escribe los datos procesados y la informaci√≥n adicional en un archivo de salida.
+ * Objetivo: El cÛdigo de main() solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita informaciÛn adicional al usuario, y finalmente escribe los datos procesados y la informaciÛn adicional en un archivo de salida.
  *
- * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de entrada cuando se le solicite. Esta cadena puede estar vac√≠a, contener solo el nombre del archivo o la ruta completa del archivo.
+ * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de entrada cuando se le solicite. Esta cadena puede estar vacÌa, contener solo el nombre del archivo o la ruta completa del archivo.
  *                 El archivo de entrada debe existir en la ruta proporcionada y debe ser legible.
- *                 El usuario debe proporcionar informaci√≥n v√°lida cuando se le solicite.
+ *                 El usuario debe proporcionar informaciÛn v·lida cuando se le solicite.
  *
- * Postcondiciones: Se crea un archivo de salida en la ruta especificada con los datos procesados y la informaci√≥n adicional.
+ * Postcondiciones: Se crea un archivo de salida en la ruta especificada con los datos procesados y la informaciÛn adicional.
  *                  Si el archivo de entrada no se puede abrir, el programa termina con un mensaje de error.
  *
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  *                 `filePath`: Una cadena que representa la ruta del archivo de entrada. Se solicita al usuario que introduzca esta ruta.
- *                 `nombreInstitucion`: Una cadena que representa el nombre de la instituci√≥n. Se solicita al usuario que introduzca esta informaci√≥n.
- *                 `recinto`: Una cadena que representa el campus. Se solicita al usuario que introduzca esta informaci√≥n.
- *                 `departamento`: Una cadena que representa el departamento. Se solicita al usuario que introduzca esta informaci√≥n.
- *                 `profesor`: Una cadena que representa el nombre del profesor. Se solicita al usuario que introduzca esta informaci√≥n.
+ *                 `nombreInstitucion`: Una cadena que representa el nombre de la instituciÛn. Se solicita al usuario que introduzca esta informaciÛn.
+ *                 `recinto`: Una cadena que representa el campus. Se solicita al usuario que introduzca esta informaciÛn.
+ *                 `departamento`: Una cadena que representa el departamento. Se solicita al usuario que introduzca esta informaciÛn.
+ *                 `profesor`: Una cadena que representa el nombre del profesor. Se solicita al usuario que introduzca esta informaciÛn.
  *                 `outputFilePath`: Una cadena que representa la ruta del archivo de salida. Se solicita al usuario que introduzca esta ruta.
  *
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  *
  *
  * Autor: Eduardo A. Sosa Torres
- * Fecha de finalizaci√≥n: 29-02-2024
+ * Fecha de finalizaciÛn: 29-02-2024
  **/
 int main() {
     // Establecer el idioma local.
@@ -177,11 +177,11 @@ int main() {
     // Verificar la ruta del archivo proporcionada por el usuario.
     filePath = filePathVerifier(filePath);
 
-    // Verificar si el archivo se abri√≥ correctamente.
+    // Verificar si el archivo se abriÛ correctamente.
     std::ifstream ifile;
     ifile.open(filePath);
 
-    // Verificar si el archivo se abri√≥ correctamente.
+    // Verificar si el archivo se abriÛ correctamente.
     if (!ifile.is_open()){
         std::cerr << "Error al abrir el archivo \"" << filePath << "\". Por favor, verifica la ruta del archivo e intenta de nuevo.\n";
         return 0;
@@ -195,7 +195,7 @@ int main() {
     FileParser fileParser;
     FileParser::CourseInfo courseInfo = fileParser.parseFile(filePath);
 
-    // Solicitar al usuario informaci√≥n adicional.
+    // Solicitar al usuario informaciÛn adicional.
     std::cout << "Nombre de Institucion: ";
     std::getline(std::cin, nombreInstitucion);
     std::cout << "Recinto: ";
@@ -216,7 +216,7 @@ int main() {
     HeaderMaker headerMaker;
     std::string header = headerMaker.makeHeader(nombreInstitucion, recinto, departamento, courseInfo.duration, profesor, courseInfo.courseName, courseInfo.crn);
 
-    // Escribir los datos procesados y la informaci√≥n adicional en el archivo de salida.
+    // Escribir los datos procesados y la informaciÛn adicional en el archivo de salida.
     FileWriter fileWriter;
     fileWriter.writeToFile(students, outputFilePath, header);
 
@@ -227,35 +227,35 @@ int main() {
 }
 
 /**
- * Objetivo: Esta funci√≥n verifica y ajusta la ruta del archivo proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensi√≥n .txt, se a√±ade la extensi√≥n.
+ * Objetivo: Esta funciÛn verifica y ajusta la ruta del archivo proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensiÛn .txt, se aÒade la extensiÛn.
  *
  * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo.
- *                 Esta cadena puede estar vac√≠a, contener solo el nombre del archivo o la ruta completa del archivo.
+ *                 Esta cadena puede estar vacÌa, contener solo el nombre del archivo o la ruta completa del archivo.
  *
- * Postcondiciones: La funci√≥n devuelve una cadena de texto que representa la ruta completa del archivo con la extensi√≥n .txt.
+ * Postcondiciones: La funciÛn devuelve una cadena de texto que representa la ruta completa del archivo con la extensiÛn .txt.
  *                  Si la ruta del archivo proporcionada por el usuario contiene comillas dobles, estas se eliminan.
  *
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  *
  *
  * Autor: Eduardo A. Sosa Torres
- * Fecha de finalizaci√≥n: 29-02-2024
+ * Fecha de finalizaciÛn: 29-02-2024
  **/
 std::string filePathVerifier(std::string filePath) {
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
     if (filePath.empty()) {
-        filePath = "../Resources/Data/ejemploDatos.txt";
+        filePath = "./Resources/Data/ejemploDatos.txt";
     }
         // Si el usuario solo ha proporcionado un nombre de archivo, anteponer la ruta del directorio predeterminado
     else if (filePath.find('/') == std::string::npos && filePath.find('\\') == std::string::npos) {
-        // Si el nombre del archivo no tiene la extensi√≥n .txt, a√±adirla
+        // Si el nombre del archivo no tiene la extensiÛn .txt, aÒadirla
         if (filePath.find(".txt") == std::string::npos) {
-            filePath = "../Resources/Data/" + filePath + ".txt";
+            filePath = "./Resources/Data/" + filePath + ".txt";
         } else {
-            filePath = "../Resources/Data/" + filePath;
+            filePath = "./Resources/Data/" + filePath;
         }
     } else {
-        // Si el usuario ha proporcionado una ruta completa sin la extensi√≥n .txt, a√±adirla
+        // Si el usuario ha proporcionado una ruta completa sin la extensiÛn .txt, aÒadirla
         if (filePath.find(".txt") == std::string::npos) {
             filePath += ".txt";
         }
@@ -270,19 +270,19 @@ std::string filePathVerifier(std::string filePath) {
 }
 
 /**
- * Objetivo: Esta funci√≥n verifica y ajusta la ruta del archivo de salida proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensi√≥n .csv, se a√±ade la extensi√≥n.
+ * Objetivo: Esta funciÛn verifica y ajusta la ruta del archivo de salida proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensiÛn .csv, se aÒade la extensiÛn.
  *
  * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de salida.
- *                 Esta cadena puede estar vac√≠a, contener solo el ombre del archivo o la ruta completa del archivo.
+ *                 Esta cadena puede estar vacÌa, contener solo el ombre del archivo o la ruta completa del archivo.
  *
- * Postcondiciones: La funci√≥n devuelve una cadena de texto que representa la ruta completa del archivo de salida con la extensi√≥n .csv.
+ * Postcondiciones: La funciÛn devuelve una cadena de texto que representa la ruta completa del archivo de salida con la extensiÛn .csv.
  *                  Si la ruta del archivo de salida proporcionada por el usuario contiene comillas dobles, estas se eliminan.
  *
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  *
  *
  * Autor: Eduardo A. Sosa Torres
- * Fecha de finalizaci√≥n: 29-02-2024
+ * Fecha de finalizaciÛn: 29-02-2024
  **/
 std::string outputFilePathVerifier(std::string outputFilePath) {
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
@@ -291,14 +291,14 @@ std::string outputFilePathVerifier(std::string outputFilePath) {
     }
         // Si el usuario solo ha proporcionado un nombre de archivo, anteponer la ruta del directorio predeterminado
     else if (outputFilePath.find('/') == std::string::npos && outputFilePath.find('\\') == std::string::npos) {
-        // Si el nombre del archivo no tiene la extensi√≥n .csv, a√±adirla
+        // Si el nombre del archivo no tiene la extensiÛn .csv, aÒadirla
         if (outputFilePath.find(".csv") == std::string::npos) {
             outputFilePath = "../Resources/Output/" + outputFilePath + ".csv";
         } else {
             outputFilePath = "../Resources/Output/" + outputFilePath;
         }
     } else {
-        // Si el usuario ha proporcionado una ruta completa sin la extensi√≥n .csv, a√±adirla
+        // Si el usuario ha proporcionado una ruta completa sin la extensiÛn .csv, aÒadirla
         if (outputFilePath.find(".csv") == std::string::npos) {
             outputFilePath += ".csv";
         }
@@ -320,9 +320,9 @@ std::string outputFilePathVerifier(std::string outputFilePath) {
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  * Autor:
- * Fecha de finalizaci√≥n:
+ * Fecha de finalizaciÛn:
  **/
 std::vector<Student> FileReader::readFile(const std::string& filePath) {
     std::vector<Student> students;
@@ -364,63 +364,63 @@ std::vector<Student> FileReader::readFile(const std::string& filePath) {
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  * Autor:
- * Fecha de finalizaci√≥n:
+ * Fecha de finalizaciÛn:
  **/
 FileParser::CourseInfo FileParser::parseFile(const std::string& filePath) {
     // Abre el archivo en la ruta proporcionada
     std::ifstream file(filePath);
     std::string line;
-    // Crea una estructura CourseInfo para almacenar la informaci√≥n del curso
+    // Crea una estructura CourseInfo para almacenar la informaciÛn del curso
     CourseInfo courseInfo;
 
-    // Lee el archivo l√≠nea por l√≠nea
+    // Lee el archivo lÌnea por lÌnea
     while (std::getline(file, line)) {
-        // Si la l√≠nea contiene "Course Information", procesa la informaci√≥n del curso
+        // Si la lÌnea contiene "Course Information", procesa la informaciÛn del curso
         if (line.find("Course Information") != std::string::npos) {
-            // Lee la siguiente l√≠nea
+            // Lee la siguiente lÌnea
             std::getline(file, line);
             std::istringstream iss(line);
             std::string courseName;
 
-            // Lee el nombre del curso hasta la primera tabulaci√≥n
+            // Lee el nombre del curso hasta la primera tabulaciÛn
             std::getline(iss, courseName, '\t');
 
-            // Elimina la parte inicial y el √∫ltimo car√°cter del nombre del curso
+            // Elimina la parte inicial y el ˙ltimo car·cter del nombre del curso
             courseName.erase(0, courseName.find(" - ") + 3);
             courseName.erase(courseName.end() - 1, courseName.end());
 
             // Almacena el nombre del curso en la estructura CourseInfo
             courseInfo.courseName = courseName;
         }
-            // Si la l√≠nea contiene "CRN:", procesa el CRN del curso
+            // Si la lÌnea contiene "CRN:", procesa el CRN del curso
         else if (line.find("CRN:") != std::string::npos) {
             std::istringstream iss(line);
             std::string crn;
 
-            // Lee el CRN del curso hasta la primera tabulaci√≥n y luego el resto de la l√≠nea
+            // Lee el CRN del curso hasta la primera tabulaciÛn y luego el resto de la lÌnea
             std::getline(iss, crn, '\t'); // lee hasta el colon
-            std::getline(iss, crn); // lee el resto de la l√≠nea
+            std::getline(iss, crn); // lee el resto de la lÌnea
 
             // Almacena el CRN en la estructura CourseInfo
             courseInfo.crn = crn;
         }
-            // Si la l√≠nea contiene "Duration:", procesa la duraci√≥n del curso
+            // Si la lÌnea contiene "Duration:", procesa la duraciÛn del curso
         else if (line.find("Duration:") != std::string::npos) {
             std::istringstream iss(line);
             std::string duration;
 
-            // Lee la duraci√≥n del curso hasta la primera tabulaci√≥n y luego el resto de la l√≠nea
+            // Lee la duraciÛn del curso hasta la primera tabulaciÛn y luego el resto de la lÌnea
             std::getline(iss, duration, '\t'); // lee hasta el colon
-            std::getline(iss, duration); // lee el resto de la l√≠nea
+            std::getline(iss, duration); // lee el resto de la lÌnea
 
-            // Modifica y almacena la duraci√≥n en la estructura CourseInfo
+            // Modifica y almacena la duraciÛn en la estructura CourseInfo
             courseInfo.duration = modifyDuration(duration);
         }
     }
 
-    // Devuelve la estructura CourseInfo con la informaci√≥n del curso
+    // Devuelve la estructura CourseInfo con la informaciÛn del curso
     return courseInfo;
 }
 
@@ -428,16 +428,16 @@ FileParser::CourseInfo FileParser::parseFile(const std::string& filePath) {
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  * Autor:
- * Fecha de finalizaci√≥n:
+ * Fecha de finalizaciÛn:
  **/
 std::string FileParser::modifyDuration(std::string duration) {
-    // Crea un flujo de entrada a partir de la duraci√≥n
+    // Crea un flujo de entrada a partir de la duraciÛn
     std::istringstream iss(duration);
     std::string startDate, endDate;
 
-    // Lee la fecha de inicio y la fecha de finalizaci√≥n de la duraci√≥n
+    // Lee la fecha de inicio y la fecha de finalizaciÛn de la duraciÛn
     std::getline(iss, startDate, '-');
     std::getline(iss, endDate);
 
@@ -445,26 +445,26 @@ std::string FileParser::modifyDuration(std::string duration) {
     startDate.erase(startDate.find(','), 1);
     endDate.erase(endDate.find(','), 1);
 
-    // Crea flujos de entrada para las fechas de inicio y finalizaci√≥n
+    // Crea flujos de entrada para las fechas de inicio y finalizaciÛn
     std::istringstream startIss(startDate);
     std::istringstream endIss(endDate);
 
     std::string startDay, startMonth, startYear;
     std::string endDay, endMonth, endYear;
 
-    // Lee el d√≠a, el mes y el a√±o de las fechas de inicio y finalizaci√≥n
+    // Lee el dÌa, el mes y el aÒo de las fechas de inicio y finalizaciÛn
     startIss >> startDay >> startMonth >> startYear;
     endIss >> endDay >> endMonth >> endYear;
 
-    // Convierte los meses a may√∫sculas
+    // Convierte los meses a may˙sculas
     for (auto & c: startMonth) c = toupper(c);
     for (auto & c: endMonth) c = toupper(c);
 
-    // Traduce los meses al espa√±ol
+    // Traduce los meses al espaÒol
     startMonth = monthTranslator(startMonth);
     endMonth = monthTranslator(endMonth);
 
-    // Devuelve la duraci√≥n modificada en el formato "MES_INICIO-MES_FINAL A√ëO"
+    // Devuelve la duraciÛn modificada en el formato "MES_INICIO-MES_FINAL A—O"
     return startMonth + "-" + endMonth + " " + startYear;
 }
 
@@ -472,9 +472,9 @@ std::string FileParser::modifyDuration(std::string duration) {
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  * Autor:
- * Fecha de finalizaci√≥n:
+ * Fecha de finalizaciÛn:
  **/
 std::string FileParser::monthTranslator(std::string month) {
     // Si el mes es "JAN", devuelve "ENERO"
@@ -525,7 +525,7 @@ std::string FileParser::monthTranslator(std::string month) {
     else if (month == "DEC") {
         return "DICIEMBRE";
     }
-    // Si el mes no coincide con ninguno de los anteriores, devuelve una cadena vac√≠a
+    // Si el mes no coincide con ninguno de los anteriores, devuelve una cadena vacÌa
     return {};
 }
 
@@ -537,12 +537,12 @@ std::string FileParser::monthTranslator(std::string month) {
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  * Autor:
- * Fecha de finalizaci√≥n:
+ * Fecha de finalizaciÛn:
  **/
 std::string HeaderMaker::makeHeader(const std::string& universityName, const std::string& campusLocation, const std::string& departmentName, const std::string& semester, const std::string& professorName, const std::string& courseName, const std::string& crn) {
-    // Si el semestre, el nombre del curso o el CRN est√°n vac√≠os, muestra un error
+    // Si el semestre, el nombre del curso o el CRN est·n vacÌos, muestra un error
     if (semester.empty() || courseName.empty() || crn.empty()) {
         std::cerr << "Error: No se han proporcionado todos los datos necesarios para crear el encabezado. Falta el semestre, el nombre del curso o el seccion." << std::endl;
     }
@@ -556,7 +556,7 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
     std::string courseNameUpper = courseName;
     std::string crnUpper = crn;
 
-    // Si el nombre de la universidad, la ubicaci√≥n del campus, el nombre del departamento o el nombre del profesor est√°n vac√≠os, usa valores predeterminados
+    // Si el nombre de la universidad, la ubicaciÛn del campus, el nombre del departamento o el nombre del profesor est·n vacÌos, usa valores predeterminados
     if (universityName.empty() || campusLocation.empty() || departmentName.empty() || professorName.empty()) {
         std::cout << "! -- ADVERTENCIA: No se han proporcionado todos los datos necesarios para crear el encabezado. -- !" << std::endl;
         std::cout << "! -- Se usaran valores predeterminados para los datos faltantes. -- !\n" << std::endl;
@@ -565,28 +565,28 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
         std::string defaultDepartmentName = "Departamento De Ciencias En Computadoras";
         std::string defaultProfessorName = "Pepito Perez";
 
-        // Si el nombre de la universidad est√° vac√≠o, usa el valor predeterminado
+        // Si el nombre de la universidad est· vacÌo, usa el valor predeterminado
         if (universityName.empty()) {
             universityNameUpper = defaultUniversityName;
         }
 
-        // Si la ubicaci√≥n del campus est√° vac√≠a, usa el valor predeterminado
+        // Si la ubicaciÛn del campus est· vacÌa, usa el valor predeterminado
         if (campusLocation.empty()) {
             campusLocationUpper = defaultCampusLocation;
         }
 
-        // Si el nombre del departamento est√° vac√≠o, usa el valor predeterminado
+        // Si el nombre del departamento est· vacÌo, usa el valor predeterminado
         if (departmentName.empty()) {
             departmentNameUpper = defaultDepartmentName;
         }
 
-        // Si el nombre del profesor est√° vac√≠o, usa el valor predeterminado
+        // Si el nombre del profesor est· vacÌo, usa el valor predeterminado
         if (professorName.empty()) {
             professorNameUpper = defaultProfessorName;
         }
     }
 
-    // Convierte todos los datos a may√∫sculas
+    // Convierte todos los datos a may˙sculas
     std::transform(universityNameUpper.begin(), universityNameUpper.end(), universityNameUpper.begin(), ::toupper);
     std::transform(campusLocationUpper.begin(), campusLocationUpper.end(), campusLocationUpper.begin(), ::toupper);
     std::transform(departmentNameUpper.begin(), departmentNameUpper.end(), departmentNameUpper.begin(), ::toupper);
@@ -615,9 +615,9 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
- * Descripci√≥n de argumentos:
+ * DescripciÛn de argumentos:
  * Autor:
- * Fecha de finalizaci√≥n:
+ * Fecha de finalizaciÛn:
  **/
 void FileWriter::writeToFile(const std::vector<Student>& students, const std::string& filePath, const std::string& header) {
     // Crea un archivo en la ruta proporcionada
@@ -642,30 +642,30 @@ void FileWriter::writeToFile(const std::vector<Student>& students, const std::st
 /* -- Empieza Student Class -- */
 
 /**
- * Objetivo: Esta clase Student se utiliza para representar a un estudiante con varios atributos como n√∫mero, nombre, identificaci√≥n del
- *           estudiante, estado de registro, nivel, cr√©ditos, calificaci√≥n de mitad de per√≠odo, calificaci√≥n final y detalles de la calificaci√≥n.
- *           Proporciona m√©todos para obtener y establecer estos atributos.
+ * Objetivo: Esta clase Student se utiliza para representar a un estudiante con varios atributos como n˙mero, nombre, identificaciÛn del
+ *           estudiante, estado de registro, nivel, crÈditos, calificaciÛn de mitad de perÌodo, calificaciÛn final y detalles de la calificaciÛn.
+ *           Proporciona mÈtodos para obtener y establecer estos atributos.
  *
- * Precondiciones: Para el constructor de `Student`, todos los par√°metros proporcionados deben ser v√°lidos y no nulos.
- *                 Para los m√©todos `set`, los valores proporcionados deben ser v√°lidos y no nulos.
+ * Precondiciones: Para el constructor de `Student`, todos los par·metros proporcionados deben ser v·lidos y no nulos.
+ *                 Para los mÈtodos `set`, los valores proporcionados deben ser v·lidos y no nulos.
  *
- * Postcondiciones: Despu√©s de la construcci√≥n, se crea un objeto `Student` con los atributos proporcionados.
- *                  Los m√©todos `get` devuelven el valor actual del atributo correspondiente.
- *                  Los m√©todos `set` actualizan el valor del atributo correspondiente.
+ * Postcondiciones: DespuÈs de la construcciÛn, se crea un objeto `Student` con los atributos proporcionados.
+ *                  Los mÈtodos `get` devuelven el valor actual del atributo correspondiente.
+ *                  Los mÈtodos `set` actualizan el valor del atributo correspondiente.
  *
- * Descripci√≥n de argumentos:
- *                 num: Un entero que representa el n√∫mero del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getNum y setNum.
- *                 name: Una cadena que representa el nombre del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getName y setName.
- *                 studentId: Una cadena que representa la ID del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getId y setId.
- *                 registrationStatus: Una cadena que representa el estado de registro del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getRegistrationStatus y setRegistrationStatus.
- *                 level: Una cadena que representa el nivel del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getLevel y setLevel.
- *                 credits: Una cadena que representa los cr√©ditos del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getCredits y setCredits.
- *                 midterm: Una cadena que representa la calificaci√≥n de mitad de per√≠odo del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getMidterm y setMidterm.
- *                 final: Una cadena que representa la calificaci√≥n final del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getFinal y setFinal.
- *                 gradeDetail: Una cadena que representa los detalles de la calificaci√≥n del estudiante. Este es tanto un par√°metro para el constructor como el sujeto de los m√©todos getGradeDetail y setGradeDetail.
+ * DescripciÛn de argumentos:
+ *                 num: Un entero que representa el n˙mero del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getNum y setNum.
+ *                 name: Una cadena que representa el nombre del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getName y setName.
+ *                 studentId: Una cadena que representa la ID del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getId y setId.
+ *                 registrationStatus: Una cadena que representa el estado de registro del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getRegistrationStatus y setRegistrationStatus.
+ *                 level: Una cadena que representa el nivel del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getLevel y setLevel.
+ *                 credits: Una cadena que representa los crÈditos del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getCredits y setCredits.
+ *                 midterm: Una cadena que representa la calificaciÛn de mitad de perÌodo del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getMidterm y setMidterm.
+ *                 final: Una cadena que representa la calificaciÛn final del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getFinal y setFinal.
+ *                 gradeDetail: Una cadena que representa los detalles de la calificaciÛn del estudiante. Este es tanto un par·metro para el constructor como el sujeto de los mÈtodos getGradeDetail y setGradeDetail.
  *
  * Autor: Eduardo A. Sosa Torres
- * Fecha de finalizaci√≥n: 28-02-2024
+ * Fecha de finalizaciÛn: 28-02-2024
  **/
 Student::Student(int num, const std::string& name, std::string& studentId, const std::string& registrationStatus, const std::string& level, const std::string& credits, const std::string& midterm, const std::string& final, const std::string& gradeDetail)
         : num(num), name(name), studentId(studentId), registrationStatus(registrationStatus), level(level), credits(credits), midterm(midterm), final(final), gradeDetail(gradeDetail) {
@@ -673,12 +673,12 @@ Student::Student(int num, const std::string& name, std::string& studentId, const
 }
 
 int Student::getNum() const {
-    // Devuelve el n√∫mero del estudiante.
+    // Devuelve el n˙mero del estudiante.
     return num;
 }
 
 void Student::setNum(int num) {
-    // Establece el n√∫mero del estudiante.
+    // Establece el n˙mero del estudiante.
     Student::num = num;
 }
 
@@ -693,12 +693,12 @@ void Student::setName(const std::string &name) {
 }
 
 const std::string &Student::getId() const {
-    // Devuelve la identificaci√≥n del estudiante.
+    // Devuelve la identificaciÛn del estudiante.
     return studentId;
 }
 
 void Student::setId(const std::string &id) {
-    // Establece la identificaci√≥n del estudiante.
+    // Establece la identificaciÛn del estudiante.
     Student::studentId = id;
 }
 
@@ -723,42 +723,42 @@ void Student::setLevel(const std::string &level) {
 }
 
 const std::string &Student::getCredits() const {
-    // Devuelve los cr√©ditos del estudiante.
+    // Devuelve los crÈditos del estudiante.
     return credits;
 }
 
 void Student::setCredits(const std::string &credits) {
-    // Establece los cr√©ditos del estudiante.
+    // Establece los crÈditos del estudiante.
     Student::credits = credits;
 }
 
 const std::string &Student::getMidterm() const {
-    // Devuelve la calificaci√≥n de mitad de per√≠odo del estudiante.
+    // Devuelve la calificaciÛn de mitad de perÌodo del estudiante.
     return midterm;
 }
 
 void Student::setMidterm(const std::string &midterm) {
-    // Establece la calificaci√≥n de mitad de per√≠odo del estudiante.
+    // Establece la calificaciÛn de mitad de perÌodo del estudiante.
     Student::midterm = midterm;
 }
 
 const std::string &Student::getFinal() const {
-    // Devuelve la calificaci√≥n final del estudiante.
+    // Devuelve la calificaciÛn final del estudiante.
     return final;
 }
 
 void Student::setFinal(const std::string &final) {
-    // Establece la calificaci√≥n final del estudiante.
+    // Establece la calificaciÛn final del estudiante.
     Student::final = final;
 }
 
 const std::string &Student::getGradeDetail() const {
-    // Devuelve los detalles de la calificaci√≥n del estudiante.
+    // Devuelve los detalles de la calificaciÛn del estudiante.
     return gradeDetail;
 }
 
 void Student::setGradeDetail(const std::string &gradeDetail) {
-    // Establece los detalles de la calificaci√≥n del estudiante.
+    // Establece los detalles de la calificaciÛn del estudiante.
     Student::gradeDetail = gradeDetail;
 }
 

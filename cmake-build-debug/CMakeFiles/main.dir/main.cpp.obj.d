@@ -1,4 +1,4 @@
-CMakeFiles/newProyectoTeam3.dir/main.cpp.obj: \
+CMakeFiles/main.dir/main.cpp.obj: \
  C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \

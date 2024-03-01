@@ -1,3 +1,3 @@
-C:/Users/eduar/CLionProjects/newProyectoTeam3/cmake-build-debug/CMakeFiles/newProyectoTeam3.dir
+C:/Users/eduar/CLionProjects/newProyectoTeam3/cmake-build-debug/CMakeFiles/main.dir
 C:/Users/eduar/CLionProjects/newProyectoTeam3/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/eduar/CLionProjects/newProyectoTeam3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

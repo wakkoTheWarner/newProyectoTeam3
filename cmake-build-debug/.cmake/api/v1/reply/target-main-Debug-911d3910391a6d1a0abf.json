@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "newProyectoTeam3.exe"
+			"path" : "C:/Users/eduar/CLionProjects/newProyectoTeam3/main.exe"
 		},
 		{
-			"path" : "newProyectoTeam3.pdb"
+			"path" : "C:/Users/eduar/CLionProjects/newProyectoTeam3/main.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "newProyectoTeam3::@6890427a1f51a3e7e1df",
+	"id" : "main::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +76,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "newProyectoTeam3",
-	"nameOnDisk" : "newProyectoTeam3.exe",
+	"name" : "main",
+	"nameOnDisk" : "main.exe",
 	"paths" : 
 	{
 		"build" : ".",
