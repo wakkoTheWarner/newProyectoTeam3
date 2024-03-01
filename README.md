@@ -96,16 +96,48 @@ For a visual guide on setting up the Visual Studio Code environment and running 
 
 ## 🔧Usage
 
-```c++
-$ ./main
-Ingresa la ruta del archivo: /path/to/input.txt
-Nombre de Institucion: My Institution
-Recinto: My Campus
-Departamento: My Department
-Profesor: My Professor
-Ingresa la ruta y nombre del archivo de salida: /path/to/output.csv
-Los datos se han exportado al archivo /path/to/output.csv
-```
+This program is designed to process student data from a text file and output it in a CSV format. Here are the steps to use this program:
+
+1. **Compile and Run the Program**: First, compile the `main.cpp` file and run the resulting executable. This will start the program.
+
+   Example:
+   ```bash
+   g++ main.cpp -o main
+   ./main
+   ```
+
+2. **Input File Path**: The program will first ask you to enter the path of the input text file. This file should contain the student data that you want to process. You can enter just the file name if the file is in the same directory as the program, or the full path to the file. If the file has a `.txt` extension, you can include it, but if you don't, the program will automatically add it for you.
+
+   Example:
+   ```
+   Ingresa la ruta del archivo: ./Resources/Data/student_data.txt
+   ```
+
+3. **Enter Additional Information**: The program will then ask you to enter additional information that is not included in the input file. This includes the name of the institution, the campus, the department, and the professor's name. Please enter these details as prompted.
+
+   Example:
+   ```
+   Nombre de Institucion: Interamrican University of Puerto Rico
+   Recinto: Main Campus
+   Departamento: Department of Computer Science
+   Profesor: John Doe
+   ```
+
+4. **Output File Path**: Finally, the program will ask you to enter the path and name of the output CSV file. This is where the processed data will be written. As with the input file, you can enter just the file name if you want the file to be created in the same directory as the program, or the full path to the file. If the file has a `.csv` extension, you can include it, but if you don't, the program will automatically add it for you.
+
+   Example:
+   ```
+   Ingresa la ruta y nombre del archivo de salida: ../Resources/Output/student_output.csv
+   ```
+
+5. **Check the Output**: Once you've entered all the required information, the program will process the data and write it to the output file. It will then print a message telling you that the data has been exported. You can now open the output file to see the processed data.
+
+   Example:
+   ```
+   Los datos se han exportado al archivo ../Resources/Output/student_output.csv
+   ```
+
+Please note that this program assumes that the input file is formatted correctly and that all the data is valid. If the program encounters an error while reading the file, it will print an error message and terminate.
 
 ## 📕main.cpp
 

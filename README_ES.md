@@ -96,16 +96,49 @@ Para una guía visual sobre cómo configurar el entorno de jGrasp y ejecutar un 
 Para una guía visual sobre cómo configurar el entorno de Visual Studio Code y ejecutar un archivo C++, puedes ver este [video de YouTube](https://www.youtube.com/watch?v=DMWD7wfhgNY).
 
 ## 🔧Uso
-```c++
-$ ./main
-Ingresa la ruta del archivo: /ruta/a/input.txt
-Nombre de Institución: Mi Institución
-Recinto: Mi Campus
-Departamento: Mi Departamento
-Profesor: Mi Profesor
-Ingresa la ruta y nombre del archivo de salida: /ruta/a/output.csv
-Los datos se han exportado al archivo /ruta/a/output.csv
-```
+
+Este programa está diseñado para procesar datos de estudiantes de un archivo de texto y exportarlos en formato CSV. Aquí están los pasos para usar este programa:
+
+1. **Compilar y Ejecutar el Programa**: Primero, compila el archivo `main.cpp` y ejecuta el ejecutable resultante. Esto iniciará el programa.
+
+   Ejemplo:
+   ```bash
+   g++ main.cpp -o main
+   ./main
+   ```
+
+2. **Ruta del Archivo de Entrada**: El programa te pedirá primero que ingreses la ruta del archivo de texto de entrada. Este archivo debe contener los datos de los estudiantes que deseas procesar. Puedes ingresar solo el nombre del archivo si el archivo está en el mismo directorio que el programa, o la ruta completa al archivo. Si el archivo tiene una extensión `.txt`, puedes incluirla, pero si no, el programa la agregará automáticamente por ti.
+
+   Ejemplo:
+   ```
+   Ingresa la ruta del archivo: ./Resources/Data/student_data.txt
+   ```
+
+3. **Ingresar Información Adicional**: Luego, el programa te pedirá que ingreses información adicional que no está incluida en el archivo de entrada. Esto incluye el nombre de la institución, el recinto, el departamento y el nombre del profesor. Por favor, ingresa estos detalles como se te solicite.
+
+   Ejemplo:
+   ```
+   Nombre de Institución: Universidad Interamericana de Puerto Rico
+   Recinto: Campus Principal
+   Departamento: Departamento de Ciencias de Computadoras
+   Profesor: John Doe
+   ```
+
+4. **Ruta del Archivo de Salida**: Finalmente, el programa te pedirá que ingreses la ruta y nombre del archivo CSV de salida. Aquí se escribirán los datos procesados. Al igual que con el archivo de entrada, puedes ingresar solo el nombre del archivo si deseas que el archivo se cree en el mismo directorio que el programa, o la ruta completa al archivo. Si el archivo tiene una extensión `.csv`, puedes incluirla, pero si no, el programa la agregará automáticamente por ti.
+
+   Ejemplo:
+   ```
+   Ingresa la ruta y nombre del archivo de salida: ../Resources/Output/student_output.csv
+   ```
+
+5. **Verificar la Salida**: Una vez que hayas ingresado toda la información requerida, el programa procesará los datos y los escribirá en el archivo de salida. Luego, imprimirá un mensaje diciéndote que los datos han sido exportados. Ahora puedes abrir el archivo de salida para ver los datos procesados.
+
+   Ejemplo:
+   ```
+   Los datos se han exportado al archivo ../Resources/Output/student_output.csv
+   ```
+
+Por favor, ten en cuenta que este programa asume que el archivo de entrada está formateado correctamente y que todos los datos son válidos. Si el programa encuentra un error al leer el archivo, imprimirá un mensaje de error y terminará.
 
 ## 📕main.cpp
 
