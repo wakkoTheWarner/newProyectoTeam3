@@ -3,70 +3,19 @@
 
 This C++ project is a university student registration system. It reads student data from a file, processes it, and writes the processed data to another file. The data includes student names, IDs, registration status, level, and credits. The user is prompted to input the institution's name, campus, and professor's name. The processed data, including the institution's name, campus, department, semester, professor's name, course, and the table of students' information, is then written to a new file named "output.csv".
 
+## 🔧Usage
 
-## 🛠️ Installation
-
-This project requires MinGW to compile and run. The minimum version requirement is MinGW 3.6.0-1 from 2019, but the recommended version is MinGW w64 version 11.0 or 12.0. The code has been tested in MinGW 3.6.0-1, MinGW w64 11.0 and 12.0.
-
-### MinGW Installation
-
-1. Download the MinGW Installation Manager from [here](https://sourceforge.net/projects/mingw/).
-
-2. Open the downloaded file and follow the instructions to install MinGW Installation Manager.
-
-3. Once installed, open the MinGW Installation Manager.
-
-4. Select the packages you need (at least `mingw32-base` and `mingw32-gcc-g++`).
-
-5. Apply changes and wait for the packages to be installed.
-
-⚠️ **Warning**: This version of MinGW is outdated. Use at your own risk.
-
-For a visual guide on installing MinGW, you can watch this [YouTube video](https://www.youtube.com/watch?v=fzOmcmUcl_E).
-
-### MinGW w64 Installation
-
-1. Download MSYS2 from the [official page](https://www.msys2.org/) or directly via this [installer link](https://www.msys2.org/).
-
-2. Run the installer and follow the on-screen instructions. Choose your installation folder (the default is usually fine) and ensure to check `Run MSYS2 now` at the end.
-
-3. Once installed, open MSYS2 terminal.
-
-4. In the MSYS2 terminal, execute: `pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain`
-
-5. Type `Y` and press Enter when prompted to confirm the installation.
-
-For a visual guide on installing MinGW w64, you can watch this [YouTube video](https://www.youtube.com/watch?v=DMWD7wfhgNY).
-
-### MinGW Environment Variable Set-up
-
-1. Open the System Properties (Right click Computer in the start menu, or use the keyboard shortcut Win+Pause)
-
-2. Click Advanced system settings
-
-3. Click Environment Variables
-
-4. Under System Variables, find and select the Path variable
-
-5. Click Edit
-
-6. In the Edit System Variable window, click New
-
-7. Type the path to the MinGW bin folder (e.g., `C:\MinGW\bin` or `C:\msys64\mingw64\bin` for MinGW w64)
-
-8. Click OK in all windows to apply the changes
-
-You may need to restart any open command prompt windows for changes to take effect.
-
-### Testing Installation
-
-After installing MinGW or MinGW w64, you can test whether the installation was successful by running the following commands in the command prompt:
-
-```cmd
-gcc --version
-g++ --version
-gdb --version
+```c++
+$ ./main
+Ingresa la ruta del archivo: /path/to/input.txt
+Nombre de Institucion: My Institution
+Recinto: My Campus
+Departamento: My Department
+Profesor: My Professor
+Ingresa la ruta y nombre del archivo de salida: /path/to/output.csv
+Los datos se han exportado al archivo /path/to/output.csv
 ```
+
 ## 🏃‍♂️How to Run
 
 To run the code, you need to have MinGW installed with a release higher than `6.3.0-1` from 2019. The code also works with current iterations of MinGW (MinGW-w64 such as 11.0 w64 the latest version of MSYS2 12.0 w64).
@@ -92,7 +41,9 @@ For a visual guide on setting up the jGrasp environment and running a C++ file, 
 4. **Run the code**: Click `Run or Debug...` on the top right corner, click Run and select `C/C++: g++ from C:\msys64\mingw64\bin\g++.exe` to build the code. This will create an executable file in the same directory as your source code as well as run it (might have to run it 2 times).
 
 For a visual guide on setting up the Visual Studio Code environment and running a C++ file, you can watch this [YouTube video](https://www.youtube.com/watch?v=DMWD7wfhgNY).
-## Usage
+
+## 🔧Usage
+
 ```c++
 $ ./main
 Ingresa la ruta del archivo: /path/to/input.txt
@@ -103,21 +54,26 @@ Profesor: My Professor
 Ingresa la ruta y nombre del archivo de salida: /path/to/output.csv
 Los datos se han exportado al archivo /path/to/output.csv
 ```
+
 ## 📕main.cpp
 
 ### Objective
+
 The main function of this program is to process a student list from a text file and convert it into a CSV format compatible with Excel. The program prompts the user for the input file path, reads and processes the data from the file, requests additional information from the user, and finally writes the processed data and additional information to an output file.
 
 ### Pre-conditions
+
 - The user must provide a valid file path for the input file when prompted. This can be an empty string, a file name, or a full file path.
 - The input file must exist at the provided path and must be readable.
 - The user must provide valid additional information when prompted.
 
 ### Post-conditions
+
 - An output file is created at the specified path with the processed data and additional information.
 - If the input file cannot be opened, the program terminates with an error message.
 
 ### Description of each argument
+
 - `filePath`: A string that represents the path of the input file. The user is prompted to enter this path.
 - `nombreInstitucion`: A string that represents the name of the institution. The user is prompted to enter this information.
 - `recinto`: A string that represents the campus. The user is prompted to enter this information.
@@ -126,25 +82,31 @@ The main function of this program is to process a student list from a text file 
 - `outputFilePath`: A string that represents the path of the output file. The user is prompted to enter this path.
 
 ### Additional Information
+
 - The function uses several helper functions and classes to read and process the data from the input file, create the header for the output file, and write the data to the output file.
 - The function verifies the file paths provided by the user and adjusts them as necessary.
 - The function checks if the input file can be opened and terminates with an error message if it cannot.
 - The function informs the user when the data has been exported to the output file.
+
 ## 📕Students.cpp
 
 ### Objective
+
 The selected code represents the implementation of the `Student` class in C++. This class is used to represent a student with various attributes such as number, name, student ID, registration status, level, credits, midterm grade, final grade, and grade details. It provides methods to get and set these attributes.
 
 ### Pre-conditions
+
 - For the `Student` constructor, all provided parameters must be valid and non-null.
 - For the `set` methods, the provided values must be valid and non-null.
 
 ### Post-conditions
+
 - After construction, a `Student` object is created with the provided attributes.
 - The `get` methods return the current value of the corresponding attribute.
 - The `set` methods update the value of the corresponding attribute.
 
 ### Description of each argument
+
 - `num`: An integer that represents the student's number. This is both a parameter for the constructor and the subject of the `getNum` and `setNum` methods.
 - `name`: A string that represents the student's name. This is both a parameter for the constructor and the subject of the `getName` and `setName` methods.
 - `studentId`: A string that represents the student's ID. This is both a parameter for the constructor and the subject of the `getId` and `setId` methods.
@@ -156,10 +118,12 @@ The selected code represents the implementation of the `Student` class in C++. T
 - `gradeDetail`: A string that represents the student's grade details. This is both a parameter for the constructor and the subject of the `getGradeDetail` and `setGradeDetail` methods.
 
 ### Additional Information
+
 - The `Student` class is a simple data class with no behavior beyond storing and retrieving its attributes.
 - The `get` methods are all `const`, meaning they do not modify the object and can be called on `const` objects.
 - The `set` methods are not `const`, meaning they modify the object and cannot be called on `const` objects.
 - The `Student` class does not manage any resources, so it does not need to define a destructor, copy constructor, or copy assignment operator. The default ones provided by the compiler are sufficient.
+
 ## 📝 Authors
 
 This section lists the authors who contributed to the different files in the project:
@@ -172,9 +136,11 @@ This section lists the authors who contributed to the different files in the pro
 - `Students.cpp`/`Students.h`: [DEFAULT]
 - `README.md`: Eduardo A. Sosa Torres
 - Made the code runnable in jGrasp: Eduardo A. Sosa Torres
+
 ## 📋[TEMPORARY] To-Do
 
-### Coding Requirements
+### Coding Requirements:
+
 - [✔️] Develop a C++ application that processes content from a Studlist-generated page, saved in a text file, into a CSV format compatible with Excel.
 - [✔️] The application must request additional information not included in the Studlist file (e.g., name of the institution, campus) from the user.
 - [✔️] The application should prompt the user for the name of the input text file and the output CSV file.
@@ -185,8 +151,10 @@ This section lists the authors who contributed to the different files in the pro
   - [✔️] Function Documentation
 
 ### Turnable Requirements:
+
 - [] A single file containing all the program code.
 - [] A video (5-10 minutes, mp4 format) demonstrating the application's functionality, including a walkthrough of the code and examples of executions. The video must have clear voice explanations and legible on-screen text.
 - [] Test files used in the video and for program testing, showcasing the application's capability to load and process data.
 - [] A peer evaluation document as provided by the professor, filled out and submitted individually.
 - [] All files (code, video, tests, peer evaluation) must be named according to the format COMP3800MemberCpp## and compressed into a single folder for submission.
+ 
