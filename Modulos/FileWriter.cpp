@@ -8,6 +8,7 @@
 
 #include <fstream>
 #include "FileWriter.h"
+#include "Students.h"
 
 void FileWriter::writeToFile(const std::vector<Student>& students, const std::string& filePath, const std::string& header) {
     std::ofstream file(filePath);

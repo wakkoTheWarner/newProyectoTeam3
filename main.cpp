@@ -13,6 +13,10 @@
 #include "Modulos/HeaderMaker.h"
 #include "Modulos/FileReader.h"
 #include "Modulos/FileWriter.h"
+#include "Modulos/FileParser.cpp"
+#include "Modulos/HeaderMaker.cpp"
+#include "Modulos/FileReader.cpp"
+#include "Modulos/FileWriter.cpp"
 
 std::string filePathVerifier(std::string filePath);
 

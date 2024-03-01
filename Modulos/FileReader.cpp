@@ -9,6 +9,7 @@
 #include <fstream>
 #include <sstream>
 #include "FileReader.h"
+#include "Students.h"
 
 std::vector<Student> FileReader::readFile(const std::string& filePath) {
     std::vector<Student> students;

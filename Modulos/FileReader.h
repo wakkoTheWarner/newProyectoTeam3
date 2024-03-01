@@ -13,6 +13,7 @@
 #include <vector>
 #include <string>
 #include "Students.h"
+#include "Students.cpp"
 
 class FileReader {
 public:
