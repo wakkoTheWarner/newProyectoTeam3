@@ -1,4 +1,6 @@
 
+Para la versión en inglés de este documento, haz clic [aquí](README.md).
+
 # Proyecto de Investigación en C++
 
 Este proyecto de C++ es un sistema de registro de estudiantes universitarios. Lee datos de estudiantes de un archivo, los procesa y escribe los datos procesados en otro archivo. Los datos incluyen nombres de estudiantes, IDs, estado de registro, nivel y créditos. Se le pide al usuario que ingrese el nombre de la institución, el campus y el nombre del profesor. Los datos procesados, incluyendo el nombre de la institución, campus, departamento, semestre, nombre del profesor, curso y la tabla de información de los estudiantes, luego se escriben en un nuevo archivo llamado "output.csv".

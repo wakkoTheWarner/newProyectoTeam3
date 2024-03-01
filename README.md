@@ -1,4 +1,6 @@
 
+For the Spanish version of this document, click [here](README_ES.md).
+
 # C++ Investigation Project
 
 This C++ project is a university student registration system. It reads student data from a file, processes it, and writes the processed data to another file. The data includes student names, IDs, registration status, level, and credits. The user is prompted to input the institution's name, campus, and professor's name. The processed data, including the institution's name, campus, department, semester, professor's name, course, and the table of students' information, is then written to a new file named "output.csv".
