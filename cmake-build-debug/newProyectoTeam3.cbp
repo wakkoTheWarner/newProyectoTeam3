@@ -80,21 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/FileParser.h">
-			<Option target="newProyectoTeam3"/>
-		</Unit>
-		<Unit filename="C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/FileReader.h">
-			<Option target="newProyectoTeam3"/>
-		</Unit>
-		<Unit filename="C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/FileWriter.h">
-			<Option target="newProyectoTeam3"/>
-		</Unit>
-		<Unit filename="C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/HeaderMaker.h">
-			<Option target="newProyectoTeam3"/>
-		</Unit>
-		<Unit filename="C:/Users/eduar/CLionProjects/newProyectoTeam3/Modulos/Students.h">
-			<Option target="newProyectoTeam3"/>
-		</Unit>
 		<Unit filename="C:/Users/eduar/CLionProjects/newProyectoTeam3/main.cpp">
 			<Option target="newProyectoTeam3"/>
 		</Unit>
