@@ -72,15 +72,15 @@ CMakeFiles/newProyectoTeam3.dir/main.cpp.obj: CMakeFiles/newProyectoTeam3.dir/fl
 CMakeFiles/newProyectoTeam3.dir/main.cpp.obj: C:/Users/eduar/CLionProjects/newProyectoTeam3/main.cpp
 CMakeFiles/newProyectoTeam3.dir/main.cpp.obj: CMakeFiles/newProyectoTeam3.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\eduar\CLionProjects\newProyectoTeam3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/newProyectoTeam3.dir/main.cpp.obj"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/main.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\main.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\main.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/newProyectoTeam3.dir/main.cpp.obj -MF CMakeFiles\newProyectoTeam3.dir\main.cpp.obj.d -o CMakeFiles\newProyectoTeam3.dir\main.cpp.obj -c C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp
 
 CMakeFiles/newProyectoTeam3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/newProyectoTeam3.dir/main.cpp.i"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp > CMakeFiles\newProyectoTeam3.dir\main.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp > CMakeFiles\newProyectoTeam3.dir\main.cpp.i
 
 CMakeFiles/newProyectoTeam3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/newProyectoTeam3.dir/main.cpp.s"
-	C:\MinGW\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp -o CMakeFiles\newProyectoTeam3.dir\main.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\eduar\CLionProjects\newProyectoTeam3\main.cpp -o CMakeFiles\newProyectoTeam3.dir\main.cpp.s
 
 # Object files for target newProyectoTeam3
 newProyectoTeam3_OBJECTS = \

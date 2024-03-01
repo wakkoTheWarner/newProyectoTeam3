@@ -1,4 +1,4 @@
-ToolSet: 5.0 (local)@C:\MinGW
+ToolSet: 12.0 w64 (local)@C:\msys64\ucrt64
 Options: 
 
 Options:
