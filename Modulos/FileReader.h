@@ -17,6 +17,7 @@
 
 class FileReader {
 public:
+    // Función para leer el archivo y obtener una lista de estudiantes
     std::vector<Student> readFile(const std::string& filePath);
 };
 

@@ -11,17 +11,19 @@
 #include "Students.h"
 
 void FileWriter::writeToFile(const std::vector<Student>& students, const std::string& filePath, const std::string& header) {
+    // Crea un archivo en la ruta proporcionada
     std::ofstream file(filePath);
 
-    // Write the header to the file
+    // Escribe el encabezado en el archivo
     file << header;
 
-    // Write the student data to the file
+    // Escribe los datos del estudiante en el archivo
     for (const Student& student : students) {
         file << "\"" << student.getNum() << "\","
              << "\"" << student.getName() << "\","
              << "\"" << student.getId() << "\"\n";
     }
 
+    // Cierra el archivo
     file.close();
 }
