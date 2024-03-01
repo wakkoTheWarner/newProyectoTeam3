@@ -1,6 +1,5 @@
 /**
- * Objetivo: El código de main() solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita información adicional al
- *           usuario, y finalmente escribe los datos procesados y la información adicional en un archivo de salida.
+ * Objetivo: El código de main() solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita información adicional al usuario, y finalmente escribe los datos procesados y la información adicional en un archivo de salida.
  *
  * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de entrada cuando se le solicite. Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.
  *                 El archivo de entrada debe existir en la ruta proporcionada y debe ser legible.
@@ -8,6 +7,17 @@
  *
  * Postcondiciones: Se crea un archivo de salida en la ruta especificada con los datos procesados y la información adicional.
  *                  Si el archivo de entrada no se puede abrir, el programa termina con un mensaje de error.
+ *
+ * Descripción de argumentos:
+ *                 `filePath`: Una cadena que representa la ruta del archivo de entrada. Se solicita al usuario que introduzca esta ruta.
+ *                 `nombreInstitucion`: Una cadena que representa el nombre de la institución. Se solicita al usuario que introduzca esta información.
+ *                 `recinto`: Una cadena que representa el campus. Se solicita al usuario que introduzca esta información.
+ *                 `departamento`: Una cadena que representa el departamento. Se solicita al usuario que introduzca esta información.
+ *                 `profesor`: Una cadena que representa el nombre del profesor. Se solicita al usuario que introduzca esta información.
+ *                 `outputFilePath`: Una cadena que representa la ruta del archivo de salida. Se solicita al usuario que introduzca esta ruta.
+ *
+ * Descripción de argumentos:
+ *
  *
  * Autor: Eduardo A. Sosa Torres
  * Fecha de finalización: 29-02-2024
@@ -96,16 +106,17 @@ int main() {
 }
 
 /**
- * Objetivo: Esta función verifica y ajusta la ruta del archivo proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta
- *           predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona
- *           una ruta completa sin la extensión .txt, se añade la extensión.
+ * Objetivo: Esta función verifica y ajusta la ruta del archivo proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .txt, se añade la extensión.
  *
- * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo. Esta cadena puede estar vacía, contener solo el
- *                 nombre del archivo o la ruta completa del archivo.
+ * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo.
+ *                 Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.
  *
  * Postcondiciones: La función devuelve una cadena de texto que representa la ruta completa del archivo con la extensión .txt.
-                    Si la ruta del archivo proporcionada por el usuario contiene comillas dobles, estas se eliminan.
-
+ *                  Si la ruta del archivo proporcionada por el usuario contiene comillas dobles, estas se eliminan.
+ *
+ * Descripción de argumentos:
+ *
+ *
  * Autor: Eduardo A. Sosa Torres
  * Fecha de finalización: 29-02-2024
  **/
@@ -138,15 +149,16 @@ std::string filePathVerifier(std::string filePath) {
 }
 
 /**
- * Objetivo: Esta función verifica y ajusta la ruta del archivo de salida proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta
- *           predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona
- *           una ruta completa sin la extensión .csv, se añade la extensión.
+ * Objetivo: Esta función verifica y ajusta la ruta del archivo de salida proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .csv, se añade la extensión.
  *
- * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de salida. Esta cadena puede estar vacía, contener solo el
- *                 nombre del archivo o la ruta completa del archivo.
+ * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de salida.
+ *                 Esta cadena puede estar vacía, contener solo el ombre del archivo o la ruta completa del archivo.
  *
  * Postcondiciones: La función devuelve una cadena de texto que representa la ruta completa del archivo de salida con la extensión .csv.
  *                  Si la ruta del archivo de salida proporcionada por el usuario contiene comillas dobles, estas se eliminan.
+ *
+ * Descripción de argumentos:
+ *
  *
  * Autor: Eduardo A. Sosa Torres
  * Fecha de finalización: 29-02-2024

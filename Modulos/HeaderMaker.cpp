@@ -2,6 +2,7 @@
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
+ * Descripción de argumentos:
  * Autor:
  * Fecha de finalización:
  **/

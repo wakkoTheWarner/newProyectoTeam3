@@ -10,6 +10,17 @@
  *                  Los métodos `get` devuelven el valor actual del atributo correspondiente.
  *                  Los métodos `set` actualizan el valor del atributo correspondiente.
  *
+ * Descripción de argumentos:
+ *                 num: Un entero que representa el número del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getNum y setNum.
+ *                 name: Una cadena que representa el nombre del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getName y setName.
+ *                 studentId: Una cadena que representa la ID del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getId y setId.
+ *                 registrationStatus: Una cadena que representa el estado de registro del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getRegistrationStatus y setRegistrationStatus.
+ *                 level: Una cadena que representa el nivel del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getLevel y setLevel.
+ *                 credits: Una cadena que representa los créditos del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getCredits y setCredits.
+ *                 midterm: Una cadena que representa la calificación de mitad de período del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getMidterm y setMidterm.
+ *                 final: Una cadena que representa la calificación final del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getFinal y setFinal.
+ *                 gradeDetail: Una cadena que representa los detalles de la calificación del estudiante. Este es tanto un parámetro para el constructor como el sujeto de los métodos getGradeDetail y setGradeDetail.
+ *
  * Autor: Eduardo A. Sosa Torres
  * Fecha de finalización: 28-02-2024
  **/

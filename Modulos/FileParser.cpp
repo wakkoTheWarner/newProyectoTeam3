@@ -2,6 +2,7 @@
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
+ * Descripción de argumentos:
  * Autor:
  * Fecha de finalización:
  **/
@@ -71,6 +72,7 @@ FileParser::CourseInfo FileParser::parseFile(const std::string& filePath) {
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
+ * Descripción de argumentos:
  * Autor:
  * Fecha de finalización:
  **/
@@ -114,6 +116,7 @@ std::string FileParser::modifyDuration(std::string duration) {
  * Objetivo:
  * Precondiciones:
  * Postcondiciones:
+ * Descripción de argumentos:
  * Autor:
  * Fecha de finalización:
  **/
