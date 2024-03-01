@@ -2,7 +2,8 @@
  * Objetivo: El código de main() solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita información adicional al
  *           usuario, y finalmente escribe los datos procesados y la información adicional en un archivo de salida.
  *
- * Precondiciones: El archivo de entrada debe existir en la ruta proporcionada y debe ser legible.
+ * Precondiciones: El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de entrada cuando se le solicite. Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.
+ *                 El archivo de entrada debe existir en la ruta proporcionada y debe ser legible.
  *                 El usuario debe proporcionar información válida cuando se le solicite.
  *
  * Postcondiciones: Se crea un archivo de salida en la ruta especificada con los datos procesados y la información adicional.
