@@ -97,7 +97,7 @@ Para una guía visual sobre cómo configurar el entorno de Visual Studio Code y 
 
 ## 🔧Uso
 
-## Cómo Usar
+### Cómo Usar
 
 Este programa está diseñado para procesar datos de estudiantes de un archivo de texto y exportarlos en formato CSV. Aquí están los pasos para usar este programa:
 

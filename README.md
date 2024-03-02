@@ -95,7 +95,7 @@ For a visual guide on setting up the jGrasp environment and running a C++ file, 
 For a visual guide on setting up the Visual Studio Code environment and running a C++ file, you can watch this [YouTube video](https://www.youtube.com/watch?v=DMWD7wfhgNY).
 ## 🔧Usage
 
-## How to Use
+### How to Use
 
 This program is designed to process student data from a text file and output it in a CSV format. Here are the steps to use this program:
 
