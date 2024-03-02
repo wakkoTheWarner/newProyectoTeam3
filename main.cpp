@@ -287,15 +287,15 @@ std::string filePathVerifier(std::string filePath) {
 std::string outputFilePathVerifier(std::string outputFilePath) {
     // Si el usuario no ha proporcionado una ruta, usar la ruta predeterminada.
     if (outputFilePath.empty()) {
-        outputFilePath = "../Resources/Output/ejemploDatos.csv";
+        outputFilePath = "./Resources/Output/ejemploDatos.csv";
     }
         // Si el usuario solo ha proporcionado un nombre de archivo, anteponer la ruta del directorio predeterminado
     else if (outputFilePath.find('/') == std::string::npos && outputFilePath.find('\\') == std::string::npos) {
         // Si el nombre del archivo no tiene la extensión .csv, añadirla
         if (outputFilePath.find(".csv") == std::string::npos) {
-            outputFilePath = "../Resources/Output/" + outputFilePath + ".csv";
+            outputFilePath = "./Resources/Output/" + outputFilePath + ".csv";
         } else {
-            outputFilePath = "../Resources/Output/" + outputFilePath;
+            outputFilePath = "./Resources/Output/" + outputFilePath;
         }
     } else {
         // Si el usuario ha proporcionado una ruta completa sin la extensión .csv, añadirla
