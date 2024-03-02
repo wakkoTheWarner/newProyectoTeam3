@@ -361,12 +361,19 @@ std::vector<Student> FileReader::readFile(const std::string& filePath) {
 /* -- Empieza FileParser Class -- */
 
 /**
- * Objetivo:
- * Precondiciones:
- * Postcondiciones:
+ * Objetivo: Esta función se utiliza para analizar un archivo y extraer información relevante del curso. La información extraída incluye el nombre del curso, el número de registro del curso (CRN) y la duración del curso.
+ *
+ * Precondiciones: La función recibe como argumento una cadena de texto que representa la ruta del archivo a analizar.
+ *				   El archivo debe existir en la ruta proporcionada y debe ser legible.
+ *
+ * Postcondiciones: La función devuelve una estructura CourseInfo que contiene la información del curso extraída del archivo.
+ *					Si el archivo no se puede abrir o leer, o si la información del curso no se puede encontrar o extraer correctamente, la función puede no comportarse como se espera.
+ *
  * Descripción de argumentos:
- * Autor:
- * Fecha de finalización:
+ *					`filePath`: Una cadena que representa la ruta del archivo que se va a analizar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.
+ *
+ * Autor: Ian P. Roman
+ * Fecha de finalización: 02-28-2024
  **/
 FileParser::CourseInfo FileParser::parseFile(const std::string& filePath) {
     // Abre el archivo en la ruta proporcionada
@@ -425,12 +432,18 @@ FileParser::CourseInfo FileParser::parseFile(const std::string& filePath) {
 }
 
 /**
- * Objetivo:
- * Precondiciones:
- * Postcondiciones:
+ * Objetivo: Esta función se utiliza para modificar la duración de un curso. La duración se proporciona en el formato "Fecha de inicio - Fecha de finalización", y la función la modifica para que esté en el formato "MES_INICIO-MES_FINAL AÑO". Además, traduce los nombres de los meses al español.
+ *
+ * Precondiciones: La función recibe como argumento una cadena de texto que representa la duración del curso en el formato "Fecha de inicio - Fecha de finalización".
+ *                 Las fechas de inicio y finalización deben estar en el formato "Día Mes, Año".
+ *
+ * Postcondiciones: La función devuelve una cadena de texto que representa la duración del curso en el formato "MES_INICIO-MES_FINAL AÑO".
+ *                  Los nombres de los meses están en español y en mayúsculas.
+ *
  * Descripción de argumentos:
- * Autor:
- * Fecha de finalización:
+ *                  `duration`: Una cadena que representa la duración del curso en el formato "Fecha de inicio - Fecha de finalización". Esta cadena se modifica para que esté en el formato "MES_INICIO-MES_FINAL AÑO" y los nombres de los meses se traducen al español.
+ * Autor: Ian P. Roman
+ * Fecha de finalización: 02-28-2024
  **/
 std::string FileParser::modifyDuration(std::string duration) {
     // Crea un flujo de entrada a partir de la duración
@@ -469,12 +482,18 @@ std::string FileParser::modifyDuration(std::string duration) {
 }
 
 /**
- * Objetivo:
- * Precondiciones:
- * Postcondiciones:
+ * Objetivo: Esta función se utiliza para traducir los nombres de los meses al español. La función recibe un nombre de mes en inglés y devuelve el nombre correspondiente en español.
+ *
+ * Precondiciones: La función recibe como argumento una cadena de texto que representa el nombre de un mes en inglés.
+ *
+ * Postcondiciones: La función devuelve una cadena de texto que representa el nombre del mes en español.
+ *                  Si el nombre del mes no coincide con ninguno de los nombres de los meses en inglés, la función devuelve una cadena vacía.
+ *
  * Descripción de argumentos:
- * Autor:
- * Fecha de finalización:
+ *                  `month`: Una cadena que representa el nombre del mes en inglés y en mayúsculas. Esta cadena se traduce al español.
+ *
+ * Autor: Ian P. Roman
+ * Fecha de finalización: 02-28-2024
  **/
 std::string FileParser::monthTranslator(std::string month) {
     // Si el mes es "JAN", devuelve "ENERO"

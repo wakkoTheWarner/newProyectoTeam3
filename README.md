@@ -93,18 +93,24 @@ For a visual guide on setting up the jGrasp environment and running a C++ file, 
 4. **Run the code**: Click `Run or Debug...` on the top right corner, click Run and select `C/C++: g++ from C:\msys64\mingw64\bin\g++.exe` to build the code. This will create an executable file in the same directory as your source code as well as run it (might have to run it 2 times).
 
 For a visual guide on setting up the Visual Studio Code environment and running a C++ file, you can watch this [YouTube video](https://www.youtube.com/watch?v=DMWD7wfhgNY).
-
 ## 🔧Usage
+
+## How to Use
 
 This program is designed to process student data from a text file and output it in a CSV format. Here are the steps to use this program:
 
-1. **Compile and Run the Program**: First, compile the `main.cpp` file and run the resulting executable. This will start the program.
+1. **Compile and Run the Program**: To start the program, you have two options based on your development environment:
 
-   Example:
-   ```bash
-   g++ main.cpp -o main
-   ./main
-   ```
+   - If using a command-line interface (CLI), first compile the `main.cpp` file and then run the resulting executable with the following commands:
+
+     Example:
+     ```bash
+     g++ main.cpp -o main
+     ./main
+     ```
+
+   - Alternatively, if using an Integrated Development Environment (IDE) like jGrasp, simply click on the **Compile and Link** button, then the **Run** button.
+
 
 2. **Input File Path**: The program will first ask you to enter the path of the input text file. This file should contain the student data that you want to process. You can enter just the file name if the file is in the same directory as the program, or the full path to the file. If the file has a `.txt` extension, you can include it, but if you don't, the program will automatically add it for you.
 
@@ -139,106 +145,14 @@ This program is designed to process student data from a text file and output it 
 
 Please note that this program assumes that the input file is formatted correctly and that all the data is valid. If the program encounters an error while reading the file, it will print an error message and terminate.
 
-## 📕main.cpp
-
-### Objective
-
-The main function of this program is to process a student list from a text file and convert it into a CSV format compatible with Excel. The program prompts the user for the input file path, reads and processes the data from the file, requests additional information from the user, and finally writes the processed data and additional information to an output file.
-
-### Pre-conditions
-
-- The user must provide a valid file path for the input file when prompted. This can be an empty string, a file name, or a full file path.
-- The input file must exist at the provided path and must be readable.
-- The user must provide valid additional information when prompted.
-
-### Post-conditions
-
-- An output file is created at the specified path with the processed data and additional information.
-- If the input file cannot be opened, the program terminates with an error message.
-
-### Description of each argument
-
-- `filePath`: A string that represents the path of the input file. The user is prompted to enter this path.
-- `nombreInstitucion`: A string that represents the name of the institution. The user is prompted to enter this information.
-- `recinto`: A string that represents the campus. The user is prompted to enter this information.
-- `departamento`: A string that represents the department. The user is prompted to enter this information.
-- `profesor`: A string that represents the professor's name. The user is prompted to enter this information.
-- `outputFilePath`: A string that represents the path of the output file. The user is prompted to enter this path.
-
-### Additional Information
-
-- The function uses several helper functions and classes to read and process the data from the input file, create the header for the output file, and write the data to the output file.
-- The function verifies the file paths provided by the user and adjusts them as necessary.
-- The function checks if the input file can be opened and terminates with an error message if it cannot.
-- The function informs the user when the data has been exported to the output file.
-
-## 📕Students.cpp
-
-### Objective
-
-The selected code represents the implementation of the `Student` class in C++. This class is used to represent a student with various attributes such as number, name, student ID, registration status, level, credits, midterm grade, final grade, and grade details. It provides methods to get and set these attributes.
-
-### Pre-conditions
-
-- For the `Student` constructor, all provided parameters must be valid and non-null.
-- For the `set` methods, the provided values must be valid and non-null.
-
-### Post-conditions
-
-- After construction, a `Student` object is created with the provided attributes.
-- The `get` methods return the current value of the corresponding attribute.
-- The `set` methods update the value of the corresponding attribute.
-
-### Description of each argument
-
-- `num`: An integer that represents the student's number. This is both a parameter for the constructor and the subject of the `getNum` and `setNum` methods.
-- `name`: A string that represents the student's name. This is both a parameter for the constructor and the subject of the `getName` and `setName` methods.
-- `studentId`: A string that represents the student's ID. This is both a parameter for the constructor and the subject of the `getId` and `setId` methods.
-- `registrationStatus`: A string that represents the student's registration status. This is both a parameter for the constructor and the subject of the `getRegistrationStatus` and `setRegistrationStatus` methods.
-- `level`: A string that represents the student's level. This is both a parameter for the constructor and the subject of the `getLevel` and `setLevel` methods.
-- `credits`: A string that represents the student's credits. This is both a parameter for the constructor and the subject of the `getCredits` and `setCredits` methods.
-- `midterm`: A string that represents the student's midterm grade. This is both a parameter for the constructor and the subject of the `getMidterm` and `setMidterm` methods.
-- `final`: A string that represents the student's final grade. This is both a parameter for the constructor and the subject of the `getFinal` and `setFinal` methods.
-- `gradeDetail`: A string that represents the student's grade details. This is both a parameter for the constructor and the subject of the `getGradeDetail` and `setGradeDetail` methods.
-
-### Additional Information
-
-- The `Student` class is a simple data class with no behavior beyond storing and retrieving its attributes.
-- The `get` methods are all `const`, meaning they do not modify the object and can be called on `const` objects.
-- The `set` methods are not `const`, meaning they modify the object and cannot be called on `const` objects.
-- The `Student` class does not manage any resources, so it does not need to define a destructor, copy constructor, or copy assignment operator. The default ones provided by the compiler are sufficient.
-
 ## 📝 Authors
 
 This section lists the authors who contributed to the different files in the project:
 
 - `main.cpp`: Eduardo A. Sosa Torres
-- `FileParser.cpp`/`FileParser.h`: [DEFAULT]
-- `FileReader.cpp`/`FileReader.h`: [DEFAULT]
-- `FileWriter.cpp`/`FileWriter.h`: [DEFAULT]
-- `HeaderMaker.cpp`/`HeaderMaker.h`: [DEFAULT]
-- `Students.cpp`/`Students.h`: [DEFAULT]
+- `FileParser`: Ian P. Roman
+- `FileReader`: [DEFAULT]
+- `FileWriter`: Javier Santos Babilonia
+- `HeaderMaker`: [DEFAULT]
+- `Students`: Eduardo A. Sosa Torres
 - `README.md`: Eduardo A. Sosa Torres
-- Made the code runnable in jGrasp: Eduardo A. Sosa Torres
-
-## 📋[TEMPORARY] To-Do
-
-### Coding Requirements:
-
-- [✔️] Develop a C++ application that processes content from a Studlist-generated page, saved in a text file, into a CSV format compatible with Excel.
-- [✔️] The application must request additional information not included in the Studlist file (e.g., name of the institution, campus) from the user.
-- [✔️] The application should prompt the user for the name of the input text file and the output CSV file.
-- [✔️] Ensure the application can handle any number of student records, from 1 to many.
-- [] The program must be well-documented, with detailed comments on functions and methods, including objective, pre-conditions, post-conditions, argument descriptions, author, and date of completion.
-  - [] Word Documentation
-  - [✔️] Comment Documentation
-  - [✔️] Function Documentation
-
-### Turnable Requirements:
-
-- [] A single file containing all the program code.
-- [] A video (5-10 minutes, mp4 format) demonstrating the application's functionality, including a walkthrough of the code and examples of executions. The video must have clear voice explanations and legible on-screen text.
-- [] Test files used in the video and for program testing, showcasing the application's capability to load and process data.
-- [] A peer evaluation document as provided by the professor, filled out and submitted individually.
-- [] All files (code, video, tests, peer evaluation) must be named according to the format COMP3800MemberCpp## and compressed into a single folder for submission.
- 
