@@ -2,6 +2,18 @@
 	"entries" : 
 	[
 		{
+			"name" : "BUILD_GMOCK",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "OFF"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -43,7 +55,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : "Release"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -55,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/eduar/CLionProjects/newProyectoTeam3/cmake-build-debug"
+			"value" : "c:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-release"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -643,7 +655,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/eduar/CLionProjects/newProyectoTeam3/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-release/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -715,7 +727,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/eduar/CLionProjects/newProyectoTeam3"
+			"value" : "C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -947,7 +959,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "newProyectoTeam3"
+			"value" : "COMP3800ProyectoCpp03"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1342,6 +1354,42 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "COMP3800ProyectoCpp03_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-release"
+		},
+		{
+			"name" : "COMP3800ProyectoCpp03_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "COMP3800ProyectoCpp03_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03"
+		},
+		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
 			"properties" : 
 			[
@@ -1354,6 +1402,18 @@
 			"value" : "TRUE"
 		},
 		{
+			"name" : "gtest_force_shared_crt",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "on"
+		},
+		{
 			"name" : "newProyectoTeam3_BINARY_DIR",
 			"properties" : 
 			[
@@ -1363,7 +1423,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/eduar/CLionProjects/newProyectoTeam3/cmake-build-debug"
+			"value" : "C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-release"
 		},
 		{
 			"name" : "newProyectoTeam3_IS_TOP_LEVEL",
@@ -1387,7 +1447,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/eduar/CLionProjects/newProyectoTeam3"
+			"value" : "C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03"
 		}
 	],
 	"kind" : "cache",

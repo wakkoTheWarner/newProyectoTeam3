@@ -612,12 +612,23 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
 /* -- Empieza FileWriter Class -- */
 
 /**
- * Objetivo:
- * Precondiciones:
- * Postcondiciones:
+ * Objetivo: La clase FileWriter se utiliza para crear un archivo de texto en formato CSV (valores separados por comas), en el cual se escriben datos de estudiantes. Estos datos incluyen sus nombres, el número que se les asigna y su identificación. Esto simplifica el proceso de escribir datos en los archivos.
+ *
+ * Precondiciones: El vector 'students' debe estar compuesto de datos válidos relacionados a la clase Student.
+ *                 La función de 'filePath' debe representar la ruta del archivo donde los datos serán escritos.
+ *                 El 'header' debe representar el encabezado que tendrá el archivo al inicio.
+ *
+ * Postcondiciones: Cuando se crea un archivo, este tiene que estar contenido en la ruta que se especificó en el 'filePath'.
+ *                  Los datos en el archivo deben estar escritos en el formato CSV.
+ *                  El encabezado debe estar colocado al inicio del archivo.
+ *                  El archivo debe cerrarse después de ingresar todos los datos.
+ *
  * Descripción de argumentos:
- * Autor:
- * Fecha de finalización:
+ *                  'students': Un vector de objetos relacionados a los objetos de la clase Student que contiene los datos de los estudiantes que se escribirán en el archivo.
+ *                  'filePath': Una cadena que representa la ruta del archivo donde los datos serán escritos.
+ *                  'header': Una cadena que representa el encabezado que se escribirá al inicio del archivo. Este encabezado puede contener información como nombres de columnas para los diferentes tipos de información que tendrá el archivo sobre los estudiantes.
+ * Autor: Javier Santos Babilonia
+ * Fecha de finalización: 01-03-2024
  **/
 void FileWriter::writeToFile(const std::vector<Student>& students, const std::string& filePath, const std::string& header) {
     // Crea un archivo en la ruta proporcionada

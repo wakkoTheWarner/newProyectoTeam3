@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.27)
-project(newProyectoTeam3)
+project(COMP3800ProyectoCpp03)
 
 set(CMAKE_CXX_STANDARD 17)
 
