@@ -23,6 +23,10 @@
                 color: #262626;
                 margin-left: 20px;
             }
+            #codeExplorer h3 ~ *:not(h2, h3) {
+                color: #262626;
+                margin-left: 50px;
+            }
             body :not(p):not(li) > code {
                 display: block;
                 background-color: #f4f4f4;
@@ -80,6 +84,10 @@
                 margin-left: 340px;
                 padding: 40px;
             }
+            #codeExplorer {
+                margin-left: 340px;
+                padding: 20px;
+            }
 
             /* Dark Mode Toggle */
             #dark-mode-toggle {
@@ -126,7 +134,7 @@
                 background-color: #1e1e1e;
                 color: #fff;
             }
-            .dark-mode #content {
+            .dark-mode #content, .dark-mode #codeExplorer {
                 background-color: #1e1e1e;
                 color: #fff;
             }
@@ -143,25 +151,28 @@
                 background-color: #262626;
                 color: #fff;
             }
-            /* Collapse Table of Content, minimize content padding, and make text smaller after a certain screen size (phone screen size). Also fix codes not wrapping */
+            .dark-mode #codeExplorer p {
+                color: #fff;
+            }
+
             @media (max-width: 768px) {
                 #toc {
                     display: none;
                 }
-                #content {
+                #content, #codeExplorer {
                     margin-left: 20px;
                     padding: 20px;
                 }
-                #content h1 {
+                #content h1, #codeExplorer h1{
                     font-size: 2em;
                 }
-                #content h2 {
+                #content h2, #codeExplorer h2 {
                     font-size: 1.5em;
                 }
-                #content h3 {
+                #content h3, #codeExplorer h3 {
                     font-size: 1.25em;
                 }
-                #content p, #content li {
+                #content p, #content li, #codeExplorer p, #codeExplorer li{
                     font-size: 0.95em;
                 }
             }
@@ -209,6 +220,23 @@
             <li><a class="h2Tag" href="#📋características">📋 Características</a></li>
             <li><a class="h2Tag" href="#📦estructura-del-código">📦 Estructura del Código</a></li>
             <li><a class="h2Tag" href="#📝-autores">📝 Autores</a></li>
+        </ul>
+        <hr>
+        <ul>
+            <li><a class="h2Tag" href="#main">📚main</a></li>
+                <ul>
+                    <li><a href="#filePathVerifier">filePathVerifier()</a></li>
+                    <li><a href="#outputFilePathVerifier">outputFilePathVerifier()</a></li>
+                </ul>
+            <li><a class="h2Tag" href="#FileParser">📕FileParser</a></li>
+            <ul>
+                <li><a href="#modifyDuration">modifyDuration()</a></li>
+                <li><a href="#monthTranslator">monthTranslator()</a></li>
+            </ul>
+            <li><a class="h2Tag" href="#FileReader">📕FileReader</a></li>
+            <li><a class="h2Tag" href="#HeaderMaker">📕HeaderMaker</a></li>
+            <li><a class="h2Tag" href="#FileWriter">📕FileWriter</a></li>
+            <li><a class="h2Tag" href="#Student">📕Student</a></li>
         </ul>
     </div>
     <div id="content">
@@ -441,6 +469,189 @@ Profesor: John Doe
             <li><code>Students</code>: Eduardo A. Sosa Torres</li>
             <li><code>README.md</code>: Eduardo A. Sosa Torres</li>
         </ul>
+    </div>
+    <div id="codeExplorer">
+        <h1>Documentación Completa del Código y Visión General de la Funcionalidad</h1>
+        <p>
+            Este documento proporciona una descripción detallada de la estructura y el funcionamiento del código fuente del proyecto. Se divide en varias secciones, cada una de las cuales describe un componente clave del proyecto y su funcionalidad. Las secciones incluyen una descripción general del componente, sus objetivos, precondiciones, postcondiciones, descripción de los argumentos, autor y fecha de finalización.
+        </p>
+        <h2 class="collapsable" id="main">📚main</h2>
+        <p><strong>Objetivo:</strong> La función <code>main()</code> solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita información adicional al usuario y, finalmente, escribe los datos procesados y la información adicional en un archivo de salida.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de entrada cuando se le solicite. Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+            <li>El archivo de entrada debe existir en la ruta proporcionada y ser legible.</li>
+            <li>El usuario debe proporcionar información válida cuando se le solicite.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>Se crea un archivo de salida en la ruta especificada con los datos procesados y la información adicional.</li>
+            <li>Si el archivo de entrada no puede abrirse, el programa termina con un mensaje de error.</li>
+        </ul>
+        <p><strong>Descripción de los Argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo de entrada. Se solicita al usuario que introduzca esta ruta.</li>
+            <li><code>nombreInstitucion</code>: Una cadena que representa el nombre de la institución. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>recinto</code>: Una cadena que representa el campus. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>departamento</code>: Una cadena que representa el departamento. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>profesor</code>: Una cadena que representa el nombre del profesor. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>outputFilePath</code>: Una cadena que representa la ruta del archivo de salida. Se solicita al usuario que introduzca esta ruta.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
+        <h3 id="filePathVerifier">filePathVerifier()</h3>
+        <p><strong>Objetivo:</strong> Esta función verifica y ajusta la ruta del archivo proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .txt, se añade la extensión.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo.</li>
+            <li>Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa la ruta completa del archivo con la extensión .txt.</li>
+            <li>Si la ruta del archivo proporcionada por el usuario contiene comillas dobles, estas se eliminan.</li>
+        </ul>
+        <p><strong>Descripción de los Argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
+        <h3 id="outputFilePathVerifier">outputFilePathVerifier()</h3>
+        <p><strong>Objetivo:</strong> Esta función verifica y ajusta la ruta del archivo de salida proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .csv, se añade la extensión.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de salida.</li>
+            <li>Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa la ruta completa del archivo de salida con la extensión .csv.</li>
+            <li>Si la ruta del archivo de salida proporcionada por el usuario contiene comillas dobles, estas se eliminan.</li>
+        </ul>
+        <p><strong>Descripción de los Argumentos:</strong></p>
+        <ul>
+            <li><code>outputFilePath</code>: Una cadena que representa la ruta del archivo de salida que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
+        <h2 class="collapsable" id="FileParser">📕FileParser</h2>
+        <p><strong>Objetivo:</strong> Esta función se utiliza para analizar un archivo y extraer información relevante del curso, incluyendo el nombre del curso, el número de registro del curso (CRN) y la duración del curso.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>La función recibe como argumento una cadena de texto que representa la ruta del archivo a analizar.</li>
+            <li>El archivo debe existir en la ruta proporcionada y debe ser legible.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una estructura <code>CourseInfo</code> que contiene la información del curso extraída del archivo.</li>
+            <li>Si el archivo no se puede abrir o leer, o si la información del curso no se puede encontrar o extraer correctamente, la función puede no comportarse como se espera.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a analizar.</li>
+        </ul>
+        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
+        <h3 id="modifyDuration">modifyDuration</h3>
+        <p><strong>Objetivo:</strong> Esta función se utiliza para modificar la duración de un curso, traduciendo los nombres de los meses al español y ajustando el formato a &quot;MES_INICIO-MES_FINAL AÑO&quot;.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>La función recibe como argumento una cadena de texto que representa la duración del curso en el formato &quot;Fecha de inicio - Fecha de finalización&quot;.</li>
+            <li>Las fechas de inicio y finalización deben estar en el formato &quot;Día Mes, Año&quot;.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa la duración del curso en el formato &quot;MES_INICIO-MES_FINAL AÑO&quot;.</li>
+            <li>Los nombres de los meses están en español y en mayúsculas.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>duration</code>: Una cadena que representa la duración del curso en el formato original, que se modifica al formato deseado con los meses en español.</li>
+        </ul>
+        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
+        <h3 id="monthTranslator">monthTranslator</h3>
+        <p><strong>Objetivo:</strong> Esta función se utiliza para traducir los nombres de los meses al español, recibiendo un nombre de mes en inglés y devolviendo el correspondiente en español.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>La función recibe como argumento una cadena de texto que representa el nombre de un mes en inglés.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa el nombre del mes en español.</li>
+            <li>Si el nombre del mes no coincide con ninguno de los nombres de los meses en inglés, la función devuelve una cadena vacía.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>month</code>: Una cadena que representa el nombre del mes en inglés, que se traduce al español.</li>
+        </ul>
+        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
+        <h2 class="collapsable" id="FileReader">📕FileReader</h2>
+        <p><strong>Objetivo:</strong> La clase <code>FileReader</code> se utiliza para leer un archivo de texto en formato CSV (valores separados por comas) y extraer datos de estudiantes. Estos datos incluyen el número de estudiante, el nombre, la identificación del estudiante, el estado de registro, el nivel, los créditos, la calificación de mitad de período, la calificación final y los detalles de la calificación.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El archivo debe existir en la ruta proporcionada y debe ser legible.</li>
+            <li>El archivo debe estar en formato CSV.</li>
+            <li>Los datos en el archivo deben estar en el formato correcto, ser válidos y estar en el orden correcto.</li>
+            <li>Los datos en el archivo deben estar separados por comas y rodeados por comillas dobles.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve un vector de objetos relacionados a los de la clase <code>Student</code> que contiene los datos de los estudiantes.</li>
+            <li>Si el archivo no se puede abrir o leer correctamente, o si los datos no se pueden extraer correctamente, la función puede no comportarse como se espera.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a leer.</li>
+        </ul>
+        <p><strong>Autor:</strong> Christian J Santiago Rivera<br><strong>Fecha de Finalización:</strong> 03-02-2024</p>
+        <h2 class="collapsable" id="HeaderMaker">📕HeaderMaker</h2>
+        <p><strong>Objetivo:</strong> La clase <code>HeaderMaker</code> se utiliza para crear un encabezado con los datos proporcionados, utilizando valores predeterminados en caso de falta de información.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>Es necesario proporcionar el nombre del curso, el semestre y el CRN. El resto de los datos pueden estar vacíos, ya que se completarán con valores predeterminados.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>Si el nombre del curso, semestre y CRN están vacíos, el programa imprimirá un mensaje de error.</li>
+            <li>Si se proporcionan datos para el resto de los valores, se crearán copias de ellos.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>universityName</code>, <code>campusLocation</code>, <code>departmentName</code>, <code>semester</code>, <code>professorName</code>, <code>courseName</code>, <code>crn</code>: Diversos datos necesarios para la creación del encabezado, con valores predeterminados para algunos si no se proporcionan.</li>
+        </ul>
+        <p><strong>Autor:</strong> Azkaria L. Rosado Rodriguez<br><strong>Fecha de Finalización:</strong> 02-03-2024</p>
+        <h2 class="collapsable" id="FileWriter">📕FileWriter</h2>
+        <p><strong>Objetivo:</strong> La clase <code>FileWriter</code> se utiliza para crear un archivo de texto en formato CSV con datos de estudiantes.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El vector <code>students</code> debe contener datos válidos de la clase <code>Student</code>.</li>
+            <li><code>filePath</code> debe representar la ruta del archivo de salida.</li>
+            <li><code>header</code> debe representar el encabezado del archivo.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>El archivo creado se encuentra en la ruta especificada.</li>
+            <li>Los datos están en formato CSV y el encabezado al inicio del archivo.</li>
+            <li>El archivo se cierra después de escribir todos los datos.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>students</code>, <code>filePath</code>, <code>header</code>: Parámetros necesarios para la creación del archivo, incluyendo los datos de los estudiantes y la ruta del archivo.</li>
+        </ul>
+        <p><strong>Autor:</strong> Javier Santos Babilonia<br><strong>Fecha de Finalización:</strong> 01-03-2024</p>
+        <h2 class="collapsable" id="Student">📕Student</h2>
+        <p><strong>Objetivo:</strong> La clase <code>Student</code> representa a un estudiante con varios atributos relevantes y proporciona métodos para manipular estos atributos.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>Para el constructor y los métodos <code>set</code>, todos los valores proporcionados deben ser válidos.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>Se crea un objeto <code>Student</code> con los atributos especificados.</li>
+            <li>Los métodos <code>get</code> y <code>set</code> permiten leer y modificar los atributos, respectivamente.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>num</code>, <code>name</code>, <code>studentId</code>, <code>registrationStatus</code>, <code>level</code>, <code>credits</code>, <code>midterm</code>, <code>final</code>, <code>gradeDetail</code>: Atributos del estudiante que pueden ser obtenidos o establecidos a través de los métodos de la clase.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 28-02-2024</p>
     </div>
     </body>
 </html>
