@@ -1,4 +1,3 @@
 C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-debug/CMakeFiles/main.dir
-C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-debug/CMakeFiles/test.dir
 C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/eduar/CLionProjects/COMP3800ProyectoCpp03/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -78,7 +78,79 @@
                 margin-left: 340px;
                 padding: 40px;
             }
+
+            /* Dark Mode Toggle */
+            #dark-mode-toggle {
+                position: fixed;
+                right: 20px;
+                top: 20px;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #dark-mode-toggle:hover {
+                background-color: #0056b3;
+            }
+            .dark-mode #dark-mode-toggle {
+                background-color: #f4f4f4;
+                color: #000;
+            }
+            .dark-mode #dark-mode-toggle:hover {
+                background-color: #ccc;
+            }
+
+            /* Dark Mode Table of Contents */
+            .dark-mode #toc h2 {
+                color: #fff;
+            }
+            .dark-mode #toc {
+                background-color: #262626;
+            }
+            .dark-mode #toc ul li a {
+                color: #fff;
+            }
+            .dark-mode #toc ul li a:hover {
+                color: #007bff;
+            }
+            .dark-mode #toc .h2Tag {
+                color: #fff;
+            }
+
+            /* Dark Mode Content */
+            * .dark-mode {
+                background-color: #1e1e1e;
+                color: #fff;
+            }
+            .dark-mode #content {
+                background-color: #1e1e1e;
+                color: #fff;
+            }
+            .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p, .dark-mode li {
+                color: #fff;
+            }
+            .dark-mode a {
+                color: #007bff;
+            }
+            .dark-mode a:hover {
+                color: #00a0ff;
+            }
+            .dark-mode code {
+                background-color: #262626;
+                color: #fff;
+            }
+
         </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const darkModeToggle = document.getElementById('dark-mode-toggle');
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                });
+            });
+        </script>
     </head>
     <body>
     <div id="toc">
@@ -108,6 +180,7 @@
         </ul>
     </div>
     <div id="content">
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
         <h1 id="proyecto-de-investigación-en-c">Proyecto de Investigación en C++</h1>
         <p>Este proyecto en C++ es un sistema de registro de estudiantes universitarios. Lee los datos de los estudiantes de un archivo, los procesa y escribe los datos procesados en otro archivo. Los datos incluyen nombres de los estudiantes, ID, estado de registro, nivel y créditos. Se le solicita al usuario que ingrese el nombre de la institución, el campus y el nombre del profesor. Los datos procesados, incluyendo el nombre de la institución, campus, departamento, semestre, nombre del profesor, curso y la tabla de información de los estudiantes, se escriben entonces en un nuevo archivo llamado &quot;output.csv&quot;.</p>
         <h2 class="collapsable" id="🛠️-instalación">🛠️ Instalación</h2>
@@ -222,12 +295,12 @@ Profesor: John Doe
             </li>
             <li><p><strong>Ruta del Archivo de Salida</strong>: Finalmente, el programa te pedirá que ingreses la ruta y el nombre del archivo CSV de salida. Aquí se escribirán los datos procesados. Al igual que con el archivo de entrada, puedes ingresar solo el nombre del archivo si deseas que el archivo se cree en el mismo directorio que el programa, o la ruta completa al archivo. Si el archivo tiene una extensión <code>.csv</code>, puedes incluirla, pero si no, el programa la agregará automáticamente por ti.</p>
                 <p>Ejemplo:</p>
-                <pre><code>Ingresa la ruta y nombre del archivo de salida: ../Resources/Output/student_output.csv
+                <pre><code>Ingresa la ruta y nombre del archivo de salida: ./Resources/Output/student_output.csv
 </code></pre>
             </li>
             <li><p><strong>Revisa la Salida</strong>: Una vez que hayas ingresado toda la información requerida, el programa procesará los datos y los escribirá en el archivo de salida. Luego imprimirá un mensaje diciéndote que los datos han sido exportados. Ahora puedes abrir el archivo de salida para ver los datos procesados.</p>
                 <p>Ejemplo:</p>
-                <pre><code>Los datos se han exportado al archivo ../Resources/Output/student_output.csv
+                <pre><code>Los datos se han exportado al archivo ./Resources/Output/student_output.csv
 </code></pre>
             </li>
         </ol>

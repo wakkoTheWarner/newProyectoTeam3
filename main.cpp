@@ -236,7 +236,7 @@ int main() {
  *                  Si la ruta del archivo proporcionada por el usuario contiene comillas dobles, estas se eliminan.
  *
  * Descripción de argumentos:
- *
+ *                 `filePath`: Una cadena que representa la ruta del archivo que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.
  *
  * Autor: Eduardo A. Sosa Torres
  * Fecha de finalización: 29-02-2024
@@ -279,7 +279,7 @@ std::string filePathVerifier(std::string filePath) {
  *                  Si la ruta del archivo de salida proporcionada por el usuario contiene comillas dobles, estas se eliminan.
  *
  * Descripción de argumentos:
- *
+ *                `outputFilePath`: Una cadena que representa la ruta del archivo de salida que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.
  *
  * Autor: Eduardo A. Sosa Torres
  * Fecha de finalización: 29-02-2024

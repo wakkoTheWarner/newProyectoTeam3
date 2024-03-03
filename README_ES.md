@@ -134,14 +134,14 @@ Este programa está diseñado para procesar datos de estudiantes de un archivo d
 
    Ejemplo:
    ```
-   Ingresa la ruta y nombre del archivo de salida: ../Resources/Output/student_output.csv
+   Ingresa la ruta y nombre del archivo de salida: ./Resources/Output/student_output.csv
    ```
 
 5. **Revisa la Salida**: Una vez que hayas ingresado toda la información requerida, el programa procesará los datos y los escribirá en el archivo de salida. Luego imprimirá un mensaje diciéndote que los datos han sido exportados. Ahora puedes abrir el archivo de salida para ver los datos procesados.
 
    Ejemplo:
    ```
-   Los datos se han exportado al archivo ../Resources/Output/student_output.csv
+   Los datos se han exportado al archivo ./Resources/Output/student_output.csv
    ```
 
 Ten en cuenta que este programa asume que el archivo de entrada está formateado correctamente y que todos los datos son válidos. Si el programa encuentra un error al leer el archivo, imprimirá un mensaje de error y terminará.
