@@ -1,0 +1,26 @@
+Course Information
+MACHINE LEARNING - COMP 7890 0
+CRN:	23456
+Duration:	01 Mar, 2024 - 30 Jul, 2024
+Status:	Open
+
+Enrollment Counts
+  Maximum	Actual	Remaining
+Enrollment:	12	12	0
+Cross List:	0	0	0
+
+Summary Class List
+Record
+Number	Student Name	ID	Reg Status	Level	Credits	Midterm	Final	Grade Detail
+1	SESSA ARCE	Z29854435	** Unregistered **	GRADUATE	6.000	Enter	Enter	Available
+2	LIC. DANIEL CANTÚ	Z27967229	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+3	MARÍA EUGENIA MASCAREÑAS CANALES	Z49603651	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+4	TEODORO MARÍA CRISTINA MACÍAS	Z12803417	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+5	DR. LEONOR SANABRIA	Z16286799	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+6	PORFIRIO ISRAEL ACEVEDO	Z59421910	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+7	PAMELA NATIVIDAD VÁSQUEZ	Z96773680	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+8	LEONEL CARRERO DE LA GARZA	Z79395774	** Unregistered **	GRADUATE	6.000	Enter	Enter	Available
+9	GILBERTO VÉLEZ CANDELARIA	Z72863461	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+10	FABIOLA ARGUELLO ARENAS	Z83116275	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+11	JUANA ARREOLA ROJO	Z27319335	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+12	MINERVA PABLO TERRAZAS	Z40158324	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available

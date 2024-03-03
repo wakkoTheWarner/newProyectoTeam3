@@ -1,0 +1,15 @@
+Course Information
+DATA SCIENCE - COMP 4567 0
+CRN:	56789
+Duration:	01 Jan, 2025 - 30 Apr, 2025
+Status:	Open
+
+Enrollment Counts
+  Maximum	Actual	Remaining
+Enrollment:	1	1	0
+Cross List:	0	0	0
+
+Summary Class List
+Record
+Number	Student Name	ID	Reg Status	Level	Credits	Midterm	Final	Grade Detail
+1	DOLORES LINDA FLORES	Z29842561	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available

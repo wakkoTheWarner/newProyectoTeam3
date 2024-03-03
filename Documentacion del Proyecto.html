@@ -308,7 +308,7 @@ gdb --version
             </li>
             <li><p><strong>Establece el compilador</strong>: Ve a la pestaña <code>Compilador</code>, establece el lenguaje a <code>C++</code>, y en la pestaña <code>Entorno</code>, selecciona <code>g++ genérico</code>. Haz clic en <code>Aplicar</code> y luego en <code>Cerrar</code>.</p>
             </li>
-            <li><p><strong>Ejecuta el código</strong>: En la pestaña <code>Explorar</code> en el lado izquierdo de jGrasp, navega a la ruta de la carpeta del proyecto y abre <code>main.cpp</code>. Haz clic en el icono verde doble <code>+</code> en el encabezado para compilar y enlazar los códigos, luego haz clic en el icono rojo de ejecución para correr el archivo ejecutable <code>main.exe</code>.</p>
+            <li><p><strong>Ejecuta el código</strong>: En la pestaña <code>Explorar</code> en el lado izquierdo de jGrasp, navega a la ruta de la carpeta del proyecto y abre <code>COMP3800NombreCpp03.cpp</code>. Haz clic en el icono verde doble <code>+</code> en el encabezado para compilar y enlazar los códigos, luego haz clic en el icono rojo de ejecución para correr el archivo ejecutable <code>main.exe</code>.</p>
             </li>
         </ol>
         <p>Para una guía visual sobre cómo configurar el entorno de jGrasp y ejecutar un archivo C++, puedes ver este <a href="https://youtu.be/fzOmcmUcl_E?si=7SDH4_e3-i4Be46x&t=253">video de YouTube</a>.</p>
@@ -330,9 +330,9 @@ gdb --version
         <ol>
             <li><p><strong>Compila y Ejecuta el Programa</strong>: Para iniciar el programa, tienes dos opciones basadas en tu entorno de desarrollo:</p>
                 <ul>
-                    <li><p>Si usas una interfaz de línea de comandos (CLI), primero compila el archivo <code>main.cpp</code> y luego ejecuta el ejecutable resultante con los siguientes comandos:</p>
+                    <li><p>Si usas una interfaz de línea de comandos (CLI), primero compila el archivo <code>COMP3800NombreCpp03.cpp</code> y luego ejecuta el ejecutable resultante con los siguientes comandos:</p>
                         <p>Ejemplo:</p>
-                        <pre><code class="language-bash">g++ main.cpp -o main
+                        <pre><code class="language-bash">g++ COMP3800NombreCpp03.cpp -o main
 ./main
 </code></pre>
                     </li>
@@ -368,12 +368,8 @@ Profesor: John Doe
         <h2 class="collapsable" id="📂estructura-de-archivos">📂Estructura de Archivos</h2>
         <p>El proyecto está organizado en una estructura de carpetas simple. Aquí está la estructura de archivos del proyecto:</p>
         <pre><code>Project
-│   CMakeLists.txt
 │   Documentacion del Proyecto.html
-│   main.cpp
-│   main.exe
-│   README.md
-│   README_ES.md
+│   COMP3800NombreCpp03.cpp
 │
 └───Resources
     │
@@ -384,12 +380,8 @@ Profesor: John Doe
         │   student_output.csv
 </code></pre>
         <ul>
-            <li><code>CMakeLists.txt</code>: Archivo de configuración de CMake para compilar el proyecto. No es necesario para compilar y ejecutar el proyecto en jGrasp o Visual Studio Code.</li>
             <li><code>Documentacion del Proyecto.html</code>: Documentación del proyecto en formato HTML.</li>
-            <li><code>main.cpp</code>: Archivo fuente principal del proyecto.</li>
-            <li><code>main.exe</code>: Archivo ejecutable del proyecto.</li>
-            <li><code>README.md</code>: Archivo README en inglés.</li>
-            <li><code>README_ES.md</code>: Archivo README en español.</li>
+            <li><code>COMP3800NombreCpp03.cpp</code>: Archivo fuente principal del proyecto.</li>
             <li><code>Resources</code>: Carpeta que contiene los archivos de datos de entrada y salida.<ul>
                 <li><code>Data</code>: Carpeta que contiene el archivo de datos de entrada.</li>
                 <li><code>Output</code>: Carpeta que contiene el archivo de datos de salida.</li>
@@ -406,7 +398,6 @@ Profesor: John Doe
             <li><strong>Interfaz de Usuario</strong>: El programa solicita al usuario que ingrese información adicional que no está incluida en el archivo de entrada.</li>
             <li><strong>Validación de Datos</strong>: El programa asume que los datos de entrada son válidos y están formateados correctamente.</li>
             <li><strong>Documentación del Proyecto</strong>: El proyecto incluye un archivo de documentación en formato HTML.</li>
-            <li><strong>Soporte de Idiomas</strong>: El proyecto incluye un archivo README en inglés y en español.</li>
             <li><strong>Estructura de Archivos</strong>: El proyecto está organizado en una estructura de carpetas simple.</li>
             <li><strong>Compilación y Ejecución</strong>: El proyecto se puede compilar y ejecutar en jGrasp y Visual Studio Code.</li>
             <li><strong>Configuración de Entorno</strong>: El proyecto incluye instrucciones para instalar MinGW y MinGW w64, así como para configurar el entorno de jGrasp y Visual Studio Code.</li>
@@ -416,7 +407,7 @@ Profesor: John Doe
         <h2 class="collapsable" id="📦estructura-del-código">📦 Estructura del Código</h2>
         <p>El proyecto está estructurado en torno a varios componentes clave, cada uno con un rol específico:</p>
         <ol>
-            <li><p><code>main.cpp</code>: Este es el archivo fuente principal del proyecto. Contiene la función <code>main()</code> que es el punto de entrada del programa. La función <code>main()</code> maneja la interacción del usuario, la lectura y escritura de archivos, y el procesamiento de datos.</p>
+            <li><p><code>COMP3800NombreCpp03.cpp</code>: Este es el archivo fuente principal del proyecto. Contiene la función <code>main()</code> que es el punto de entrada del programa. La función <code>main()</code> maneja la interacción del usuario, la lectura y escritura de archivos, y el procesamiento de datos.</p>
                 <ul>
                     <li><code>filePathValidator()</code>: Esta función valida la ruta del archivo de entrada. Si la ruta es válida, devuelve <code>true</code>, de lo contrario, devuelve <code>false</code>. Si la ruta es inválida, imprime un mensaje de error.</li>
                     <li><code>outputFilePathValidator()</code>: Esta función valida la ruta del archivo de salida. Si la ruta es válida, devuelve <code>true</code>, de lo contrario, devuelve <code>false</code>. Si la ruta es inválida, imprime un mensaje de error.</li>
@@ -457,17 +448,17 @@ Profesor: John Doe
             <li><p><code>FileWriter</code>: Esta clase se utiliza para crear un archivo de texto en formato CSV, donde se escriben los datos de los estudiantes. Esto simplifica el proceso de escritura de datos en archivos.</p>
             </li>
         </ol>
-        <p>Cada uno de estos componentes juega un papel crucial en la funcionalidad general del proyecto. El archivo <code>main.cpp</code> orquesta el proceso, utilizando las otras clases para leer, procesar y escribir datos.</p>
+        <p>Cada uno de estos componentes juega un papel crucial en la funcionalidad general del proyecto. El archivo <code>COMP3800NombreCpp03.cpp</code> orquesta el proceso, utilizando las otras clases para leer, procesar y escribir datos.</p>
         <h2 class="collapsable" id="📝-autores">📝 Autores</h2>
         <p>Esta sección enumera a los autores que contribuyeron a los diferentes archivos en el proyecto:</p>
         <ul>
-            <li><code>main.cpp</code>: Eduardo A. Sosa Torres</li>
+            <li><code>main</code>: Eduardo A. Sosa Torres</li>
             <li><code>FileParser</code>: Ian P. Roman</li>
             <li><code>FileReader</code>: Christian J. Santiago Rivera</li>
             <li><code>FileWriter</code>: Javier Santos Babilonia</li>
             <li><code>HeaderMaker</code>: Azkaria L. Rosado Rodriguez</li>
             <li><code>Students</code>: Eduardo A. Sosa Torres</li>
-            <li><code>README.md</code>: Eduardo A. Sosa Torres</li>
+            <li><code>Documentacion del Proyecto</code>: Eduardo A. Sosa Torres</li>
         </ul>
     </div>
     <div id="codeExplorer">
