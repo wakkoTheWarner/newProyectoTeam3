@@ -177,6 +177,9 @@ int main() {
     // Verificar la ruta del archivo proporcionada por el usuario.
     filePath = filePathVerifier(filePath);
 
+    // Informar al usuario que se ha ingresado la ruta del archivo.
+    std::cout << "Has ingresado: " << filePath << "\n";
+
     // Verificar si el archivo se abrió correctamente.
     std::ifstream ifile;
     ifile.open(filePath);
