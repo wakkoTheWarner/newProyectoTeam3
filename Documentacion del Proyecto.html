@@ -35,6 +35,7 @@
                 background-color: #f4f4f4;
                 padding: 2px 5px;
                 border-radius: 3px;
+                white-space: pre-wrap;
             }
             a {
                 color: #007bff;
@@ -43,6 +44,7 @@
             a:hover {
                 text-decoration: underline;
             }
+            /* Table of Contents */
             #toc {
                 position: fixed;
                 left: 0;
@@ -141,6 +143,28 @@
                 background-color: #262626;
                 color: #fff;
             }
+            /* Collapse Table of Content, minimize content padding, and make text smaller after a certain screen size (phone screen size). Also fix codes not wrapping */
+            @media (max-width: 768px) {
+                #toc {
+                    display: none;
+                }
+                #content {
+                    margin-left: 20px;
+                    padding: 20px;
+                }
+                #content h1 {
+                    font-size: 2em;
+                }
+                #content h2 {
+                    font-size: 1.5em;
+                }
+                #content h3 {
+                    font-size: 1.25em;
+                }
+                #content p, #content li {
+                    font-size: 0.95em;
+                }
+            }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <script>
@@ -181,6 +205,9 @@
                     <li><a href="#cómo-usar">Cómo Usar</a></li>
                 </ul>
             </li>
+            <li><a class="h2Tag" href="#📂estructura-de-archivos">📂 Estructura de Archivos</a></li>
+            <li><a class="h2Tag" href="#📋características">📋 Características</a></li>
+            <li><a class="h2Tag" href="#📦estructura-del-código">📦 Estructura del Código</a></li>
             <li><a class="h2Tag" href="#📝-autores">📝 Autores</a></li>
         </ul>
     </div>
@@ -310,14 +337,107 @@ Profesor: John Doe
             </li>
         </ol>
         <p>Ten en cuenta que este programa asume que el archivo de entrada está formateado correctamente y que todos los datos son válidos. Si el programa encuentra un error al leer el archivo, imprimirá un mensaje de error y terminará.</p>
+        <h2 class="collapsable" id="📂estructura-de-archivos">📂Estructura de Archivos</h2>
+        <p>El proyecto está organizado en una estructura de carpetas simple. Aquí está la estructura de archivos del proyecto:</p>
+        <pre><code>Project
+│   CMakeLists.txt
+│   Documentacion del Proyecto.html
+│   main.cpp
+│   main.exe
+│   README.md
+│   README_ES.md
+│
+Resources
+│
+└───Data
+│   │   student_data.txt
+│
+└───Output
+    │   student_output.csv
+</code></pre>
+        <ul>
+            <li><code>CMakeLists.txt</code>: Archivo de configuración de CMake para compilar el proyecto. No es necesario para compilar y ejecutar el proyecto en jGrasp o Visual Studio Code.</li>
+            <li><code>Documentacion del Proyecto.html</code>: Documentación del proyecto en formato HTML.</li>
+            <li><code>main.cpp</code>: Archivo fuente principal del proyecto.</li>
+            <li><code>main.exe</code>: Archivo ejecutable del proyecto.</li>
+            <li><code>README.md</code>: Archivo README en inglés.</li>
+            <li><code>README_ES.md</code>: Archivo README en español.</li>
+            <li><code>Resources</code>: Carpeta que contiene los archivos de datos de entrada y salida.<ul>
+                <li><code>Data</code>: Carpeta que contiene el archivo de datos de entrada.</li>
+                <li><code>Output</code>: Carpeta que contiene el archivo de datos de salida.</li>
+                <li><code>student_data.txt</code>: Archivo de datos de entrada.</li>
+                <li><code>student_output.csv</code>: Archivo de datos de salida.</li>
+            </ul>
+            </li>
+        </ul>
+        <h2 class="collapsable" id="📋características">📋Características</h2>
+        <ul>
+            <li><strong>Lectura de Archivos</strong>: El programa lee los datos de los estudiantes de un archivo de texto.</li>
+            <li><strong>Procesamiento de Datos</strong>: El programa procesa los datos de los estudiantes y los almacena en una estructura de datos.</li>
+            <li><strong>Escritura de Archivos</strong>: El programa escribe los datos procesados en un archivo CSV.</li>
+            <li><strong>Interfaz de Usuario</strong>: El programa solicita al usuario que ingrese información adicional que no está incluida en el archivo de entrada.</li>
+            <li><strong>Validación de Datos</strong>: El programa asume que los datos de entrada son válidos y están formateados correctamente.</li>
+            <li><strong>Documentación del Proyecto</strong>: El proyecto incluye un archivo de documentación en formato HTML.</li>
+            <li><strong>Soporte de Idiomas</strong>: El proyecto incluye un archivo README en inglés y en español.</li>
+            <li><strong>Estructura de Archivos</strong>: El proyecto está organizado en una estructura de carpetas simple.</li>
+            <li><strong>Compilación y Ejecución</strong>: El proyecto se puede compilar y ejecutar en jGrasp y Visual Studio Code.</li>
+            <li><strong>Configuración de Entorno</strong>: El proyecto incluye instrucciones para instalar MinGW y MinGW w64, así como para configurar el entorno de jGrasp y Visual Studio Code.</li>
+            <li><strong>Uso del Programa</strong>: El proyecto incluye instrucciones sobre cómo usar el programa.</li>
+            <li><strong>Autores</strong>: El proyecto incluye una sección de autores que enumera a los contribuyentes del proyecto.</li>
+        </ul>
+        <h2 class="collapsable" id="📦estructura-del-código">📦 Estructura del Código</h2>
+        <p>El proyecto está estructurado en torno a varios componentes clave, cada uno con un rol específico:</p>
+        <ol>
+            <li><p><code>main.cpp</code>: Este es el archivo fuente principal del proyecto. Contiene la función <code>main()</code> que es el punto de entrada del programa. La función <code>main()</code> maneja la interacción del usuario, la lectura y escritura de archivos, y el procesamiento de datos.</p>
+                <ul>
+                    <li><code>filePathValidator()</code>: Esta función valida la ruta del archivo de entrada. Si la ruta es válida, devuelve <code>true</code>, de lo contrario, devuelve <code>false</code>. Si la ruta es inválida, imprime un mensaje de error.</li>
+                    <li><code>outputFilePathValidator()</code>: Esta función valida la ruta del archivo de salida. Si la ruta es válida, devuelve <code>true</code>, de lo contrario, devuelve <code>false</code>. Si la ruta es inválida, imprime un mensaje de error.</li>
+                </ul>
+            </li>
+            <li><p><code>Student</code>: Esta clase representa a un estudiante con varios atributos como número, nombre, ID del estudiante, estado de registro, nivel, créditos, calificación de mitad de período, calificación final y detalles de la calificación. Proporciona métodos para obtener y establecer estos atributos.</p>
+                <ul>
+                    <li><code>getStudentNumber()</code>: Este método devuelve el número del estudiante.</li>
+                    <li><code>getStudentName()</code>: Este método devuelve el nombre del estudiante.</li>
+                    <li><code>getStudentID()</code>: Este método devuelve el ID del estudiante.</li>
+                    <li><code>getRegistrationStatus()</code>: Este método devuelve el estado de registro del estudiante.</li>
+                    <li><code>getLevel()</code>: Este método devuelve el nivel del estudiante.</li>
+                    <li><code>getCredits()</code>: Este método devuelve los créditos del estudiante.</li>
+                    <li><code>getMidtermGrade()</code>: Este método devuelve la calificación de mitad de período del estudiante.</li>
+                    <li><code>getFinalGrade()</code>: Este método devuelve la calificación final del estudiante.</li>
+                    <li><code>getGradeDetails()</code>: Este método devuelve los detalles de la calificación del estudiante.</li>
+                    <li><code>setStudentNumber()</code>: Este método establece el número del estudiante.</li>
+                    <li><code>setStudentName()</code>: Este método establece el nombre del estudiante.</li>
+                    <li><code>setStudentID()</code>: Este método establece el ID del estudiante.</li>
+                    <li><code>setRegistrationStatus()</code>: Este método establece el estado de registro del estudiante.</li>
+                    <li><code>setLevel()</code>: Este método establece el nivel del estudiante.</li>
+                    <li><code>setCredits()</code>: Este método establece los créditos del estudiante.</li>
+                    <li><code>setMidtermGrade()</code>: Este método establece la calificación de mitad de período del estudiante.</li>
+                    <li><code>setFinalGrade()</code>: Este método establece la calificación final del estudiante.</li>
+                    <li><code>setGradeDetails()</code>: Este método establece los detalles de la calificación del estudiante.</li>
+                </ul>
+            </li>
+            <li><p><code>FileReader</code>: Esta clase se utiliza para leer un archivo de texto en formato CSV y extraer datos de estudiantes. Los datos incluyen el número del estudiante, nombre, ID del estudiante, estado de registro, nivel, créditos, calificación de mitad de período, calificación final y detalles de la calificación.</p>
+            </li>
+            <li><p><code>FileParser</code>: Esta clase se utiliza para analizar un archivo y extraer información relevante del curso. La información extraída incluye el nombre del curso, el número de registro del curso (CRN) y la duración del curso.</p>
+                <ul>
+                    <li><code>modifyDuration()</code>: Esta función se utiliza para modificar la duración de un curso. La duración se proporciona en el formato &quot;Fecha de inicio - Fecha de finalización&quot;, y la función la modifica para que esté en el formato &quot;MES_INICIO-MES_FINAL AÑO&quot;. Además, traduce los nombres de los meses al español.</li>
+                    <li><code>monthTranslator()</code>: Esta función se utiliza para traducir los nombres de los meses del inglés al español.</li>
+                </ul>
+            </li>
+            <li><p><code>HeaderMaker</code>: Esta clase se utiliza para crear un encabezado con los datos proporcionados. El encabezado incluye el nombre de la universidad, ubicación del campus, nombre del departamento, semestre, nombre del profesor, nombre del curso y CRN.</p>
+            </li>
+            <li><p><code>FileWriter</code>: Esta clase se utiliza para crear un archivo de texto en formato CSV, donde se escriben los datos de los estudiantes. Esto simplifica el proceso de escritura de datos en archivos.</p>
+            </li>
+        </ol>
+        <p>Cada uno de estos componentes juega un papel crucial en la funcionalidad general del proyecto. El archivo <code>main.cpp</code> orquesta el proceso, utilizando las otras clases para leer, procesar y escribir datos.</p>
         <h2 class="collapsable" id="📝-autores">📝 Autores</h2>
         <p>Esta sección enumera a los autores que contribuyeron a los diferentes archivos en el proyecto:</p>
         <ul>
             <li><code>main.cpp</code>: Eduardo A. Sosa Torres</li>
             <li><code>FileParser</code>: Ian P. Roman</li>
-            <li><code>FileReader</code>: [DEFAULT]</li>
+            <li><code>FileReader</code>: Christian J. Santiago Rivera</li>
             <li><code>FileWriter</code>: Javier Santos Babilonia</li>
-            <li><code>HeaderMaker</code>: [DEFAULT]</li>
+            <li><code>HeaderMaker</code>: Azkaria L. Rosado Rodriguez</li>
             <li><code>Students</code>: Eduardo A. Sosa Torres</li>
             <li><code>README.md</code>: Eduardo A. Sosa Torres</li>
         </ul>

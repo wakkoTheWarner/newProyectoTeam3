@@ -320,12 +320,23 @@ std::string outputFilePathVerifier(std::string outputFilePath) {
 /* -- Empieza FileReader Class -- */
 
 /**
- * Objetivo:
- * Precondiciones:
- * Postcondiciones:
+ * Objetivo: La clase FileReader se utiliza para leer un archivo de texto en formato CSV (valores separados por comas) y extraer datos de estudiantes. Estos datos incluyen el número de estudiante, el nombre, la identificación del estudiante, el estado de registro, el nivel, los créditos, la calificación de mitad de período, la calificación final y los detalles de la calificación.
+ *
+ * Precondiciones: El archivo debe existir en la ruta proporcionada y debe ser legible.
+ *                 El archivo debe estar en formato CSV (valores separados por comas).
+ *                 Los datos en el archivo deben estar en el formato correcto y deben ser válidos.
+ *                 Los datos en el archivo deben estar en el orden correcto.
+ *                 Los datos en el archivo deben estar separados por comas.
+ *                 Los datos en el archivo deben estar rodeados por comillas dobles.
+ *
+ * Postcondiciones: La función devuelve un vector de objetos relacionados a los objetos de la clase Student que contiene los datos de los estudiantes que se escribirán en el archivo.
+ *                  Si el archivo no se puede abrir o leer, o si los datos no se pueden encontrar o extraer correctamente, la función puede no comportarse como se espera.
+ *
  * Descripción de argumentos:
- * Autor:
- * Fecha de finalización:
+ *                 `filePath`: Una cadena que representa la ruta del archivo que se va a leer. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.
+ *
+ * Autor: Christian J Santiago Rivera
+ * Fecha de finalización: 03-02-2024
  **/
 std::vector<Student> FileReader::readFile(const std::string& filePath) {
     std::vector<Student> students;
@@ -556,12 +567,25 @@ std::string FileParser::monthTranslator(std::string month) {
 /* -- Empieza HeaderMaker Class -- */
 
 /**
- * Objetivo:
- * Precondiciones:
- * Postcondiciones:
+ * Objetivo: La clase HeaderMaker es utilizada para crear un encabezado mediante el uso de los datos proporcionados y en el caso de que falte informacion seran llenados por valores predeterminados.
+ *
+ * Precondiciones: Es necesario que el nombre de curso, semestre y CRN sean proporcionados, de lo contrario el programa no avanzara.
+ *                 El resto de los datos pueden estar vacios ya que seran provistos por los datos predeterminados.
+ *
+ * Postcondiciones: Si los datos para el nombre del curso, semestre y CRN están vacíos, el programa imprimirá un mensaje de error en la consola.
+ *                  Si se proporcionan datos para el resto de los valores, se crearán copias de ellos.
+ *
  * Descripción de argumentos:
- * Autor:
- * Fecha de finalización:
+ *                  `universityName`: Nombre de la universidad. Si no proporciona datos, sera llenado por el valor predeterminado "Universidad ABC123".
+ *                  `campusLocation`: Ubicacion de la universidad. Si no proporciona datos, sera llenado por el valor predeterminado "Recinto de Isla Mona".
+ *                  `departmentName`: Nombre del departamento. Si no proporciona datos, sera llenado por el valor predeterminado "Departamento De Ciencias En Computadora".
+ *                  `semester`: Semestre en curso (codigo). Debe ser proporcionado para la creacion del encabezado.
+ *                  `professorName`: Nombre del profesor. Si no proporciona datos, sera llenado por el valor predeterminado "Pepito Perez".
+ *                  `courseName`: Nombre del curso. Debe ser proporcionado para la creacion del encabezado.
+ *                  `crn`: Numero de referencia del curso. (Course Reference Number). Debe ser proporcionado para la creacion del encabezado.
+ *
+ * Autor: Azkaria L. Rosado Rodriguez
+ * Fecha de finalización: 02-03-2024
  **/
 std::string HeaderMaker::makeHeader(const std::string& universityName, const std::string& campusLocation, const std::string& departmentName, const std::string& semester, const std::string& professorName, const std::string& courseName, const std::string& crn) {
     // Si el semestre, el nombre del curso o el CRN están vacíos, muestra un error
@@ -649,6 +673,7 @@ std::string HeaderMaker::makeHeader(const std::string& universityName, const std
  *                  'students': Un vector de objetos relacionados a los objetos de la clase Student que contiene los datos de los estudiantes que se escribirán en el archivo.
  *                  'filePath': Una cadena que representa la ruta del archivo donde los datos serán escritos.
  *                  'header': Una cadena que representa el encabezado que se escribirá al inicio del archivo. Este encabezado puede contener información como nombres de columnas para los diferentes tipos de información que tendrá el archivo sobre los estudiantes.
+ *
  * Autor: Javier Santos Babilonia
  * Fecha de finalización: 01-03-2024
  **/
