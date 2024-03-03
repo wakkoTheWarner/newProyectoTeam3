@@ -21,7 +21,7 @@ This project requires MinGW to compile and run. The minimum version requirement 
 
 5. Apply changes and wait for the packages to be installed.
 
-⚠️ **Warning**: This version of MinGW is outdated. Use at your own risk.
+⚠️ **Warning**: This version of MinGW is outdated. Use at your own risk. ⚠️
 
 For a visual guide on installing MinGW, you can watch this [YouTube video](https://www.youtube.com/watch?v=fzOmcmUcl_E).
 
@@ -145,14 +145,112 @@ This program is designed to process student data from a text file and output it 
 
 Please note that this program assumes that the input file is formatted correctly and that all the data is valid. If the program encounters an error while reading the file, it will print an error message and terminate.
 
+## 📂File Structure
+
+The project is organized in a simple folder structure. Here is the file structure of the project:
+
+```
+Project
+│   CMakeLists.txt
+│   Project Documentation.html
+│   main.cpp
+│   main.exe
+│   README.md
+│   README_ES.md
+│
+└───Resources
+    │
+    └───Data
+    │   │   student_data.txt
+    │
+    └───Output
+        │   student_output.csv
+```
+
+- `CMakeLists.txt`: CMake configuration file to compile the project. It is not necessary to compile and run the project in jGrasp or Visual Studio Code.
+- `Project Documentation.html`: Project documentation in HTML format.
+- `main.cpp`: Main source file of the project.
+- `main.exe`: Executable file of the project.
+- `README.md`: README file in English.
+- `README_ES.md`: README file in Spanish.
+- `Resources`: Folder that contains the input and output data files.
+   - `Data`: Folder that contains the input data file.
+   - `Output`: Folder that contains the output data file.
+   - `student_data.txt`: Input data file.
+   - `student_output.csv`: Output data file.
+
+## 📋Features
+
+- **File Reading**: The program reads student data from a text file.
+- **Data Processing**: The program processes student data and stores it in a data structure.
+- **File Writing**: The program writes the processed data to a CSV file.
+- **User Interface**: The program asks the user to enter additional information that is not included in the input file.
+- **Data Validation**: The program assumes that the input data is valid and correctly formatted.
+- **Project Documentation**: The project includes a documentation file in HTML format.
+- **Language Support**: The project includes a README file in English and Spanish.
+- **File Structure**: The project is organized in a simple folder structure.
+- **Compilation and Execution**: The project can be compiled and run in jGrasp and Visual Studio Code.
+- **Environment Setup**: The project includes instructions for installing MinGW and MinGW w64, as well as for setting up the jGrasp and Visual Studio Code environment.
+- **Program Use**: The project includes instructions on how to use the program.
+- **Authors**: The project includes an authors section that lists the contributors to the project.
+
+## 📦Code Structure
+
+The project is structured around several key components, each with a specific role:
+
+1. `main.cpp`: This is the main source file of the project. It contains the `main()` function which is the entry point of the program. The `main()` function handles user interaction, file reading and writing, and data processing.
+
+   - `filePathValidator()`: This function validates the input file path. If the path is valid, it returns `true`, otherwise, it returns `false`. If the path is invalid, it prints an error message.
+   - `outputFilePathValidator()`: This function validates the output file path. If the path is valid, it returns `true`, otherwise, it returns `false`. If the path is invalid, it prints an error message.
+
+
+2. `Student`: This class represents a student with various attributes such as number, name, student ID, registration status, level, credits, midterm grade, final grade, and grade details. It provides methods to get and set these attributes.
+
+   - `getStudentNumber()`: This method returns the student number.
+   - `getStudentName()`: This method returns the student name.
+   - `getStudentID()`: This method returns the student ID.
+   - `getRegistrationStatus()`: This method returns the student's registration status.
+   - `getLevel()`: This method returns the student's level.
+   - `getCredits()`: This method returns the student's credits.
+   - `getMidtermGrade()`: This method returns the student's midterm grade.
+   - `getFinalGrade()`: This method returns the student's final grade.
+   - `getGradeDetails()`: This method returns the student's grade details.
+   - `setStudentNumber()`: This method sets the student number.
+   - `setStudentName()`: This method sets the student name.
+   - `setStudentID()`: This method sets the student ID.
+   - `setRegistrationStatus()`: This method sets the student's registration status.
+   - `setLevel()`: This method sets the student's level.
+   - `setCredits()`: This method sets the student's credits.
+   - `setMidtermGrade()`: This method sets the student's midterm grade.
+   - `setFinalGrade()`: This method sets the student's final grade.
+   - `setGradeDetails()`: This method sets the student's grade details.
+
+
+3. `FileReader`: This class is used to read a text file in CSV format and extract student data. The data includes the student number, name, student ID, registration status, level, credits, midterm grade, final grade, and grade details.
+
+
+4. `FileParser`: This class is used to parse a file and extract relevant course information. The extracted information includes the course name, the course registration number (CRN), and the course duration.
+
+   - `modifyDuration()`: This function is used to modify the duration of a course. The duration is provided in the format "Start Date - End Date", and the function modifies it to be in the format "START_MONTH-END_MONTH YEAR". In addition, it translates the month names to Spanish.
+   - `monthTranslator()`: This function is used to translate month names from English to Spanish.
+
+
+5. `HeaderMaker`: This class is used to create a header with the provided data. The header includes the university name, campus location, department name, semester, professor name, course name, and CRN.
+
+
+6. `FileWriter`: This class is used to create a text file in CSV format, where the student data is written. This simplifies the process of writing data to files.
+
+
+Each of these components plays a crucial role in the overall functionality of the project. The `main.cpp` file orchestrates the process, using the other classes to read, process, and write data.
+
 ## 📝 Authors
 
 This section lists the authors who contributed to the different files in the project:
 
 - `main.cpp`: Eduardo A. Sosa Torres
 - `FileParser`: Ian P. Roman
-- `FileReader`: [DEFAULT]
+- `FileReader`: Christian J. Santiago Rivera
 - `FileWriter`: Javier Santos Babilonia
-- `HeaderMaker`: [DEFAULT]
+- `HeaderMaker`: Azkaria L. Rosado Rodriguez
 - `Students`: Eduardo A. Sosa Torres
 - `README.md`: Eduardo A. Sosa Torres

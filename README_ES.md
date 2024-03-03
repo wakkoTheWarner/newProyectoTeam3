@@ -1,5 +1,5 @@
 
-Para la versión en español de este documento, haga clic [aquí](README_ES.md).
+Para la versión en Inglés de este documento, haga clic [aquí](README.md).
 
 # Proyecto de Investigación en C++
 
@@ -159,13 +159,13 @@ Project
 │   README.md
 │   README_ES.md
 │
-Resources
-│
-└───Data
-│   │   student_data.txt
-│
-└───Output
-    │   student_output.csv
+└───Resources
+    │
+    └───Data
+    │   │   student_data.txt
+    │
+    └───Output
+        │   student_output.csv
 ```
 
 - `CMakeLists.txt`: Archivo de configuración de CMake para compilar el proyecto. No es necesario para compilar y ejecutar el proyecto en jGrasp o Visual Studio Code.
@@ -195,7 +195,7 @@ Resources
 - **Uso del Programa**: El proyecto incluye instrucciones sobre cómo usar el programa.
 - **Autores**: El proyecto incluye una sección de autores que enumera a los contribuyentes del proyecto.
 
-## Estructura del Código
+## 📦Estructura del Código
 
 El proyecto está estructurado en torno a varios componentes clave, cada uno con un rol específico:
 
