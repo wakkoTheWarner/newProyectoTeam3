@@ -1,3 +1,5 @@
+# @Author: Eduardo A. Sosa Torres
+
 import os
 import json
 
