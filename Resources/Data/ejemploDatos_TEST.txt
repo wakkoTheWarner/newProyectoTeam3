@@ -1,0 +1,114 @@
+Course Information
+OPERATING SYSTEMS - COMP 7890 0
+CRN:	63135
+Duration:	22 Aug, 2025 - 18 Dec, 2025
+Status:	Open
+
+Enrollment Counts
+	Maximum	Actual	Remaining
+Enrollment:	29	11	18
+Cross List: 	0	0	0
+
+Summary Class List
+Record
+Number	Student Name	ID	Reg Status	Level	Credits	Midterm	Final	Grade Detail
+1	Carolina Barbero Iriarte	Z95081291	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+2	Fito Martinez Rivera	Z30703470	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+3	Luciana Nieto Blanco	Z97096393	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+4	Dalila Pou Mariscal	Z51270271	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+5	Isidoro de Gordillo	Z93352375	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+6	Saturnina Figueras Figueroa	Z58843597	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+7	Guiomar Mata Colomer	Z20243046	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+8	Teodora Macaria Martin Bejarano	Z69037603	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+9	Martina Aranda Salinas	Z73709959	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+10	Román de Redondo	Z33064927	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+11	María Cristina Plaza Ferrán	Z34931162	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+12	Selena Mata Alberola	Z71521204	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+13	Norberto Augusto Mulet Hidalgo	Z82458084	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+14	María Del Carmen Rivas Martín	Z60084701	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+15	Nico Enrique Coll Montalbán	Z52806058	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+16	Félix Garmendia	Z19765777	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+17	Vinicio Sabater Tenorio	Z79224057	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+18	Cebrián de Alberdi	Z84079773	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+19	Adelia Cervera Carrillo	Z61213378	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+20	Felipe Boix Guardia	Z71215454	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+21	Luis Miguel Jáuregui-Palacios	Z85014307	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+22	Ileana Julián Montalbán	Z63526929	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+23	Montserrat Begoña Ledesma Losada	Z16243600	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+24	Heriberto España Sureda	Z71027518	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+25	Marita Nieves Mariño Badía	Z56640355	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+26	Claudia Ariza Camacho	Z25806509	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+27	Carolina Guadalupe Valbuena Arenas	Z71956505	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+28	Andrés Manrique Uriarte	Z92229559	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+29	Sol Losa	Z85019963	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+30	Lucas Bolaños Parejo	Z11036955	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+31	Amando Campoy Morán	Z31291076	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+32	Aristides Guijarro Pablo	Z63961435	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+33	Américo Vera Castañeda	Z93354745	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+34	Mariano Ayuso-Feijoo	Z36243803	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+35	Ariel Juan	Z60272955	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+36	Rosalina Saez Arroyo	Z11172631	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+37	Anastasia de Hoyos	Z20889980	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+38	Graciana Marqués Pons	Z64734762	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+39	Marisol Torrecilla Soler	Z16961166	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+40	Elisabet Alvarado Coca	Z38879008	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+41	Íngrid Céspedes Barros	Z18211577	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+42	Juan Bautista Chaparro Díez	Z54077494	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+43	Adelaida Vazquez Toledo	Z41696673	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+44	Gerardo Huerta Blazquez	Z76943291	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+45	Cayetana Maribel Rojas Montenegro	Z74371398	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+46	Apolonia Camacho Prats	Z82223346	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+47	Octavio Aguiló Hoz	Z14012377	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+48	Tito Vélez Criado	Z92068380	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+49	Alicia Ordóñez Hoz	Z16352934	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+50	Aureliano Sebastián Vara Peiró	Z73790229	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+51	Macario Huguet Ayuso	Z47037796	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+52	Chuy Gomez Gómez	Z22094333	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+53	Paloma Verdugo Blanch	Z38625910	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+54	Miguela de Aliaga	Z23261557	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+55	Luis Doménech Esparza	Z37008875	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+56	Marcio Monreal	Z10392980	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+57	Pascuala Noriega Roda	Z35927459	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+58	Trini Eliana Mulet Carrera	Z11526362	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+59	Florentino del Bermúdez	Z30237635	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+60	Brígida Aparicio-Pulido	Z69444223	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+61	Isabel Pi Checa	Z49947014	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+62	Miguel Ángel Castro Villaverde	Z89863411	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+63	Jesusa Gimenez	Z21325488	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+64	Julia Soria-Seco	Z81556234	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+65	Graciana Fuertes Aguilera	Z28633102	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+66	Cleto Salomón Durán Marco	Z79009418	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+67	Ciriaco Uriarte Gaya	Z90837389	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+68	Narcisa Pazos-Machado	Z95927204	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+69	Casandra Caparrós Piñeiro	Z21144894	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+70	Tristán Hurtado Montoya	Z66863652	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+71	Eusebio Martin Cabrero	Z46283582	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+72	Daniela Goñi Cervera	Z83401784	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+73	América Villena Aparicio	Z19577799	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+74	Áurea Martorell Cabrero	Z57294424	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+75	Cloe Quintero Flor	Z38352795	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+76	Pablo Agustín-Antón	Z40200676	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+77	Eleuterio Rafa Aguiló Lobo	Z45250731	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+78	Lino Bejarano Galindo	Z34649021	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+79	Cecilio Castellanos Azcona	Z79642730	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+80	Albert Guerrero Marín	Z59778825	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+81	Duilio Blanca Benito	Z62767704	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+82	Norberto Martorell Diez	Z62555369	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+83	Emiliana Valbuena-Pi	Z40288197	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+84	Cirino Alegria	Z45534929	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+85	Paulina de Alsina	Z61749245	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+86	Emperatriz Jordán	Z21810909	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+87	Leandra Cisneros Pascual	Z64074092	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+88	Remigio Andrés Espada Cantón	Z85595427	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+89	Gerónimo del Gomis	Z37745253	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+90	Ester Tejedor Antúnez	Z91825596	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+91	Adalberto Alba Ibarra	Z31639611	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+92	Adelardo Puerta Arévalo	Z86803815	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+93	Fabiola Sol Mayo Guitart	Z53293670	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+94	Victorino Carbonell Molins	Z72116901	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+95	Hilario Gallo Valdés	Z22629918	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+96	Feliciana Posada Blanco	Z99905276	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+97	Fulgencio del Soler	Z21205213	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+98	Eligio Berrocal Tejedor	Z90494324	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+99	Cipriano Aroca-Santos	Z88230107	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+100	Carolina Pareja Blazquez	Z82457716	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
