@@ -1,0 +1,92 @@
+Course Information
+NATURAL LANGUAGE PROCESSING - COMP 3456 0
+CRN:	78901
+Duration:	22 Jan, 2024 - 18 May, 2024
+Status:	Open
+
+Enrollment Counts
+  Maximum	Actual	Remaining
+Enrollment:	78	78	0
+Cross List:	0	0	0
+
+Summary Class List
+Record
+Number	Student Name	ID	Reg Status	Level	Credits	Midterm	Final	Grade Detail
+1	MAGDALENA LUCAS TAPIA	Z40206050	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+2	CRISTIAN ELIAS LAUREANO BARRAZA	Z27264305	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+3	VICTORIA REYNA	Z52580691	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+4	VICTORIA LUIS MANUEL HERRERA	Z28720438	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+5	ADRIANA SALCEDO QUINTANILLA	Z72388669	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+6	MIGUEL ÁNGEL LUCAS VÁSQUEZ MÉNDEZ	Z88395827	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+7	GUADALUPE JOSÉ MARÍA FAJARDO ALMARAZ	Z51064989	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+8	MTRO. PORFIRIO OCHOA	Z97812319	** Unregistered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+9	ADÁN MATEO BALLESTEROS BENÍTEZ	Z15020927	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+10	ANA LUISA SAMUEL OZUNA	Z51875771	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+11	ESPERANZA HUMBERTO CAMACHO	Z19471621	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+12	ESMERALDA ARELLANO	Z77864706	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+13	IGNACIO GUZMÁN	Z41920905	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+14	SR(A). MAURO QUINTANA	Z34374277	** Unregistered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+15	AMELIA SARABIA	Z24111756	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+16	ÓLIVER SISNEROS TAFOYA	Z17007040	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+17	ALMA CARREÓN FELICIANO	Z52754082	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+18	MTRO. ENRIQUE BARAJAS	Z76847678	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+19	JUDITH FELIX LINARES SANTIAGO	Z77718649	** Registered **	GRADUATE	9.000	Enter	Enter	Available
+20	SR(A). ALDONZA MARROQUÍN	Z15886042	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+21	JOSEFINA TERRAZAS	Z41136653	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+22	VERÓNICA MARCELA BURGOS VELASCO	Z93629880	** Unregistered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+23	MINERVA HARO	Z41888449	** Unregistered **	GRADUATE	6.000	Enter	Enter	Available
+24	CRISTOBAL ALONSO	Z89179984	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+25	BLANCA JACOBO CASANOVA MADERA	Z44745284	** Unregistered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+26	EDUARDO ANGUIANO ALVA	Z13079624	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+27	PERLA RUBY SANTIAGO PIZARRO	Z32820601	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+28	SILVANO AGUAYO	Z37080292	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+29	JUAN CARLOS JOSÉ ESQUIBEL ZAYAS	Z71786551	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+30	MITZY JONÁS FERRER ALARCÓN	Z73254744	** Unregistered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+31	DALIA VARELA	Z59162206	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+32	ROBERTO CABALLERO	Z89203684	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+33	MARÍA ELENA GERÓNIMO CASTILLO	Z80482971	** Unregistered **	GRADUATE	6.000	Enter	Enter	Available
+34	SR(A). CLARA SÁENZ	Z90752672	** Unregistered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+35	JACINTO ARTEAGA	Z56162779	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+36	GABRIELA BERTA SAAVEDRA DE LA O	Z80725198	** Unregistered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+37	SR(A). ABEL SAIZ	Z40192589	** Registered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+38	EDUARDO FERNANDO NARANJO PÁEZ	Z70775304	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+39	CRISTINA PALOMO MONTALVO	Z89675943	** Unregistered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+40	LUCAS CARMEN MORALES ROLÓN	Z90650396	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+41	ING. MARIO CAMPOS	Z60143271	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+42	ING. JOSEFINA JIMÉNEZ	Z28085966	** Registered **	GRADUATE	9.000	Enter	Enter	Available
+43	MTRO. FABIOLA ZELAYA	Z58851847	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+44	BERTA LUCAS OLIVAS SALDAÑA	Z65157463	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+45	ÚRSULA ROBLES CARRIÓN	Z82871037	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+46	ELVIRA CISNEROS CANTÚ	Z13894418	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+47	DAVID HELENA TERÁN HURTADO	Z90109651	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+48	VICTORIA BACA BORREGO	Z22207019	** Registered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+49	FEDERICO TAFOYA	Z42902413	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+50	PASCUAL ALCALA	Z21991285	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+51	LIC. JULIA LUCERO	Z77354602	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+52	SR(A). MARCELA DE LEÓN	Z36690340	** Unregistered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+53	OCTAVIO CARLA LOVATO	Z51470455	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+54	DR. NOELIA ALBA	Z59890232	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+55	MARÍA DEL CARMEN RAÚL CARRANZA ENRÍQUEZ	Z43757555	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+56	LUCAS HURTADO CHAVARRÍA	Z17269707	** Registered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+57	RUBY IRMA SALDIVAR	Z37747570	** Unregistered **	GRADUATE	6.000	Enter	Enter	Available
+58	JOSÉ EDUARDO LUCÍA ESPINOZA ZAMBRANO	Z91952994	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+59	GABINO OJEDA	Z75697909	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+60	ESTHER BLANCA LÓPEZ	Z28672410	** Unregistered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+61	RODOLFO ARMENTA ALTAMIRANO	Z12478723	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+62	RAFAÉL IVÁN TÉLLEZ	Z49314211	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+63	DULCE MARÍA ABREGO	Z97679324	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+64	ADRIANA BIANCA NAVARRETE SOTELO	Z41905846	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+65	ZOÉ RUIZ	Z33139611	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+66	LILIANA ROQUE	Z73482722	** Unregistered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+67	ALBERTO CERVANTES SERRATO	Z58825646	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+68	SR(A). ALEJANDRA ZAYAS	Z52367650	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+69	IVONNE MOTA	Z37932289	** Registered **	GRADUATE	9.000	Enter	Enter	Available
+70	JUAN ARREOLA	Z11526870	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+71	ADALBERTO BARBARA ABREU	Z96804944	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+72	DR. ALONSO ESPINO	Z75183486	** Registered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+73	DIEGO ORELLANA ESPINO	Z64441838	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+74	LIC. MARÍA GUZMÁN	Z87882328	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+75	LIC. VERÓNICA MIRAMONTES	Z41669292	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+76	MARTÍN FUENTES NAZARIO	Z48643285	** Unregistered **	GRADUATE	6.000	Enter	Enter	Available
+77	ÁNGEL VÁZQUEZ	Z39556494	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+78	MARIO CORREA	Z50408105	** Registered **	GRADUATE	6.000	Enter	Enter	Available

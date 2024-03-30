@@ -1,0 +1,37 @@
+Course Information
+NEURAL NETWORKS - COMP 1234 0
+CRN:	67890
+Duration:	01 May, 2025 - 31 Aug, 2025
+Status:	Open
+
+Enrollment Counts
+  Maximum	Actual	Remaining
+Enrollment:	23	23	0
+Cross List:	0	0	0
+
+Summary Class List
+Record
+Number	Student Name	ID	Reg Status	Level	Credits	Midterm	Final	Grade Detail
+1	DR. ANDREA DOMÍNGUEZ	Z55051879	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+2	EVELIO JIMÉNEZ	Z46203947	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+3	TERESA LUIS MIGUEL NÚÑEZ ARTEAGA	Z24490935	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+4	FRIDA ELVIA QUIÑONES RUELAS	Z31401890	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+5	ASUNCIÓN CARLA CHACÓN BARRETO	Z37969307	** Registered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+6	MARÍA ELENA ALFONSO RAMOS SÁENZ	Z37141024	** Unregistered **	GRADUATE	9.000	Enter	Enter	Available
+7	ING. CYNTHIA CAMPOS	Z94560654	** Unregistered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+8	SR(A). LEONEL HEREDIA	Z73820378	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+9	JOSÉ LUIS SALCIDO	Z98784575	** Registered **	GRADUATE	3.000	Enter	Enter	Available
+10	ING. RAMIRO CARRANZA	Z48249577	** Registered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+11	MINERVA RAQUEL TEJADA	Z60397901	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+12	BERNABÉ ELOISA SALAZAR RUELAS	Z13003154	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+13	MARCELA VILLAREAL	Z59629433	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+14	MTRO. PAMELA LEDESMA	Z15586768	** Unregistered **	UNDERGRADUATE	9.000	Enter	Enter	Available
+15	ELVIRA FRANCISCO CAMARILLO ZAVALA	Z90766508	** Registered **	GRADUATE	6.000	Enter	Enter	Available
+16	OFELIA CEDILLO	Z45991823	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+17	GILBERTO MAURO NARVÁEZ	Z90706863	** Unregistered **	GRADUATE	3.000	Enter	Enter	Available
+18	YENI GABINO GUERRERO MONROY	Z86516801	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+19	DALIA JUAN BERRÍOS DE LA O	Z19657956	** Registered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+20	ELOISA JAVIER BARELA	Z32967365	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+21	TRINIDAD TÉLLEZ DELGADILLO	Z55314016	** Unregistered **	UNDERGRADUATE	6.000	Enter	Enter	Available
+22	SR(A). WILFRIDO CARRANZA	Z81462909	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+23	CELIA GUSTAVO ALBA	Z95181731	** Registered **	GRADUATE	3.000	Enter	Enter	Available
