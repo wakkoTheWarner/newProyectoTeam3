@@ -14,8 +14,10 @@ def write_file(output_path, header, students):
             # Escribe la representación en cadena del estudiante en el archivo
             file.write(str(student) + "\n")
 
+    absolute_path = os.path.abspath(output_path)
+
     # Imprime un mensaje indicando que el archivo ha sido creado exitosamente
-    print('\033[92m' + "\nEl archivo ha sido creado exitosamente.")
+    print('\033[92m' + "\nEl archivo ha sido creado exitosamente en la siguiente ruta: " + '\033[1;32m' + "\n" + absolute_path + '\033[0m')
 
     # Retorna de la función
     return
@@ -173,7 +175,7 @@ def read_file(path_to_file):
     counter = 0
 
     # Abre el archivo en modo lectura
-    with open(path_to_file, "r") as file:
+    with open(path_to_file, "r", encoding="windows-1252") as file:
         # Itera sobre cada línea en el archivo
         for line in file:
             # Si la línea no está vacía y el contador es menor a 12
