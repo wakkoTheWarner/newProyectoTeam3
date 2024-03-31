@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Documentacion del Proyecto</title>
+        <style>
+            body {
+                    padding: 20px;
+                    font-family: Arial, sans-serif;
+                }
+                h1, h2, h3 {
+                    color: #1e1e1e;
+                }
+                h1 {
+                    font-size: 2.5em;
+                    margin-bottom: 20px;
+                }
+                h2 {
+                    border-bottom: 1px solid #ccc;
+                    padding-bottom: 10px;
+                }
+                h2 ~ *:not(h2) {
+                    color: #262626;
+                    margin-left: 20px;
+                }
+                #codeExplorer h3 ~ *:not(h2, h3) {
+                    color: #262626;
+                    margin-left: 50px;
+                }
+                body :not(p):not(li) > code {
+                    display: block;
+                    background-color: #f4f4f4;
+                    padding: 12px 15px;
+                    border-radius: 3px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                code {
+                    background-color: #f4f4f4;
+                    padding: 2px 5px;
+                    border-radius: 3px;
+                    white-space: pre-wrap;
+                }
+                a {
+                    color: #007bff;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+                /* Table of Contents */
+                #toc {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 300px;
+                    overflow: auto;
+                    padding: 20px;
+                    background-color: #f4f4f4;
+                }
+                #toc ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                #toc ul li a {
+                    display: block;
+                    color: #000;
+                    padding: 5px 0;
+                    text-decoration: none;
+                }
+                #toc ul li a:hover {
+                    color: #007bff;
+                }
+                #toc ul ul {
+                    margin-left: 50px;
+                    font-size: 0.95em;
+                }
+                #toc .h2Tag {
+                    font-weight: bold;
+                    color: #1e1e1e;
+                }
+                #content {
+                    margin-left: 340px;
+                    padding: 40px;
+                }
+                #codeExplorer {
+                    margin-left: 340px;
+                    padding: 20px;
+                }
+
+                /* Dark Mode Toggle */
+                #dark-mode-toggle {
+                    position: fixed;
+                    right: 20px;
+                    top: 20px;
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                #dark-mode-toggle:hover {
+                    background-color: #0056b3;
+                }
+                .dark-mode #dark-mode-toggle {
+                    background-color: #f4f4f4;
+                    color: #000;
+                }
+                .dark-mode #dark-mode-toggle:hover {
+                    background-color: #ccc;
+                }
+
+                /* Dark Mode Table of Contents */
+                .dark-mode #toc h2 {
+                    color: #fff;
+                }
+                .dark-mode #toc {
+                    background-color: #262626;
+                }
+                .dark-mode #toc ul li a {
+                    color: #fff;
+                }
+                .dark-mode #toc ul li a:hover {
+                    color: #007bff;
+                }
+                .dark-mode #toc .h2Tag {
+                    color: #fff;
+                }
+
+                /* Dark Mode Content */
+                * .dark-mode {
+                    background-color: #1e1e1e;
+                    color: #fff;
+                }
+                .dark-mode #content, .dark-mode #codeExplorer {
+                    background-color: #1e1e1e;
+                    color: #fff;
+                }
+                .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p, .dark-mode li {
+                    color: #fff;
+                }
+                .dark-mode a {
+                    color: #007bff;
+                }
+                .dark-mode a:hover {
+                    color: #00a0ff;
+                }
+                .dark-mode code {
+                    background-color: #262626;
+                    color: #fff;
+                }
+                .dark-mode #codeExplorer p {
+                    color: #fff;
+                }
+
+                @media (max-width: 768px) {
+                    #toc {
+                        display: none;
+                    }
+                    #content, #codeExplorer {
+                        margin-left: 20px;
+                        padding: 20px;
+                    }
+                    #content h1, #codeExplorer h1{
+                        font-size: 2em;
+                    }
+                    #content h2, #codeExplorer h2 {
+                        font-size: 1.5em;
+                    }
+                    #content h3, #codeExplorer h3 {
+                        font-size: 1.25em;
+                    }
+                    #content p, #content li, #codeExplorer p, #codeExplorer li{
+                        font-size: 0.95em;
+                    }
+                }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const darkModeToggle = document.getElementById('dark-mode-toggle');
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    if (document.body.classList.contains('dark-mode')) {
+                        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for dark mode
+                    } else {
+                        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for light mode
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a class="h2Tag" href="#proyecto-de-investigacion-en-python">🏠 Home</a></li>
+                <li><a class="h2Tag" href="#🛠️-instalación">🛠️ Instalación</a>
+                    <ul>
+                        <li><a href="#instalacion-de-python-3">Instalación de Python 3</a></li>
+                        <li><a href="#configuracion-de-la-variable-de-entorno">Configuración de la Variable de Entorno de Python3</a></li>
+                        <li><a href="#prueba-de-instalación">Prueba de Instalación</a></li>
+                    </ul>
+                </li>
+                <li><a class="h2Tag" href="#🏃♂️cómo-ejecutar">🏃‍♂️ Cómo Ejecutar</a>
+                    <ul>
+                        <li><a href="#ejecutando-en-visual-studio-code">Ejecución en Visual Studio Code</a></li>
+                    </ul>
+                </li>
+                <li><a class="h2Tag" href="#🔧uso">🔧 Uso</a>
+                    <ul>
+                        <li><a href="#cómo-usar">Cómo Usar</a></li>
+                    </ul>
+                </li>
+                <li><a class="h2Tag" href="#📂estructura-de-archivos">📂 Estructura de Archivos</a></li>
+                <li><a class="h2Tag" href="#📋características">📋 Características</a></li>
+                <li><a class="h2Tag" href="#📦estructura-del-código">📦 Estructura del Código</a></li>
+                <li><a class="h2Tag" href="#📝-autores">📝 Autores</a></li>
+            </ul>
+            <hr>
+            <ul>
+                <li><a class="h2Tag" href="#main">📚main</a></li>
+                    <ul>
+                        <li><a href="#filePathVerifier">filePathVerifier()</a></li>
+                        <li><a href="#outputFilePathVerifier">outputFilePathVerifier()</a></li>
+                    </ul>
+                <li><a class="h2Tag" href="#FileParser">📕FileParser</a></li>
+                <ul>
+                    <li><a href="#modifyDuration">modifyDuration()</a></li>
+                    <li><a href="#monthTranslator">monthTranslator()</a></li>
+                </ul>
+                <li><a class="h2Tag" href="#FileReader">📕FileReader</a></li>
+                <li><a class="h2Tag" href="#HeaderMaker">📕HeaderMaker</a></li>
+                <li><a class="h2Tag" href="#FileWriter">📕FileWriter</a></li>
+                <li><a class="h2Tag" href="#Student">📕Student</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            <h1 id="proyecto-de-investigacion-en-python">Proyecto de Investigación en Python</h1>
+            <p>Este proyecto en Python es un sistema de registro de estudiantes universitarios. Lee los datos de los estudiantes de un archivo, los procesa y escribe los datos procesados en otro archivo. Los datos incluyen nombres de los estudiantes, identificaciones, estado de registro, nivel y créditos. Se solicita al usuario que ingrese el nombre de la institución, el campus y el nombre del profesor. Los datos procesados, incluyendo el nombre de la institución, campus, departamento, semestre, nombre del profesor, curso y la tabla de información de los estudiantes, luego se escriben en un nuevo archivo llamado &quot;output.csv&quot;.</p>
+            <h2 id="🛠️-instalación">🛠️ Instalación</h2>
+            <p>Este proyecto fue desarrollado en Python 3.10.12 y requiere Python 3.10.12 o más reciente.</p>
+            <h3 id="instalacion-de-python-3">Instalación de Python 3</h3>
+            <ol>
+            <li><p><strong>Descarga de Python 3.10.12</strong></p>
+            <ul>
+            <li>Visita el <a href="https://www.python.org/downloads/">sitio oficial de Python</a> para descargar Python 3.10.12. Asegúrate de descargar la versión apropiada para tu sistema operativo (Windows, macOS, Linux/UNIX).</li>
+            </ul>
+            </li>
+            <li><p><strong>Ejecuta el instalador</strong>.</p>
+            <ul>
+            <li>Asegúrate de marcar la casilla que dice &quot;Agregar Python 3.x al PATH&quot; para asegurar que el intérprete de Python pueda ser encontrado por tu sistema. (Si se hace, puedes saltarte la Configuración de la Variable de Entorno)</li>
+            </ul>
+            </li>
+            <li><p>Sigue las indicaciones de instalación y finaliza la configuración.</p>
+            </li>
+            <li><p>Para verificar la instalación, abre la Línea de Comandos y escribe <code>python --version</code>. Deberías ver la versión de Python que instalaste.</p>
+            </li>
+            </ol>
+            <p>Para una guía visual sobre cómo instalar Python3, puedes ver este <a href="https://www.youtube.com/watch?v=9o4gDQvVkLU">video de YouTube</a>.</p>
+            <h3 id="configuracion-de-la-variable-de-entorno">Configuración de la Variable de Entorno</h3>
+            <ol>
+            <li><p>Abre las Propiedades del Sistema (Haz clic derecho en Computadora en el menú de inicio, o usa el atajo de teclado Win+Pause)</p>
+            </li>
+            <li><p>Haz clic en Configuraciones avanzadas del sistema</p>
+            </li>
+            <li><p>Haz clic en Variables de Entorno</p>
+            </li>
+            <li><p>Bajo Variables del Sistema, busca y selecciona la variable Path</p>
+            </li>
+            <li><p>Haz clic en Editar</p>
+            </li>
+            <li><p>En la ventana Editar Variable del Sistema, haz clic en Nuevo</p>
+            </li>
+            <li><p>Escribe el camino a la carpeta bin de Python3 (p.ej., <code>C:\Python3???</code>)</p>
+            </li>
+            <li><p>Haz clic en Aceptar en todas las ventanas para aplicar los cambios</p>
+            </li>
+            </ol>
+            <p>Puede que necesites reiniciar cualquier ventana de la línea de comandos abierta para que los cambios surtan efecto.</p>
+            <h3 id="prueba-de-instalación">Prueba de la Instalación</h3>
+            <p>Después de instalar Python3, puedes probar si la instalación fue exitosa ejecutando los siguientes comandos en la línea de comandos:</p>
+            <pre><code class="lang-cmd"><span class="hljs-keyword">python3</span> --<span class="hljs-keyword">version</span>
+</code></pre>
+
+            <h2 id="🏃♂️cómo-ejecutar">🏃‍♂️Cómo Ejecutar</h2>
+            <h3 id="ejecutando-en-visual-studio-code">Ejecución en Visual Studio Code</h3>
+            <ol>
+            <li><p>Instala Visual Studio Code y/o Python3</p>
+            <ul>
+            <li>Si aún no lo has hecho, instala Visual Studio Code y/o Python3. Asegúrate de agregar Python3 al PATH de tu sistema si aún no lo has hecho.</li>
+            </ul>
+            </li>
+            <li><p>Instala la extensión de Python en VS Code</p>
+            <ul>
+            <li>Ve a la vista de Extensiones (<code>Ver &gt; Extensiones</code>), busca <code>python</code>, y luego instala la extensión <code>python</code> proporcionada por Microsoft.</li>
+            </ul>
+            </li>
+            <li><p>Abre el proyecto en Visual Studio Code</p>
+            <ul>
+            <li>Abre Visual Studio Code, luego ve a <code>Archivo &gt; Abrir Carpeta</code> y selecciona la carpeta del proyecto.</li>
+            </ul>
+            </li>
+            <li><p>Ejecuta el código:</p>
+            <ul>
+            <li>Haz clic en <code>Ejecutar Archivo Python</code> o <code>Depurar Archivo Python</code> en la esquina superior derecha para ejecutar el código.</li>
+            </ul>
+            </li>
+            </ol>
+            <p>Para una guía visual sobre cómo configurar el entorno de Visual Studio Code y ejecutar un archivo Python, puedes ver este <a href="https://www.youtube.com/watch?v=9o4gDQvVkLU">video de YouTube</a>.</p>
+
+            <h2 id="🔧uso">🔧 Uso</h2>
+            <h3 id="cómo-usar">Cómo Usar</h3>
+            <p>Este programa está diseñado para procesar datos de estudiantes de un archivo de texto y exportarlos en formato CSV. Aquí están los pasos para usar este programa:</p>
+            <ol>
+            <li><p><strong>Ejecutar el Programa</strong></p>
+            <ul>
+            <li><p>Para iniciar el programa, puedes usar una interfaz de línea de comandos (CLI). Navega al directorio del proyecto y ejecuta el script de Python usando el siguiente comando:</p>
+            <pre><code class="lang-bash"> <span class="hljs-keyword">python3</span> main.<span class="hljs-keyword">py</span>
+</code></pre>
+            </li>
+            <li><p>Si estás utilizando un Entorno de Desarrollo Integrado (IDE) como PyCharm o Visual Studio Code, puedes ejecutar el script abriendo <code>main.py</code> y utilizando la funcionalidad de ejecución del IDE.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <ol>
+            <li><p><strong>Ingresar la Ruta del Archivo de Entrada</strong></p>
+            <ul>
+            <li><p>Después de iniciar el programa, este te pedirá que ingreses la ruta del archivo de texto de entrada. Este archivo debe contener los datos de los estudiantes que deseas procesar. Puedes ingresar solo el nombre del archivo si el archivo se encuentra en el mismo directorio que el programa, o la ruta completa al archivo. Si el archivo tiene una extensión <code>.txt</code>, inclúyela en tu entrada.</p>
+            <pre><code> Ingrese la ruta <span class="hljs-selector-tag">del</span> archivo:
+</code></pre><ul>
+            <li><p>Formatos de archivo de entrada válidos:</p>
+            <blockquote>
+            <p>C:\Users\user\Documents\student_data.txt</p>
+            <p>student_data.txt</p>
+            <p>student_data</p>
+            </blockquote>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><p><strong>Ingresar Información Adicional</strong></p>
+            <ul>
+            <li><p>El programa luego te pedirá que ingreses información adicional no incluida en el archivo de entrada. Esto incluye el nombre de la institución, el campus, el departamento y el nombre del profesor. Por favor, ingresa estos detalles según se solicite.</p>
+            <pre><code> Ingrese <span class="hljs-keyword">el</span> nombre de <span class="hljs-keyword">la</span> universidad:
+ Ingrese <span class="hljs-keyword">el</span> recinto de <span class="hljs-keyword">la</span> universidad:
+ Ingrese <span class="hljs-keyword">el</span> departamento de <span class="hljs-keyword">la</span> universidad:
+ Ingrese <span class="hljs-keyword">el</span> nombre del profesor:
+</code></pre><ul>
+            <li><p>Formatos de archivo de entrada válidos:</p>
+            <blockquote>
+            <p>Universidad Interamericana de Puerto Rico</p>
+            <p>Recinto de Aguadilla</p>
+            <p>Ciencias en Computadoras</p>
+            <p>Jose Detal</p>
+            <p>(Presione Enter para usar valores predeterminados)</p>
+            </blockquote>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><p><strong>Ruta del Archivo de Salida</strong></p>
+            <ul>
+            <li><p>Finalmente, el programa te pedirá que ingreses la ruta y el nombre del archivo CSV de salida. Aquí se escribirán los datos procesados. Al igual que con el archivo de entrada, puedes ingresar solo el nombre del archivo si deseas que el archivo se cree en el mismo directorio que el programa, o la ruta completa al archivo. Si el archivo tiene una extensión <code>.csv</code>, inclúyela en tu entrada.</p>
+            <pre><code> Ingrese <span class="hljs-keyword">la</span> ruta del archivo <span class="hljs-keyword">de</span> salida: student_output.csv
+</code></pre><ul>
+            <li><p>Formatos de archivo de salida válidos:</p>
+            <blockquote>
+            <p>C:\Users\user\Documents\student_output.csv</p>
+            <p>student_output.csv</p>
+            <p>student_output</p>
+            </blockquote>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            <li><p><strong>Verificar la Salida</strong></p>
+            <ul>
+            <li><p>Una vez que hayas ingresado toda la información requerida, el programa procesará los datos y los escribirá en el archivo de salida. Luego imprimirá un mensaje informándote de que los datos han sido exportados. Ahora puedes abrir el archivo de salida para ver los datos procesados.</p>
+            <pre><code> El archivo ha sido creado exitosamente.
+</code></pre></li>
+            </ul>
+            </li>
+            </ol>
+            <p>Por favor, ten en cuenta que este programa asume que el archivo de entrada está formateado correctamente y que todos los datos son válidos. Si el programa encuentra un error al leer el archivo, imprimirá un mensaje de error y terminará.</p>
+
+            <h2 id="📂estructura-de-archivos">📂 Estructura de Archivos</h2>
+            <p>El proyecto está organizado en una estructura de carpetas simple. Aquí está la estructura de archivos del proyecto:</p>
+            <pre><code>Proyecto
+│   Documentación <span class="hljs-selector-tag">del</span> Proyecto<span class="hljs-selector-class">.html</span>
+│   config<span class="hljs-selector-class">.json</span>
+│   main<span class="hljs-selector-class">.py</span>
+│   README<span class="hljs-selector-class">.md</span>
+│
+└───Recursos
+│
+└───Datos
+│   │   student_data<span class="hljs-selector-class">.txt</span>
+│
+└───Salida
+    │   student_output.csv
+</code></pre><ul>
+            <li><code>Documentación del Proyecto.html</code>: Documentación del proyecto en formato HTML.</li>
+            <li><code>config.json</code>: Archivo de configuración para el proyecto.</li>
+            <li><code>main.py</code>: Script principal de Python que procesa los datos de los estudiantes.</li>
+            <li><code>README.md</code>: Archivo README del proyecto.</li>
+            <li><code>Recursos</code>: Carpeta que contiene los archivos de datos de entrada y salida.<ul>
+            <li><code>Datos</code>: Carpeta que contiene el archivo de datos de entrada.<ul>
+            <li><code>student_data.txt</code>: Archivo de datos de entrada.</li>
+            </ul>
+            </li>
+            <li><code>Salida</code>: Carpeta que contiene el archivo de datos de salida.<ul>
+            <li><code>student_output.csv</code>: Archivo de datos de salida.</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+
+            <h2 id="📋características">📋 Características</h2>
+            <ul>
+            <li><p><strong>Formato del Archivo de Entrada</strong>: El archivo de entrada debe ser un archivo de texto que contenga datos de estudiantes. Cada línea en el archivo debe representar a un estudiante y contener el número, nombre e ID del estudiante, separados por comas. El archivo no debe contener ningún encabezado ni información adicional.</p>
+            <ul>
+            <li><p>Ejemplo del formato de archivo de entrada:</p>
+            <pre><code> Información del Curso
+             REDES NEURONALES - COMP<span class="hljs-number"> 1234 </span>0
+             CRN:    12345
+             Duración:   <span class="hljs-number"> 22 </span>Ene,<span class="hljs-number"> 2024 </span>-<span class="hljs-number"> 18 </span>May, 2024
+             Estado:    Abierto
+
+             Conteos de Inscripción
+                 Máximo    Actual    Restante
+             Inscripción:   <span class="hljs-number"> 29 </span>  <span class="hljs-number"> 11 </span>   18
+             Lista Cruzada:    <span class="hljs-number"> 0 </span>  <span class="hljs-number"> 0 </span>   0
+
+             Lista de Clase Resumen
+             Registro
+             Número    Nombre del Estudiante    ID    Estado de Reg.    Nivel    Créditos    Parcial    Final    Detalle de Calificación
+              <span class="hljs-number"> 1 </span>   John Doe    Z00123456    ** Registrado **    PREGRADO    3.000    Ingrese    Ingrese    Disponible
+              <span class="hljs-number"> 2 </span>   Jane Smith    Z00987654    ** Registrado **    PREGRADO    3.000    Ingrese    Ingrese    Disponible
+              <span class="hljs-number"> 3 </span>   Alice Johnson    Z00543210    ** Registrado **    PREGRADO    3.000    Ingrese    Ingrese    Disponible
+            </code></pre></li>
+            </ul>
+            </li>
+            <li><p><strong>Formato del Archivo de Salida</strong>: El archivo de salida es un archivo CSV que contiene los datos de los estudiantes procesados. El archivo incluye el nombre de la institución, campus, departamento, nombre del profesor, semestre, curso y una tabla con la información de los estudiantes. La información del estudiante incluye el número, nombre e ID del estudiante, separados por comas.</p>
+            <ul>
+            <li><p>Ejemplo del formato de archivo de salida:</p>
+            <pre><code>  , Universidad Interamericana <span class="hljs-keyword">de</span> Puerto Rico
+              , Recinto <span class="hljs-keyword">de</span> Aguadilla
+              , Ciencias <span class="hljs-keyword">en</span> Computadoras
+
+              SEMESTRE: ENERO-MAYO 2022
+              PROF: Jose Detal
+              CURSO: Programació<span class="hljs-keyword">n</span> <span class="hljs-keyword">en</span> Python
+
+              Num, Nombre, <span class="hljs-keyword">Matr</span>ícula
+              <span class="hljs-string">"1"</span>, <span class="hljs-string">"Jon Doe"</span>, <span class="hljs-string">"Z00123456"</span>
+              <span class="hljs-string">"2"</span>, <span class="hljs-string">"Jane Smith"</span>, <span class="hljs-string">"Z00987654"</span>
+              <span class="hljs-string">"3"</span>, <span class="hljs-string">"Alice Johnson"</span>, <span class="hljs-string">"Z00543210"</span>
+            </code></pre></li>
+            </ul>
+            </li>
+            <li><p><strong>Información de la Universidad</strong>: El programa solicita al usuario que ingrese el nombre de la institución, campus, departamento y nombre del profesor. Si el usuario no proporciona esta información, el programa utiliza valores predeterminados del archivo <code>config.json</code>.</p>
+            </li>
+            <li><p><strong>Análisis del Semestre</strong>: El programa analiza la información del semestre del archivo de entrada y la convierte a un formato estándar (por ejemplo, de &quot;Enero-Mayo 2022&quot; a &quot;ENERO-MAYO 2022&quot;).</p>
+            </li>
+            <li><p><strong>Análisis del Curso</strong>: El programa analiza la información del curso y la sección del archivo de entrada y los combina en un único nombre de curso (por ejemplo, de &quot;Programación - Sección 1&quot; a &quot;Programación&quot;).</p>
+            </li>
+            <li><p><strong>Clase Estudiante</strong>: El programa define una clase <code>Student</code> para representar la información del estudiante. La clase tiene atributos para el número, nombre e ID del estudiante y un método para devolver una representación en cadena del estudiante.</p>
+            </li>
+            <li><p><strong>Salida CSV</strong>: El programa escribe los datos procesados en un archivo CSV con la información de la institución, semestre, nombre del profesor, curso y una tabla de información de los estudiantes.</p>
+            </li>
+            <li><p><strong>Manejo de Errores</strong>: El programa incluye manejo de errores para verificar rutas de archivos y datos de entrada inválidos. Si ocurre un error, el programa imprime un mensaje de error y se cierra.</p>
+            </li>
+            <li><p><strong>Interacción con el Usuario</strong>: El programa interactúa con el usuario a través de la interfaz de línea de comandos (CLI). Solicita al usuario que ingrese la ruta del archivo de entrada, la información de la institución y la ruta del archivo de salida.</p>
+            </li>
+            <li><p><strong>Archivo de Configuración</strong>: El programa utiliza un archivo <code>config.json</code> para almacenar valores predeterminados para la información de la institución. Si el usuario no proporciona esta información, el programa utiliza los valores predeterminados del archivo de configuración.</p>
+            </li>
+            </ul>
+
+
+            <h2 id="📦estructura-del-código">📦 Estructura del Código</h2>
+            <p>El código de Python para este proyecto está organizado en varias funciones que manejan diferentes aspectos del programa. Aquí hay una visión general de la estructura del código:</p>
+            <ol>
+            <li><p><code>if __name__ == &#39;__main__&#39;:</code> - Esta línea verifica si el script se está ejecutando directamente o importado como un módulo. El código dentro de este bloque solo se ejecutará si el script se ejecuta directamente.</p>
+            <ul>
+            <li><p><code>path_to_file = path_verifier(0)</code> - Esta línea llama a la función <code>path_verifier</code> con un argumento de <code>0</code>, lo que solicita al usuario que ingrese la ruta del archivo de entrada. La función verifica la ruta y la devuelve. La ruta se almacena entonces en la variable <code>path_to_file</code>.</p>
+            </li>
+            <li><p><code>header, students = read_file(path_to_file)</code> - Esta línea llama a la función <code>read_file</code> con <code>path_to_file</code> como argumento. La función lee el archivo, procesa el encabezado y los datos de los estudiantes, y los devuelve. Los datos devueltos se almacenan en las variables <code>header</code> y <code>students</code>.</p>
+            </li>
+            <li><p><code>output_path = path_verifier(1)</code> - Esta línea llama a la función <code>path_verifier</code> con un argumento de <code>1</code>, lo que solicita al usuario que ingrese la ruta del archivo de salida. La función verifica la ruta y la devuelve. La ruta se almacena entonces en la variable <code>output_path</code>.</p>
+            </li>
+            <li><p><code>write_file(output_path, header, students)</code> - Esta línea llama a la función <code>write_file</code> con <code>output_path</code>, <code>header</code> y <code>students</code> como argumentos. La función escribe los datos procesados en el archivo de salida.</p>
+            </li>
+            <li><p><code>exit(0)</code> - Esta línea termina el programa.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <ol>
+            <li><p><code>path_verifier()</code> - Esta función solicita al usuario que ingrese una ruta de archivo y verifica que la ruta sea válida. Toma un argumento <code>mode</code> que determina si la función está verificando la ruta del archivo de entrada (<code>mode = 0</code>) o la ruta del archivo de salida (<code>mode = 1</code>). La función devuelve la ruta de archivo verificada.</p>
+            <ul>
+            <li><p><code>with open(&#39;config.json&#39;) as f:</code> - Esta línea abre el archivo &#39;config.json&#39; y carga las rutas predeterminadas para los archivos de entrada y salida.  </p>
+            </li>
+            <li><p><code>if check == 0:</code> - Este bloque de código se ejecuta cuando la función se llama con un argumento de 0. Solicita al usuario que ingrese la ruta del archivo de entrada. La función verifica la ruta y la devuelve. Si el usuario no proporciona una ruta válida después de 3 intentos, el programa se cierra.  </p>
+            </li>
+            <li><p><code>elif check == 1:</code> - Este bloque de código se ejecuta cuando la función se llama con un argumento de 1. Solicita al usuario que ingrese la ruta del archivo de salida. La función verifica la ruta y la devuelve. Si el usuario no proporciona una ruta válida después de 3 intentos, el programa se cierra.  </p>
+            </li>
+            <li><p><code>exit(0)</code> - Esta línea se ejecuta si ninguna de las condiciones anteriores se cumple, causando que el programa se cierre.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <ol>
+            <li><p><code>read_file(path_to_file)</code> - Esta función lee el archivo de entrada, procesa el encabezado y los datos de los estudiantes, y los devuelve. Toma el <code>path_to_file</code> como argumento y devuelve los datos <code>header</code> y <code>students</code>.</p>
+            <ul>
+            <li><code>header = []</code>, <code>students = []</code>, <code>header_text = &quot;&quot;</code>, <code>counter = 0</code> - Estas líneas inicializan las variables que se usarán en la función.</li>
+            </ul>
+            <ul>
+            <li><p><code>with open(path_to_file, &quot;r&quot;) as file:</code> - Esta línea abre el archivo en la ruta especificada por <code>path_to_file</code> en modo de lectura.</p>
+            </li>
+            <li><p>El bucle for <code>for line in file:</code> itera sobre cada línea en el archivo.</p>
+            </li>
+            <li><p><code>if line.strip() != &quot;&quot; and counter &lt; 12:</code> - Este bloque de código se ejecuta si la línea no está vacía y el contador es menor que 12. Añade la línea a la lista <code>header</code> e incrementa el contador.</p>
+            </li>
+            <li><p><code>elif line.strip() != &quot;&quot; and counter &gt; 11:</code> - Este bloque de código se ejecuta si la línea no está vacía y el contador es mayor que 11. Divide la línea en valores, crea un nuevo objeto <code>Student</code> con estos valores y añade el estudiante a la lista <code>students</code>.</p>
+            </li>
+            <li><p><code>header_text = header_builder(header)</code> - Esta línea llama a la función <code>header_builder</code> con <code>header</code> como argumento. La función procesa el encabez</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <p>ado y lo devuelve. El encabezado devuelto se almacena entonces en la variable <code>header_text</code>.</p>
+            <ul>
+            <li><code>return header_text, students</code> - Esta línea devuelve el encabezado procesado y la lista de estudiantes.</li>
+            </ul>
+            <ol>
+            <li><p><code>header_builder(header)</code> - Esta función procesa los datos del encabezado y los devuelve como una única cadena de texto. Toma el <code>header</code> como argumento y devuelve el texto del encabezado procesado.</p>
+            <ul>
+            <li><p><code>with open(&#39;config.json&#39;) as f:</code> - Esta línea abre el archivo &#39;config.json&#39; y carga los valores predeterminados para la información de la universidad.</p>
+            </li>
+            <li><p>El bucle for <code>for line in header:</code> itera sobre cada línea en el encabezado.</p>
+            </li>
+            <li><p><code>if line.find(&quot;Course Information&quot;) == -1 and counter &lt; 3:</code> - Este bloque de código se ejecuta si la línea no contiene &quot;Course Information&quot; y el contador es menor que 3. Asigna la línea a la variable correspondiente (<code>course</code>, <code>section</code>, o <code>semester</code>) e incrementa el contador.</p>
+            </li>
+            <li><p><code>semester = semester_parser(semester)</code> - Esta línea llama a la función <code>semester_parser</code> con <code>semester</code> como argumento. La función procesa el semestre y lo devuelve. El semestre devuelto se almacena entonces en la variable <code>semester</code>.</p>
+            </li>
+            <li><p><code>course = course_parser(course, section)</code> - Esta línea llama a la función <code>course_parser</code> con <code>course</code> y <code>section</code> como argumentos. La función procesa el curso y la sección y lo devuelve. El curso devuelto se almacena entonces en la variable <code>course</code>.</p>
+            </li>
+            <li><p>Las siguientes líneas solicitan al usuario que ingrese la información de la universidad (nombre, campus, departamento, nombre del profesor). Si el usuario no ingresa ninguna información, la función utiliza los valores predeterminados del archivo &#39;config.json&#39;.</p>
+            </li>
+            <li><p>La función luego convierte la información de la universidad a mayúsculas.</p>
+            </li>
+            <li><p><code>header_text = &quot;,&quot; + university_name + &quot;\n,&quot; + university_campus + &quot;\n,&quot; + university_department + &quot;\n\nSEMESTRE: &quot; + semester + &quot;\nPROF: &quot; + professor_name + &quot;\nCURSO: &quot; + course + &quot;\n\n\n&quot; + defaults[&quot;table_header&quot;] + &quot;\n&quot;</code> - Esta línea construye el texto del encabezado usando la información de la universidad procesada, semestre, nombre del profesor, curso y encabezado de la tabla.</p>
+            </li>
+            <li><p><code>return header_text</code> - Esta línea devuelve el texto del encabezado procesado.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <ol>
+            <li><p><code>semester_parser(semester)</code> - Esta función procesa los datos del semestre y los devuelve. Toma el <code>semester</code> como argumento y devuelve el semestre procesado.</p>
+            <ul>
+            <li><p><code>month_status = False</code>, <code>input_dates = [&quot;Ene&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Abr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Ago&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dic&quot;]</code>, <code>output_dates = [&quot;ENERO&quot;, &quot;FEBRERO&quot;, &quot;MARZO&quot;, &quot;ABRIL&quot;, &quot;MAYO&quot;, &quot;JUNIO&quot;, &quot;JULIO&quot;, &quot;AGOSTO&quot;, &quot;SEPTIEMBRE&quot;, &quot;OCTUBRE&quot;, &quot;NOVIEMBRE&quot;, &quot;DICIEMBRE&quot;]</code>, <code>month_one = &quot;&quot;</code>, <code>month_two = &quot;&quot;</code>, <code>year = &quot;&quot;</code> - Estas líneas inicializan las variables que se usarán en la función.</p>
+            </li>
+            <li><p><code>semester = semester.replace(&quot;\t&quot;, &quot; &quot;).replace(&quot;,&quot;, &quot;&quot;)</code> - Esta línea reemplaza los caracteres de tabulación y comas en el semestre con espacios.</p>
+            </li>
+            <li><p>El bucle for <code>for line in semester.split(&quot; &quot;)</code> itera sobre cada palabra en el semestre.</p>
+            </li>
+            <li><p><code>if line in input_dates and month_status == False:</code> - Este bloque de código se ejecuta si la palabra es un mes y el primer mes aún no ha sido asignado. Asigna la palabra a <code>month_one</code> y establece <code>month_status</code> a <code>True</code>.</p>
+            </li>
+            <li><p><code>elif line in input_dates and month_status == True:</code> - Este bloque de código se ejecuta si la palabra es un mes y el primer mes ya ha sido asignado. Asigna la palabra a <code>month_two</code> y termina el bucle.</p>
+            </li>
+            <li><p><code>if line.isdigit() and len(line) == 4:</code> - Este bloque de código se ejecuta si la palabra es un año. Asigna la palabra a <code>year</code>.</p>
+            </li>
+            <li><p><code>semester = month_one + &quot;-&quot; + month_two + &quot; &quot; + year</code> - Esta línea construye el semestre usando los meses y el año procesados.</p>
+            </li>
+            <li><p><code>return semester</code> - Esta línea devuelve el semestre procesado.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <ol>
+            <li><p>`course_parser(course,</p>
+            <p>section)<code>- Esta función procesa los datos del curso y la sección y los devuelve. Toma el</code>course<code>y</code>section` como argumentos y devuelve el curso procesado.</p>
+            <ul>
+            <li><p><code>course_status = False</code>, <code>course_name = &quot;&quot;</code> - Estas líneas inicializan las variables que se usarán en la función.</p>
+            </li>
+            <li><p>El primer bucle for <code>for line in course.split(&quot; &quot;)</code> itera sobre cada palabra en el curso.</p>
+            </li>
+            <li><p><code>if line.find(&quot;-&quot;) &gt; -1 or line.find(&quot;0&quot;) &gt; -1:</code> - Este bloque de código se ejecuta si la palabra contiene &quot;-&quot; o &quot;0&quot;. Alterna la variable <code>course_status</code>.</p>
+            </li>
+            <li><p><code>elif course_status == True and not line.isdigit():</code> - Este bloque de código se ejecuta si <code>course_status</code> es <code>True</code> y la palabra no es un número. Añade la palabra a <code>course_name</code>.</p>
+            </li>
+            <li><p><code>elif course_status == True and line.isdigit():</code> - Este bloque de código se ejecuta si <code>course_status</code> es <code>True</code> y la palabra es un número. Añade la palabra a <code>course_name</code>.</p>
+            </li>
+            <li><p><code>course_status = False</code> - Esta línea reinicia la variable <code>course_status</code>.</p>
+            </li>
+            <li><p>El segundo bucle for <code>for line in section.split(&quot;\t&quot;):</code> itera sobre cada palabra en la sección.</p>
+            </li>
+            <li><p><code>if course_status == False:</code> - Este bloque de código se ejecuta si <code>course_status</code> es <code>False</code>. Establece <code>course_status</code> a <code>True</code>.</p>
+            </li>
+            <li><p><code>else:</code> - Este bloque de código se ejecuta si <code>course_status</code> es <code>True</code>. Añade la sección a <code>course_name</code> y termina el bucle.</p>
+            </li>
+            <li><p><code>return course_name</code> - Esta línea devuelve el nombre del curso procesado.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <ol>
+            <li><p><code>Clase Student</code> - Esta clase define el objeto <code>Student</code>, que representa la información de un estudiante. Tiene tres atributos: <code>num</code>, <code>name</code> e <code>id</code>.</p>
+            <ul>
+            <li><p><code>def __init__(self, num, name, id):</code> - Este es el método inicializador para la clase <code>Student</code>. Toma tres argumentos: <code>num</code>, <code>name</code> e <code>id</code>. Estos argumentos se usan para inicializar los atributos <code>num</code>, <code>name</code> e <code>id</code> de la instancia de <code>Student</code>.</p>
+            </li>
+            <li><p><code>self.num = num</code>, <code>self.name = name</code>, <code>self.id = id</code> - Estas líneas asignan los valores de los argumentos <code>num</code>, <code>name</code> e <code>id</code> a los atributos correspondientes de la instancia de <code>Student</code>.</p>
+            </li>
+            <li><p><code>def __str__(self):</code> - Este es el método de representación en cadena para la clase <code>Student</code>. Devuelve una cadena que representa la instancia de <code>Student</code>.</p>
+            </li>
+            <li><p><code>return f&quot;{self.num}, {self.name}, {self.id}&quot;</code> - Esta línea devuelve una cadena que contiene los atributos <code>num</code>, <code>name</code> e <code>id</code> de la instancia de <code>Student</code>, separados por comas.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+            <ol>
+            <li><p><code>write_file(output_path, header, students)</code> - Esta función escribe los datos procesados en el archivo de salida. Toma <code>output_path</code>, <code>header</code> y <code>students</code> como argumentos y no devuelve nada.</p>
+            <ul>
+            <li><p><code>with open(output_path, &quot;w&quot;) as file:</code> - Esta línea abre el archivo en la ruta especificada por <code>output_path</code> en modo de escritura.</p>
+            </li>
+            <li><p><code>file.write(header)</code> - Esta línea escribe el encabezado procesado en el archivo.</p>
+            </li>
+            <li><p>El bucle for <code>for student in students:</code> itera sobre cada estudiante en la lista <code>students</code>.</p>
+            </li>
+            <li><p><code>file.write(str(student) + &quot;\n&quot;)</code> - Esta línea escribe la representación en cadena del estudiante en el archivo, seguida de un carácter de nueva línea.</p>
+            </li>
+            <li><p><code>print(&#39;\033[92m&#39; + &quot;\nEl archivo ha sido creado exitosamente.&quot;)</code> - Esta línea imprime un mensaje de éxito indicando que el archivo ha sido creado con éxito.</p>
+            </li>
+            <li><p><code>return</code> - Esta línea finaliza la función y devuelve el control al llamador.</p>
+            </li>
+            </ul>
+            </li>
+            </ol>
+
+            <h2 id="📝-autores">📝 Autores</h2>
+            <p>Esta sección enumera a los autores que contribuyeron a los diferentes archivos en el proyecto:</p>
+            <ul>
+                <li><code>if __name__ == &#39;__main__&#39;</code>: Eduardo A. Sosa Torres</li>
+                <li><code>path_verifier()</code>: </li>
+                <li><code>read_file()</code>: </li>
+                <li><code>header_builder()</code>: Eduardo A. Sosa Torres</li>
+                <li><code>semester_parser()</code>: Eduardo A. Sosa Torres</li>
+                <li><code>course_parser()</code>: Eduardo A. Sosa Torres</li>
+                <li><code>Clase Student</code>: </li>
+                <li><code>write_file()</code>: </li>
+                <li><code>README.md</code>: Eduardo A. Sosa Torres</li>
+            </ul>
+        </div>
+
+        <! -- NEEDS TO BE UPDATED -->
+        <div id="codeExplorer">
+        <h1>Documentación Completa del Código y Visión General de la Funcionalidad</h1>
+        <p>
+            Este documento proporciona una descripción detallada de la estructura y el funcionamiento del código fuente del proyecto. Se divide en varias secciones, cada una de las cuales describe un componente clave del proyecto y su funcionalidad. Las secciones incluyen una descripción general del componente, sus objetivos, precondiciones, postcondiciones, descripción de los argumentos, autor y fecha de finalización.
+        </p>
+        <h2 class="collapsable" id="main">📚main</h2>
+        <p><strong>Objetivo:</strong> La función <code>main()</code> solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita información adicional al usuario y, finalmente, escribe los datos procesados y la información adicional en un archivo de salida.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de entrada cuando se le solicite. Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+            <li>El archivo de entrada debe existir en la ruta proporcionada y ser legible.</li>
+            <li>El usuario debe proporcionar información válida cuando se le solicite.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>Se crea un archivo de salida en la ruta especificada con los datos procesados y la información adicional.</li>
+            <li>Si el archivo de entrada no puede abrirse, el programa termina con un mensaje de error.</li>
+        </ul>
+        <p><strong>Descripción de los Argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo de entrada. Se solicita al usuario que introduzca esta ruta.</li>
+            <li><code>nombreInstitucion</code>: Una cadena que representa el nombre de la institución. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>recinto</code>: Una cadena que representa el campus. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>departamento</code>: Una cadena que representa el departamento. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>profesor</code>: Una cadena que representa el nombre del profesor. Se solicita al usuario que introduzca esta información.</li>
+            <li><code>outputFilePath</code>: Una cadena que representa la ruta del archivo de salida. Se solicita al usuario que introduzca esta ruta.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
+        <h3 id="filePathVerifier">filePathVerifier()</h3>
+        <p><strong>Objetivo:</strong> Esta función verifica y ajusta la ruta del archivo proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .txt, se añade la extensión.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo.</li>
+            <li>Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa la ruta completa del archivo con la extensión .txt.</li>
+            <li>Si la ruta del archivo proporcionada por el usuario contiene comillas dobles, estas se eliminan.</li>
+        </ul>
+        <p><strong>Descripción de los Argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
+        <h3 id="outputFilePathVerifier">outputFilePathVerifier()</h3>
+        <p><strong>Objetivo:</strong> Esta función verifica y ajusta la ruta del archivo de salida proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .csv, se añade la extensión.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de salida.</li>
+            <li>Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa la ruta completa del archivo de salida con la extensión .csv.</li>
+            <li>Si la ruta del archivo de salida proporcionada por el usuario contiene comillas dobles, estas se eliminan.</li>
+        </ul>
+        <p><strong>Descripción de los Argumentos:</strong></p>
+        <ul>
+            <li><code>outputFilePath</code>: Una cadena que representa la ruta del archivo de salida que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
+        <h2 class="collapsable" id="FileParser">📕FileParser</h2>
+        <p><strong>Objetivo:</strong> Esta función se utiliza para analizar un archivo y extraer información relevante del curso, incluyendo el nombre del curso, el número de registro del curso (CRN) y la duración del curso.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>La función recibe como argumento una cadena de texto que representa la ruta del archivo a analizar.</li>
+            <li>El archivo debe existir en la ruta proporcionada y debe ser legible.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una estructura <code>CourseInfo</code> que contiene la información del curso extraída del archivo.</li>
+            <li>Si el archivo no se puede abrir o leer, o si la información del curso no se puede encontrar o extraer correctamente, la función puede no comportarse como se espera.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a analizar.</li>
+        </ul>
+        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
+        <h3 id="modifyDuration">modifyDuration</h3>
+        <p><strong>Objetivo:</strong> Esta función se utiliza para modificar la duración de un curso, traduciendo los nombres de los meses al español y ajustando el formato a &quot;MES_INICIO-MES_FINAL AÑO&quot;.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>La función recibe como argumento una cadena de texto que representa la duración del curso en el formato &quot;Fecha de inicio - Fecha de finalización&quot;.</li>
+            <li>Las fechas de inicio y finalización deben estar en el formato &quot;Día Mes, Año&quot;.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa la duración del curso en el formato &quot;MES_INICIO-MES_FINAL AÑO&quot;.</li>
+            <li>Los nombres de los meses están en español y en mayúsculas.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>duration</code>: Una cadena que representa la duración del curso en el formato original, que se modifica al formato deseado con los meses en español.</li>
+        </ul>
+        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
+        <h3 id="monthTranslator">monthTranslator</h3>
+        <p><strong>Objetivo:</strong> Esta función se utiliza para traducir los nombres de los meses al español, recibiendo un nombre de mes en inglés y devolviendo el correspondiente en español.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>La función recibe como argumento una cadena de texto que representa el nombre de un mes en inglés.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve una cadena de texto que representa el nombre del mes en español.</li>
+            <li>Si el nombre del mes no coincide con ninguno de los nombres de los meses en inglés, la función devuelve una cadena vacía.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>month</code>: Una cadena que representa el nombre del mes en inglés, que se traduce al español.</li>
+        </ul>
+        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
+        <h2 class="collapsable" id="FileReader">📕FileReader</h2>
+        <p><strong>Objetivo:</strong> La clase <code>FileReader</code> se utiliza para leer un archivo de texto en formato CSV (valores separados por comas) y extraer datos de estudiantes. Estos datos incluyen el número de estudiante, el nombre, la identificación del estudiante, el estado de registro, el nivel, los créditos, la calificación de mitad de período, la calificación final y los detalles de la calificación.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El archivo debe existir en la ruta proporcionada y debe ser legible.</li>
+            <li>El archivo debe estar en formato CSV.</li>
+            <li>Los datos en el archivo deben estar en el formato correcto, ser válidos y estar en el orden correcto.</li>
+            <li>Los datos en el archivo deben estar separados por comas y rodeados por comillas dobles.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>La función devuelve un vector de objetos relacionados a los de la clase <code>Student</code> que contiene los datos de los estudiantes.</li>
+            <li>Si el archivo no se puede abrir o leer correctamente, o si los datos no se pueden extraer correctamente, la función puede no comportarse como se espera.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a leer.</li>
+        </ul>
+        <p><strong>Autor:</strong> Christian J Santiago Rivera<br><strong>Fecha de Finalización:</strong> 03-02-2024</p>
+        <h2 class="collapsable" id="HeaderMaker">📕HeaderMaker</h2>
+        <p><strong>Objetivo:</strong> La clase <code>HeaderMaker</code> se utiliza para crear un encabezado con los datos proporcionados, utilizando valores predeterminados en caso de falta de información.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>Es necesario proporcionar el nombre del curso, el semestre y el CRN. El resto de los datos pueden estar vacíos, ya que se completarán con valores predeterminados.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>Si el nombre del curso, semestre y CRN están vacíos, el programa imprimirá un mensaje de error.</li>
+            <li>Si se proporcionan datos para el resto de los valores, se crearán copias de ellos.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>universityName</code>, <code>campusLocation</code>, <code>departmentName</code>, <code>semester</code>, <code>professorName</code>, <code>courseName</code>, <code>crn</code>: Diversos datos necesarios para la creación del encabezado, con valores predeterminados para algunos si no se proporcionan.</li>
+        </ul>
+        <p><strong>Autor:</strong> Azkaria L. Rosado Rodriguez<br><strong>Fecha de Finalización:</strong> 02-03-2024</p>
+        <h2 class="collapsable" id="FileWriter">📕FileWriter</h2>
+        <p><strong>Objetivo:</strong> La clase <code>FileWriter</code> se utiliza para crear un archivo de texto en formato CSV con datos de estudiantes.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>El vector <code>students</code> debe contener datos válidos de la clase <code>Student</code>.</li>
+            <li><code>filePath</code> debe representar la ruta del archivo de salida.</li>
+            <li><code>header</code> debe representar el encabezado del archivo.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>El archivo creado se encuentra en la ruta especificada.</li>
+            <li>Los datos están en formato CSV y el encabezado al inicio del archivo.</li>
+            <li>El archivo se cierra después de escribir todos los datos.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>students</code>, <code>filePath</code>, <code>header</code>: Parámetros necesarios para la creación del archivo, incluyendo los datos de los estudiantes y la ruta del archivo.</li>
+        </ul>
+        <p><strong>Autor:</strong> Javier Santos Babilonia<br><strong>Fecha de Finalización:</strong> 01-03-2024</p>
+        <h2 class="collapsable" id="Student">📕Student</h2>
+        <p><strong>Objetivo:</strong> La clase <code>Student</code> representa a un estudiante con varios atributos relevantes y proporciona métodos para manipular estos atributos.</p>
+        <p><strong>Precondiciones:</strong></p>
+        <ul>
+            <li>Para el constructor y los métodos <code>set</code>, todos los valores proporcionados deben ser válidos.</li>
+        </ul>
+        <p><strong>Postcondiciones:</strong></p>
+        <ul>
+            <li>Se crea un objeto <code>Student</code> con los atributos especificados.</li>
+            <li>Los métodos <code>get</code> y <code>set</code> permiten leer y modificar los atributos, respectivamente.</li>
+        </ul>
+        <p><strong>Descripción de argumentos:</strong></p>
+        <ul>
+            <li><code>num</code>, <code>name</code>, <code>studentId</code>, <code>registrationStatus</code>, <code>level</code>, <code>credits</code>, <code>midterm</code>, <code>final</code>, <code>gradeDetail</code>: Atributos del estudiante que pueden ser obtenidos o establecidos a través de los métodos de la clase.</li>
+        </ul>
+        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 28-02-2024</p>
+    </div>
+    </body>
+</html>

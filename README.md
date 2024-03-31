@@ -1,7 +1,7 @@
 
 # Python Investigation Project
 
-This C++ project is a university student registration system. It reads student data from a file, processes it, and writes the processed data to another file. The data includes student names, IDs, registration status, level, and credits. The user is prompted to input the institution's name, campus, and professor's name. The processed data, including the institution's name, campus, department, semester, professor's name, course, and the table of students' information, is then written to a new file named "output.csv".
+This Python project is a university student registration system. It reads student data from a file, processes it, and writes the processed data to another file. The data includes student names, IDs, registration status, level, and credits. The user is prompted to input the institution's name, campus, and professor's name. The processed data, including the institution's name, campus, department, semester, professor's name, course, and the table of students' information, is then written to a new file named "output.csv".
 ## 🛠️ Installation
 
 This project was developed in Python 3.10.12 and requires Python 3.10.12 or newer.
@@ -18,7 +18,7 @@ This project was developed in Python 3.10.12 and requires Python 3.10.12 or newe
 
 4. To verify the installation, open Command Prompt and type `python --version`. You should see the Python version you installed.
 
-For a visual guide on installing MinGW w64, you can watch this [YouTube video](https://www.youtube.com/watch?v=9o4gDQvVkLU).
+For a visual guide on installing Python3, you can watch this [YouTube video](https://www.youtube.com/watch?v=9o4gDQvVkLU).
 
 ### Enviroment Variable Set-up
 
@@ -48,7 +48,6 @@ After installing Python3, you can test whether the installation was successful b
 python3 --version
 ```
 
-
 ## 🏃‍♂️How to Run
 
 ### Running in Visual Studio Code
@@ -62,10 +61,9 @@ python3 --version
    - Open Visual Studio Code, then go to `File > Open Folder` and select the project folder.
 
 4. Run the code: 
-   - Click `Run Python File` or `Debug Python File` on the top right corner to execute the code.
+   - Click `Run Python File` or `Debug Python File` in the top right corner to execute the code.
 
-For a visual guide on setting up the Visual Studio Code environment and running a C++ file, you can watch this [YouTube video](https://www.youtube.com/watch?v=9o4gDQvVkLU).
-
+For a visual guide on setting up the Visual Studio Code environment and running a Python file, you can watch this [YouTube video](https://www.youtube.com/watch?v=9o4gDQvVkLU).
 
 ## 🔧 Usage
 
@@ -173,6 +171,67 @@ Project
     - student_data.txt: Input data file.
   - Output: Folder that contains the output data file.
     - student_output.csv: Output data file.
+
+## 📋 Characteristics
+
+- **Input File Format**: The input file should be a text file containing student data. Each line in the file should represent a student and contain the student's number, name, and ID, separated by commas. The file should not contain any headers or additional information.
+
+   - Example input file format:
+   
+      ```
+      Course Information
+      NEURAL NETWORKS - COMP 1234 0
+      CRN:	12345
+      Duration:	22 Jan, 2024 - 18 May, 2024
+      Status:	Open
+      
+      Enrollment Counts
+          Maximum	Actual	Remaining
+      Enrollment:	29	11	18
+      Cross List: 	0	0	0
+      
+      Summary Class List
+      Record
+      Number	Student Name	ID	Reg Status	Level	Credits	Midterm	Final	Grade Detail
+        1	John Doe	Z00123456	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+        2	Jane Smith	Z00987654	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+        3	Alice Johnson	Z00543210	** Registered **	UNDERGRADUATE	3.000	Enter	Enter	Available
+      ```
+
+- **Output File Format**: The output file is a CSV file that contains the processed student data. The file includes the institution's name, campus, department, professor's name, semester, course, and a table of student information. The student information includes the student's number, name, and ID, separated by commas.
+
+    - Example output file format:
+    
+        ```
+        , Universidad Interamericana de Puerto Rico
+        , Recinto de Aguadilla
+        , Ciencias en Computadoras
+        
+        SEMESTRE: ENERO-MAYO 2022
+        PROF: Jose Detal
+        CURSO: Programación en Python
+        
+        Num, Nombre, Matrícula
+        "1", "Jon Doe", "Z00123456"
+        "2", "Jane Smith", "Z00987654"
+        "3", "Alice Johnson", "Z00543210"
+        ```
+      
+- **University Information**: The program prompts the user to enter the institution's name, campus, department, and professor's name. If the user does not provide this information, the program uses default values from the `config.json` file.
+
+- **Semester Parsing**: The program parses the semester information from the input file and converts it to a standard format (e.g., "January-May 2022" to "ENERO-MAYO 2022").
+
+- **Course Parsing**: The program parses the course and section information from the input file and combines them into a single course name (e.g., "Programming - Section 1" to "Programación").
+
+- **Student Class**: The program defines a `Student` class to represent student information. The class has attributes for the student's number, name, and ID, and a method to return a string representation of the student.
+
+- **CSV Output**: The program writes the processed data to a CSV file with the institution's information, semester, professor's name, course, and a table of student information.
+
+- **Error Handling**: The program includes error handling to check for invalid file paths and input data. If an error occurs, the program prints an error message and exits.
+
+- **User Interaction**: The program interacts with the user through the command line interface (CLI). It prompts the user to enter the input file path, institution information, and output file path.
+
+- **Configuration File**: The program uses a `config.json` file to store default values for the institution's information. If the user does not provide this information, the program uses the default values from the configuration file.
 
 ## 📦 Code Structure
 
