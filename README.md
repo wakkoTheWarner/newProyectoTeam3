@@ -87,18 +87,38 @@ This program is designed to process student data from a text file and output it 
    - After starting the program, it will ask you to enter the path of the input text file. This file should contain the student data that you want to process. You can enter just the file name if the file is in the same directory as the program, or the full path to the file. If the file has a `.txt` extension, include it in your input.
 
       ```
-      Ingrese la ruta del archivo: ejemploDatos.txt
+      Ingrese la ruta del archivo: 
       ```
+     
+      - Valid input file formats:
+      
+         > C:\Users\user\Documents\student_data.txt
+         
+         > student_data.txt
+         
+         > student_data
 
 3. **Enter Additional Information**
    - The program will then prompt you to enter additional information not included in the input file. This includes the name of the institution, the campus, the department, and the professor's name. Please enter these details as prompted.
 
       ```
-      Ingrese el nombre de la universidad: Universidad Interamericana de Puerto Rico
-      Ingrese el recinto de la universidad: Recinto de Aguadilla
-      Ingrese el departamento de la universidad: Ciencias en Computadoras
-      Ingrese el nombre del profesor: Jose Detal
+      Ingrese el nombre de la universidad:
+      Ingrese el recinto de la universidad:
+      Ingrese el departamento de la universidad:
+      Ingrese el nombre del profesor:
       ```
+   
+      - Valid input file formats:
+      
+         > Universidad Interamericana de Puerto Rico
+         >
+         > Recinto de Aguadilla
+         > 
+         > Ciencias en Computadoras
+         >
+         > Jose Detal
+
+         > (Press Enter to use default values)
 
 4. **Output File Path**
    - Finally, the program will ask you to enter the path and name of the output CSV file. This is where the processed data will be written. As with the input file, you can enter just the file name if you want the file to be created in the same directory as the program, or the full path to the file. If the file has a `.csv` extension, include it in your input.
@@ -106,6 +126,14 @@ This program is designed to process student data from a text file and output it 
       ```
       Ingrese la ruta del archivo de salida: student_output.csv
       ```
+     
+      - Valid output file formats:
+      
+         > C:\Users\user\Documents\student_output.csv
+         
+         > student_output.csv
+         
+         > student_output
 
 5. **Check the Output**
    - Once you've entered all the required information, the program will process the data and write it to the output file. It will then print a message informing you that the data has been exported. You can now open the output file to view the processed data.
@@ -162,6 +190,7 @@ The Python code for this project is organized into several functions that handle
 
    - `exit(0)` - This line terminates the program.
 
+
 2. `path_verifier()` - This function prompts the user to enter a file path and verifies that the path is valid. It takes an argument `mode` that determines whether the function is verifying the input file path (`mode = 0`) or the output file path (`mode = 1`). The function returns the verified file path.
 
    - `with open('config.json') as f:` - This line opens the 'config.json' file and loads the default paths for the input and output files.  
@@ -172,6 +201,7 @@ The Python code for this project is organized into several functions that handle
 
    - `exit(0)` - This line is executed if none of the above conditions are met, causing the program to exit.
 
+   
 3. `read_file(path_to_file)` - This function reads the input file, processes the header and student data, and returns them. It takes the `path_to_file` as an argument and returns the `header` and `students` data.
     
     - `header = []`, `students = []`, `header_text = ""`, `counter = 0` - These lines initialize the variables that will be used in the function.
@@ -187,6 +217,7 @@ The Python code for this project is organized into several functions that handle
    - `header_text = header_builder(header)` - This line calls the `header_builder` function with the `header` as an argument. The function processes the header and returns it. The returned header is then stored in the `header_text` variable.
 
    - `return header_text, students` - This line returns the processed header and the list of students.
+
 
 4. `header_builder(header)` - This function processes the header data and returns it as a single string. It takes the `header` as an argument and returns the processed header text.
 
@@ -208,6 +239,7 @@ The Python code for this project is organized into several functions that handle
 
     - `return header_text` - This line returns the processed header text.
 
+
 5. `semester_parser(semester)` - This function processes the semester data and returns it. It takes the `semester` as an argument and returns the processed semester.
 
    - `month_status = False`, `input_dates = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]`, `output_dates = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"]`, `month_one = ""`, `month_two = ""`, `year = ""` - These lines initialize the variables that will be used in the function.
@@ -225,6 +257,7 @@ The Python code for this project is organized into several functions that handle
    - `semester = month_one + "-" + month_two + " " + year` - This line builds the semester using the processed months and year.
 
    - `return semester` - This line returns the processed semester.
+
 
 6. `course_parser(course, section)` - This function processes the course and section data and returns it. It takes the `course` and `section` as arguments and returns the processed course.
 
@@ -248,6 +281,7 @@ The Python code for this project is organized into several functions that handle
 
     - `return course_name` - This line returns the processed course name.
 
+
 7. `Student Class` - This class defines the `Student` object, which represents a student's information. It has three attributes: `num`, `name`, and `id`.
 
    - `def __init__(self, num, name, id):` - This is the initializer method for the `Student` class. It takes three arguments: `num`, `name`, and `id`. These arguments are used to initialize the `num`, `name`, and `id` attributes of the `Student` instance.
@@ -257,6 +291,7 @@ The Python code for this project is organized into several functions that handle
    - `def __str__(self):` - This is the string representation method for the `Student` class. It returns a string that represents the `Student` instance.
 
    - `return f"{self.num}, {self.name}, {self.id}"` - This line returns a string that contains the `num`, `name`, and `id` attributes of the `Student` instance, separated by commas.
+
 
 8. `write_file(output_path, header, students)` - This function writes the processed data to the output file. It takes the `output_path`, `header`, and `students` as arguments and does not return anything.
 
