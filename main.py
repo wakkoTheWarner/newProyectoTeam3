@@ -14,9 +14,10 @@ def write_file(output_path, header, students):
             # Escribe la representación en cadena del estudiante en el archivo
             file.write(str(student) + "\n")
 
+    # Obtiene la ruta absoluta del archivo
     absolute_path = os.path.abspath(output_path)
 
-    # Imprime un mensaje indicando que el archivo ha sido creado exitosamente
+    # Imprime un mensaje indicando que el archivo ha sido creado exitosamente y la ruta del archivo
     print('\033[92m' + "\nEl archivo ha sido creado exitosamente en la siguiente ruta: " + '\033[1;32m' + "\n" + absolute_path + '\033[0m')
 
     # Retorna de la función
