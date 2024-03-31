@@ -18,7 +18,7 @@ def write_file(output_path, header, students):
     absolute_path = os.path.abspath(output_path)
 
     # Imprime un mensaje indicando que el archivo ha sido creado exitosamente y la ruta del archivo
-    print('\033[92m' + "\nEl archivo ha sido creado exitosamente en la siguiente ruta: " + '\033[1;32m' + "\n" + absolute_path + '\033[0m')
+    print('\033[92m' + "\nEl archivo ha sido creado exitosamente en la siguiente ruta: " + '\033[1;32m' + "\n" + absolute_path + '\033[0m' + "\n")
 
     # Retorna de la función
     return
