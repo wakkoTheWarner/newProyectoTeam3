@@ -371,11 +371,11 @@ The Python code for this project is organized into several functions that handle
 This section lists the authors who contributed to the different files in the project:
 
 - `if __name__ == '__main__'`: Eduardo A. Sosa Torres
-- `path_verifier()`: 
-- `read_file()`: 
+- `path_verifier()`: Ian P. Roman
+- `read_file()`: Azkaria L. Rosado Rodriguez
 - `header_builder()`: Eduardo A. Sosa Torres
 - `semester_parser()`: Eduardo A. Sosa Torres
 - `course_parser()`: Eduardo A. Sosa Torres
-- `Student Class`: 
-- `write_file()`: 
+- `Student Class`: Christian J. Santiago Rivera
+- `write_file()`: Javier Santos Babilonia
 - `README.md`: Eduardo A. Sosa Torres

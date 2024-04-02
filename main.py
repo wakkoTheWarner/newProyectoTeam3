@@ -1,9 +1,18 @@
-# @Author: Eduardo A. Sosa Torres
-
 import os
 import json
 
 # ------------------------------- write_file ------------------------------- #
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Javier Santos Babilonia
+#
+# Fecha de Finalización:
 def write_file(output_path, header, students):
     # Crea y escribe en el archivo csv
     with open(output_path, "w") as file:
@@ -24,6 +33,17 @@ def write_file(output_path, header, students):
     return
 
 # ------------------------------- Student Class ------------------------------- #
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Christian J. Santiago Rivera
+#
+# Fecha de Finalización:
 class Student:
     def __init__(self, num, name, id):
         # Inicializa la clase Student con número, nombre e id
@@ -36,6 +56,17 @@ class Student:
         return f"{self.num}, {self.name}, {self.id}"
 
 # ------------------------------- header_builder ------------------------------- #
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Eduardo A. Sosa Torres
+#
+# Fecha de Finalización:
 def header_builder(header):
     # Carga la configuración desde el archivo 'config.json'
     with open('config.json') as f:
@@ -98,6 +129,17 @@ def header_builder(header):
     # Retorna el texto del encabezado
     return header_text
 
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Eduardo A. Sosa Torres
+#
+# Fecha de Finalización:
 def semester_parser(semester):
     # Inicializa las variables
     month_status = False
@@ -131,6 +173,17 @@ def semester_parser(semester):
     # Retorna el semestre
     return semester
 
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Eduardo A. Sosa Torres
+#
+# Fecha de Finalización:
 def course_parser(course, section):
     # Inicializa las variables
     course_status = False
@@ -168,6 +221,17 @@ def course_parser(course, section):
     return course_name
 
 # ------------------------------- read_file ------------------------------- #
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Azkaria L. Rosado Rodriguez
+#
+# Fecha de Finalización:
 def read_file(path_to_file):
     # Inicializa las variables
     header = []
@@ -201,6 +265,17 @@ def read_file(path_to_file):
     return header_text, students
 
 # ------------------------------- path_verifier ------------------------------- #
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Ian P. Roman
+#
+# Fecha de Finalización:
 def path_verifier(check):
     # Carga la configuración desde el archivo 'config.json'
     with open('config.json') as f:
@@ -311,6 +386,17 @@ def path_verifier(check):
     exit(0)
 
 # ------------------------------- main ------------------------------- #
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Eduardo A. Sosa
+#
+# Fecha de Finalización:
 if __name__ == '__main__':
 
     # Solicita al usuario que ingrese la ruta del archivo
