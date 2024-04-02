@@ -1,0 +1,42 @@
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Azkaria L. Rosado Rodriguez
+#
+# Fecha de Finalización:
+def read_file(path_to_file):
+    # Inicializa las variables
+    header = []
+    students = []
+    header_text = ""
+    counter = 0
+
+    # Abre el archivo en modo lectura
+    with open(path_to_file, "r", encoding="windows-1252") as file:
+        # Itera sobre cada línea en el archivo
+        for line in file:
+            # Si la línea no está vacía y el contador es menor a 12
+            if line.strip() != "" and counter < 12:
+                # Añade la línea al encabezado
+                header.append(line.strip())
+                # Incrementa el contador
+                counter += 1
+            # Si la línea no está vacía y el contador es mayor a 11
+            elif line.strip() != "" and counter > 11:
+                # Divide la línea en valores
+                values = line.split("\t")
+                # Crea un nuevo estudiante con los valores obtenidos
+                student = Student("\"" + values[0] + "\"", "\"" + values[1].strip() + "\"", "\"" + values[2] + "\"")
+                # Añade el estudiante a la lista de estudiantes
+                students.append(student)
+
+    # Construye el texto del encabezado
+    header_text = header_builder(header)
+
+    # Retorna el texto del encabezado y la lista de estudiantes
+    return header_text, students

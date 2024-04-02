@@ -1,0 +1,21 @@
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Christian J. Santiago Rivera
+#
+# Fecha de Finalización:
+class Student:
+    def __init__(self, num, name, id):
+        # Inicializa la clase Student con número, nombre e id
+        self.num = num
+        self.name = name
+        self.id = id
+
+    def __str__(self):
+        # Devuelve una representación en cadena de la clase Student
+        return f"{self.num}, {self.name}, {self.id}"

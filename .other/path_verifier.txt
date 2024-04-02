@@ -1,0 +1,119 @@
+# Objetivo:
+#
+# Precondiciones:
+#
+# Postcondiciones:
+#
+# Descripción de los Argumentos:
+#
+# Autor: Ian P. Roman
+#
+# Fecha de Finalización:
+def path_verifier(check):
+    # Carga la configuración desde el archivo 'config.json'
+    with open('config.json') as f:
+        config = json.load(f)
+        default_paths = config['default_paths']
+
+    # Verifica si el usuario desea ingresar la ruta del archivo
+    if check == 0:
+        # Inicializa las variables
+        default_path = default_paths["input_path"]
+        file_path = ""
+        user_confirmation = ""
+
+        attempts = 0
+        while attempts < 3:
+            # Solicita al usuario que ingrese la ruta del archivo
+            file_path = input("\nIngrese la ruta del archivo: ")
+
+            # Verifica si el archivo es de tipo .txt
+            if file_path.endswith(".txt") == False and file_path.find(".") > -1:
+                print('\033[91m' + "\nTipo de archivo inválido. Por favor, ingrese una ruta de archivo válida." + '\033[0m')
+            else:
+                # Si el archivo no tiene extensión, se le añade .txt
+                if file_path.endswith(".txt") == False:
+                    file_path = file_path + ".txt"
+
+                # Verifica si la ruta del archivo es absoluta o relativa
+                if file_path.find("/") > -1:
+                    print('\033[93m' + "\n" + file_path + '\033[0m')
+                else:
+                    # Si la ruta es relativa, se le añade la ruta por defecto
+                    file_path = default_path + file_path
+                    print('\033[93m' + "\n" + file_path + '\033[0m')
+
+                # Solicita al usuario que confirme la ruta del archivo
+                user_confirmation = input("¿Es esta la ruta correcta del archivo? (sí/no): ")
+
+                # Si el usuario confirma, verifica si el archivo existe
+                if user_confirmation.lower() in ["yes", "y", "sí", "si", "s"]:
+                    # Verifica si el archivo existe
+                    if os.path.exists(file_path) == True:
+                        # Si el archivo existe, retorna la ruta
+                        return file_path
+                    else:
+                        # Si el archivo no existe, solicita al usuario que ingrese una ruta válida
+                        print('\033[91m' + "\nEl archivo no existe. Por favor, ingrese una ruta de archivo válida." + '\033[0m')
+
+            # Incrementa el contador de intentos
+            attempts += 1
+
+        # Si se alcanza el máximo de intentos, el programa se cierra
+        print('\033[91m' "\n!! -- Se alcanzó el máximo de intentos. El programa ahora saldrá. -- !!" + '\033[0m')
+
+    # Verifica si el usuario desea ingresar la ruta del archivo de salida
+    elif check == 1:
+        # Inicializa las variables
+        default_path = default_paths["output_path"]
+        file_path = ""
+        user_confirmation = ""
+
+        attempts = 0
+        while attempts < 3:
+            # Solicita al usuario que ingrese la ruta del archivo de salida
+            file_path = input("\nIngrese la ruta del archivo de salida: ")
+
+            # Verifica si el archivo es de tipo .csv
+            if file_path.endswith(".csv") == False and file_path.find(".") > -1:
+                print('\033[91m' + "\nTipo de archivo inválido. Por favor, ingrese una ruta de archivo válida." + '\033[0m')
+            else:
+                # Si el archivo no tiene extensión, se le añade .csv
+                if file_path.endswith(".csv") == False:
+                    file_path = file_path + ".csv"
+
+                # Verifica si la ruta del archivo es absoluta o relativa
+                if file_path.find("/") > -1:
+                    print('\033[93m' + "\n" + file_path + '\033[0m')
+                else:
+                    # Si la ruta es relativa, se le añade la ruta por defecto
+                    file_path = default_path + file_path
+                    print('\033[93m' + "\n" + file_path + '\033[0m')
+
+                # Solicita al usuario que confirme la ruta del archivo
+                user_confirmation = input("¿Es esta la ruta correcta del archivo? (sí/no): ")
+
+                # Si el usuario confirma, verifica si el directorio existe
+                if user_confirmation.lower() in ["yes", "y", "sí", "si", "s"]:
+                    dir_name = os.path.dirname(file_path)
+                    if not os.path.exists(dir_name):
+                        # Si el directorio no existe, solicita al usuario si desea crearlo
+                        user_confirmation = input('\033[93m' + "\nEl directorio no existe. " + '\033[0m' + "¿Le gustaría crearlo? (sí/no): ")
+                        if user_confirmation.lower() in ["yes", "y", "sí", "si", "s"]:
+                            # Si el usuario confirma, crea el directorio
+                            os.makedirs(dir_name)
+                        else:
+                            # Si el usuario no confirma, solicita al usuario que ingrese una ruta válida
+                            print('\033[91m' + "\nPor favor, ingrese una ruta de archivo válida." + '\033[0m')
+                            path_verifier(1)
+                    # Si el directorio existe, retorna la ruta
+                    return file_path
+
+            # Incrementa el contador de intentos
+            attempts += 1
+
+        # Si se alcanza el máximo de intentos, el programa se cierra
+        print('\033[91m' "\n!! -- Se alcanzó el máximo de intentos. El programa ahora saldrá. -- !!" + '\033[0m')
+
+    # Si no se cumple ninguna de las condiciones anteriores, el programa se cierra
+    exit(0)
