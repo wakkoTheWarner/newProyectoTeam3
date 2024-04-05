@@ -1,5 +1,4 @@
 import os
-import json
 
 # ------------------------------- write_file ------------------------------- #
 # Objetivo:
@@ -33,17 +32,23 @@ def write_file(output_path, header, students):
     return
 
 # ------------------------------- Student Class ------------------------------- #
-# Objetivo:
+# Objetivo: Esta clase representa a un estudiante con un número, nombre e id.
 #
 # Precondiciones:
+# - Los argumentos `num`, `name` e `id` deben ser proporcionados al inicializar una instancia de la clase Student.
 #
 # Postcondiciones:
+# - Al inicializar una instancia de la clase Student, se crean los atributos `num`, `name` e `id` con los valores proporcionados.
+# - La función `__str__` devuelve una representación en cadena de la instancia de la clase Student en el formato "[num], [name], [id]".
 #
 # Descripción de los Argumentos:
+# - `num`: Un valor que representa el número del estudiante.
+# - `name`: Una cadena que representa el nombre del estudiante.
+# - `id`: Un valor que representa el id del estudiante.
 #
 # Autor: Christian J. Santiago Rivera
 #
-# Fecha de Finalización:
+# Fecha de Finalización: 04/04/2024
 class Student:
     def __init__(self, num, name, id):
         # Inicializa la clase Student con número, nombre e id
@@ -62,7 +67,7 @@ class Student:
 #
 # Precondiciones:
 # - El argumento `header` debe ser una lista de cadenas que contiene las líneas del encabezado del archivo de entrada.
-# - El archivo 'config.json' debe existir y contener los valores por defecto para el nombre de la universidad, el campus de la universidad, el departamento de la universidad y el nombre del profesor.
+# - El usuario debe proporcionar la información de la universidad cuando se le solicite o se utilizarán los valores por defecto.
 # - Las funciones `semester_parser` y `course_parser` deben estar definidas y funcionar correctamente.
 #
 # Postcondiciones:
@@ -75,11 +80,6 @@ class Student:
 #
 # Fecha de Finalización: 27/03/2024
 def header_builder(header):
-    # Carga la configuración desde el archivo 'config.json'
-    with open('config.json') as f:
-        config = json.load(f)
-        defaults = config['default_values']
-
     # Inicializa las variables
     counter = 0
     course = ""
@@ -116,13 +116,13 @@ def header_builder(header):
 
     # Si el usuario no ingresa información, se utilizan los valores por defecto
     if university_name == "":
-        university_name = defaults["university_name"]
+        university_name = "UNIVERSIDAD ABC123"
     if university_campus == "":
-        university_campus = defaults["university_campus"]
+        university_campus = "RECINTO DE ISLA DE MONA"
     if university_department == "":
-        university_department = defaults["university_department"]
+        university_department = "DEPARTAMENTO DE CIENCIAS EN COMPUTADORAS"
     if professor_name == "":
-        professor_name = defaults["professor_name"]
+        professor_name = "PEPITO PEREZ"
 
     # Convierte la información de la universidad a mayúsculas
     university_name = university_name.upper()
@@ -131,7 +131,7 @@ def header_builder(header):
     professor_name = professor_name.upper()
 
     # Construye el texto del encabezado
-    header_text = "," + university_name + "\n," + university_campus + "\n," + university_department + "\n\nSEMESTRE: " + semester + "\nPROF: " + professor_name + "\nCURSO: " + course + "\n\n\n" + defaults["table_header"] + "\n"
+    header_text = "," + university_name + "\n," + university_campus + "\n," + university_department + "\n\nSEMESTRE: " + semester + "\nPROF: " + professor_name + "\nCURSO: " + course + "\n\n\n" + "NUM,NOMBRE,ID,Email,Telefono" + "\n"
 
     # Retorna el texto del encabezado
     return header_text
@@ -240,17 +240,26 @@ def course_parser(course, section):
     return course_name
 
 # ------------------------------- read_file ------------------------------- #
-# Objetivo:
+# Objetivo: La clase read_file se utiliza para leer datos de un archivo específico y extraer informacion relevante.
 #
 # Precondiciones:
+# - Debe existir un archivo en la dirección especificada. De lo contrario se producirá un error al intentar abrir el archivo.
+# - El archivo debe estar codificado en utf-8 con errores ignorados.
+# - El archivo debe contar con un formato específico. Las primeras 12 líneas contendrán el encabezado, el resto serán datos tabulados de los estudiantes.
+# - La clase Student debe estar definida.
+# - Las funciones header_builder(header) y header_text deben estar definidas.
 #
 # Postcondiciones:
+# - Al ejecutar la función read_file(path_to_file) se espera construir el encabezado.
+# - Esa misma función debe haber creado la lista de estudiantes students y cada uno debería estar representado por una instancia de la clase Student con sus atributos.
+# - El valor de retorno será header_text, students.
 #
 # Descripción de los Argumentos:
+# - `path_to_file`: Una cadena que representa la dirección del archivo a leer.
 #
 # Autor: Azkaria L. Rosado Rodriguez
 #
-# Fecha de Finalización:
+# Fecha de Finalización: 05/04/2024
 def read_file(path_to_file):
     # Inicializa las variables
     header = []
@@ -258,8 +267,8 @@ def read_file(path_to_file):
     header_text = ""
     counter = 0
 
-    # Abre el archivo en modo lectura
-    with open(path_to_file, "r", encoding="windows-1252") as file:
+    # Abre el archivo en modo lectura y codificado en utf-8 con errores ignorados.
+    with open(path_to_file, "r", encoding='utf-8', errors='ignore') as file:
         # Itera sobre cada línea en el archivo
         for line in file:
             # Si la línea no está vacía y el contador es menor a 12
@@ -291,7 +300,8 @@ def read_file(path_to_file):
 #
 # Precondiciones:
 # - El argumento check debe ser un entero que indica si se está verificando la ruta del archivo de entrada (0) o de salida (1).
-# - El archivo 'config.json' debe existir y contener las rutas por defecto para los archivos de entrada y salida.
+# - El archivo de entrada debe existir en la ruta proporcionada por el usuario y debe ser legible.
+# - La ruta de salida proporcionada por el usuario debe ser válida y el programa debe tener permisos para escribir en esa ubicación.
 #
 # Postcondiciones:
 # - Si la ruta del archivo es válida y el archivo o directorio existe, la función devuelve la ruta.
@@ -305,15 +315,10 @@ def read_file(path_to_file):
 #
 # Fecha de Finalización: 01/04/2024
 def path_verifier(check):
-    # Carga la configuración desde el archivo 'config.json'
-    with open('config.json') as f:
-        config = json.load(f)
-        default_paths = config['default_paths']
-
     # Verifica si el usuario desea ingresar la ruta del archivo
     if check == 0:
         # Inicializa las variables
-        default_path = default_paths["input_path"]
+        default_path = "Resources/Data/"
         file_path = ""
         user_confirmation = ""
 
@@ -360,7 +365,7 @@ def path_verifier(check):
     # Verifica si el usuario desea ingresar la ruta del archivo de salida
     elif check == 1:
         # Inicializa las variables
-        default_path = default_paths["output_path"]
+        default_path = "Resources/Output/"
         file_path = ""
         user_confirmation = ""
 

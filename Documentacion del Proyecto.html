@@ -396,7 +396,6 @@
             <p>El proyecto está organizado en una estructura de carpetas simple. Aquí está la estructura de archivos del proyecto:</p>
             <pre><code>Proyecto
 │   Documentación <span class="hljs-selector-tag">del</span> Proyecto<span class="hljs-selector-class">.html</span>
-│   config<span class="hljs-selector-class">.json</span>
 │   main<span class="hljs-selector-class">.py</span>
 │   README<span class="hljs-selector-class">.md</span>
 │
@@ -409,7 +408,6 @@
     │   student_output.csv
 </code></pre><ul>
             <li><code>Documentación del Proyecto.html</code>: Documentación del proyecto en formato HTML.</li>
-            <li><code>config.json</code>: Archivo de configuración para el proyecto.</li>
             <li><code>main.py</code>: Script principal de Python que procesa los datos de los estudiantes.</li>
             <li><code>README.md</code>: Archivo README del proyecto.</li>
             <li><code>Recursos</code>: Carpeta que contiene los archivos de datos de entrada y salida.<ul>
@@ -468,7 +466,7 @@
             </code></pre></li>
             </ul>
             </li>
-            <li><p><strong>Información de la Universidad</strong>: El programa solicita al usuario que ingrese el nombre de la institución, campus, departamento y nombre del profesor. Si el usuario no proporciona esta información, el programa utiliza valores predeterminados del archivo <code>config.json</code>.</p>
+            <li><p><strong>Información de la Universidad</strong>: El programa solicita al usuario que ingrese el nombre de la institución, campus, departamento y nombre del profesor. Si el usuario no proporciona esta información, el programa utiliza valores predeterminados.</p>
             </li>
             <li><p><strong>Análisis del Semestre</strong>: El programa analiza la información del semestre del archivo de entrada y la convierte a un formato estándar (por ejemplo, de &quot;Enero-Mayo 2022&quot; a &quot;ENERO-MAYO 2022&quot;).</p>
             </li>
@@ -481,8 +479,6 @@
             <li><p><strong>Manejo de Errores</strong>: El programa incluye manejo de errores para verificar rutas de archivos y datos de entrada inválidos. Si ocurre un error, el programa imprime un mensaje de error y se cierra.</p>
             </li>
             <li><p><strong>Interacción con el Usuario</strong>: El programa interactúa con el usuario a través de la interfaz de línea de comandos (CLI). Solicita al usuario que ingrese la ruta del archivo de entrada, la información de la institución y la ruta del archivo de salida.</p>
-            </li>
-            <li><p><strong>Archivo de Configuración</strong>: El programa utiliza un archivo <code>config.json</code> para almacenar valores predeterminados para la información de la institución. Si el usuario no proporciona esta información, el programa utiliza los valores predeterminados del archivo de configuración.</p>
             </li>
             </ul>
 
@@ -508,8 +504,6 @@
             <ol>
             <li><p><code>path_verifier()</code> - Esta función solicita al usuario que ingrese una ruta de archivo y verifica que la ruta sea válida. Toma un argumento <code>mode</code> que determina si la función está verificando la ruta del archivo de entrada (<code>mode = 0</code>) o la ruta del archivo de salida (<code>mode = 1</code>). La función devuelve la ruta de archivo verificada.</p>
             <ul>
-            <li><p><code>with open(&#39;config.json&#39;) as f:</code> - Esta línea abre el archivo &#39;config.json&#39; y carga las rutas predeterminadas para los archivos de entrada y salida.  </p>
-            </li>
             <li><p><code>if check == 0:</code> - Este bloque de código se ejecuta cuando la función se llama con un argumento de 0. Solicita al usuario que ingrese la ruta del archivo de entrada. La función verifica la ruta y la devuelve. Si el usuario no proporciona una ruta válida después de 3 intentos, el programa se cierra.  </p>
             </li>
             <li><p><code>elif check == 1:</code> - Este bloque de código se ejecuta cuando la función se llama con un argumento de 1. Solicita al usuario que ingrese la ruta del archivo de salida. La función verifica la ruta y la devuelve. Si el usuario no proporciona una ruta válida después de 3 intentos, el programa se cierra.  </p>
@@ -545,8 +539,6 @@
             <ol>
             <li><p><code>header_builder(header)</code> - Esta función procesa los datos del encabezado y los devuelve como una única cadena de texto. Toma el <code>header</code> como argumento y devuelve el texto del encabezado procesado.</p>
             <ul>
-            <li><p><code>with open(&#39;config.json&#39;) as f:</code> - Esta línea abre el archivo &#39;config.json&#39; y carga los valores predeterminados para la información de la universidad.</p>
-            </li>
             <li><p>El bucle for <code>for line in header:</code> itera sobre cada línea en el encabezado.</p>
             </li>
             <li><p><code>if line.find(&quot;Course Information&quot;) == -1 and counter &lt; 3:</code> - Este bloque de código se ejecuta si la línea no contiene &quot;Course Information&quot; y el contador es menor que 3. Asigna la línea a la variable correspondiente (<code>course</code>, <code>section</code>, o <code>semester</code>) e incrementa el contador.</p>
@@ -555,7 +547,7 @@
             </li>
             <li><p><code>course = course_parser(course, section)</code> - Esta línea llama a la función <code>course_parser</code> con <code>course</code> y <code>section</code> como argumentos. La función procesa el curso y la sección y lo devuelve. El curso devuelto se almacena entonces en la variable <code>course</code>.</p>
             </li>
-            <li><p>Las siguientes líneas solicitan al usuario que ingrese la información de la universidad (nombre, campus, departamento, nombre del profesor). Si el usuario no ingresa ninguna información, la función utiliza los valores predeterminados del archivo &#39;config.json&#39;.</p>
+            <li><p>Las siguientes líneas solicitan al usuario que ingrese la información de la universidad (nombre, campus, departamento, nombre del profesor). Si el usuario no ingresa ninguna información, la función utiliza los valores predeterminados.</p>
             </li>
             <li><p>La función luego convierte la información de la universidad a mayúsculas.</p>
             </li>
@@ -652,12 +644,12 @@
             <p>Esta sección enumera a los autores que contribuyeron a los diferentes archivos en el proyecto:</p>
             <ul>
                 <li><code>if __name__ == &#39;__main__&#39;</code>: Eduardo A. Sosa Torres</li>
-                <li><code>path_verifier()</code>: </li>
-                <li><code>read_file()</code>: </li>
+                <li><code>path_verifier()</code>: Ian P. Roman</li>
+                <li><code>read_file()</code>: Azkaria L. Rosado Rodriguez</li>
                 <li><code>header_builder()</code>: Eduardo A. Sosa Torres</li>
                 <li><code>semester_parser()</code>: Eduardo A. Sosa Torres</li>
                 <li><code>course_parser()</code>: Eduardo A. Sosa Torres</li>
-                <li><code>Clase Student</code>: </li>
+                <li><code>Clase Student</code>: Christian J. Santiago Rivera</li>
                 <li><code>write_file()</code>: </li>
                 <li><code>README.md</code>: Eduardo A. Sosa Torres</li>
             </ul>
@@ -669,7 +661,7 @@
         <p>
             Este documento proporciona una descripción detallada de la estructura y el funcionamiento del código fuente del proyecto. Se divide en varias secciones, cada una de las cuales describe un componente clave del proyecto y su funcionalidad. Las secciones incluyen una descripción general del componente, sus objetivos, precondiciones, postcondiciones, descripción de los argumentos, autor y fecha de finalización.
         </p>
-        <h2 class="collapsable" id="main">📚main</h2>
+        <h2 class="collapsable" id="main">📚if __name__ == '__main__'</h2>
         <p><strong>Objetivo:</strong> La función <code>main()</code> solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita información adicional al usuario y, finalmente, escribe los datos procesados y la información adicional en un archivo de salida.</p>
         <p><strong>Precondiciones:</strong></p>
         <ul>

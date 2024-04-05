@@ -149,7 +149,6 @@ The project is organized in a simple folder structure. Here is the file structur
 ```
 Project
 │   Project Documentation.html
-│   config.json
 │   main.py
 │   README.md
 │
@@ -163,7 +162,6 @@ Project
 ```
 
 - Project Documentation.html: Project documentation in HTML format.
-- config.json: Configuration file for the project.
 - main.py: Main Python script that processes student data.
 - README.md: Project README file.
 - Resources: Folder that contains the input and output data files.
@@ -217,7 +215,7 @@ Project
         "3", "Alice Johnson", "Z00543210"
         ```
       
-- **University Information**: The program prompts the user to enter the institution's name, campus, department, and professor's name. If the user does not provide this information, the program uses default values from the `config.json` file.
+- **University Information**: The program prompts the user to enter the institution's name, campus, department, and professor's name. If the user does not provide this information, the program uses default values.
 
 - **Semester Parsing**: The program parses the semester information from the input file and converts it to a standard format (e.g., "January-May 2022" to "ENERO-MAYO 2022").
 
@@ -230,8 +228,6 @@ Project
 - **Error Handling**: The program includes error handling to check for invalid file paths and input data. If an error occurs, the program prints an error message and exits.
 
 - **User Interaction**: The program interacts with the user through the command line interface (CLI). It prompts the user to enter the input file path, institution information, and output file path.
-
-- **Configuration File**: The program uses a `config.json` file to store default values for the institution's information. If the user does not provide this information, the program uses the default values from the configuration file.
 
 ## 📦 Code Structure
 
@@ -251,8 +247,6 @@ The Python code for this project is organized into several functions that handle
 
 
 2. `path_verifier()` - This function prompts the user to enter a file path and verifies that the path is valid. It takes an argument `mode` that determines whether the function is verifying the input file path (`mode = 0`) or the output file path (`mode = 1`). The function returns the verified file path.
-
-   - `with open('config.json') as f:` - This line opens the 'config.json' file and loads the default paths for the input and output files.  
 
    - `if check == 0:` - This block of code is executed when the function is called with an argument of 0. It prompts the user to enter the path of the input file. The function verifies the path and returns it. If the user fails to provide a valid path after 3 attempts, the program exits.  
 
@@ -280,8 +274,6 @@ The Python code for this project is organized into several functions that handle
 
 4. `header_builder(header)` - This function processes the header data and returns it as a single string. It takes the `header` as an argument and returns the processed header text.
 
-    - `with open('config.json') as f:` - This line opens the 'config.json' file and loads the default values for the university information.
-
     - The for loop `for line in header:` iterates over each line in the header.
 
     - `if line.find("Course Information") == -1 and counter < 3:` - This block of code is executed if the line does not contain "Course Information" and the counter is less than 3. It assigns the line to the corresponding variable (`course`, `section`, or `semester`) and increments the counter.
@@ -290,7 +282,7 @@ The Python code for this project is organized into several functions that handle
 
     - `course = course_parser(course, section)` - This line calls the `course_parser` function with the `course` and `section` as arguments. The function processes the course and section and returns it. The returned course is then stored in the `course` variable.
 
-    - The next few lines prompt the user to enter the university information (name, campus, department, professor name). If the user does not enter any information, the function uses the default values from the 'config.json' file.
+    - The next few lines prompt the user to enter the university information (name, campus, department, professor name). If the user does not enter any information, the function uses the default values.
 
     - The function then converts the university information to uppercase.
 

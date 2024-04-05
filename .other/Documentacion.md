@@ -2,15 +2,40 @@
 
 - [x] if __name__ == '__main__': Eduardo A. Sosa Torres
 - [x] path_verifier(): Ian P. Roman
-- [ ] read_file(): Azkaria L. Rosado Rodriguez
+- [x] read_file(): Azkaria L. Rosado Rodriguez
 - [x] header_builder(): Eduardo A. Sosa Torres
 - [x] semester_parser(): Eduardo A. Sosa Torres
 - [x] course_parser(): Eduardo A. Sosa Torres
-- [ ] Student Class: Christian J. Santiago Rivera
+- [x] Student Class: Christian J. Santiago Rivera
 - [ ] write_file(): Javier Santos Babilonia
 
 # Documentación Completa del Código y Visión General de la Funcionalidad
 Este documento proporciona una descripción detallada de la estructura y el funcionamiento del código fuente del proyecto. Se divide en varias secciones, cada una de las cuales describe un componente clave del proyecto y su funcionalidad. Las secciones incluyen una descripción general del componente, sus objetivos, precondiciones, postcondiciones, descripción de los argumentos, autor y fecha de finalización.
+
+[comment]: <> (------------------------ 📚 STUDENT_CLASS 📚 ------------------------)
+[comment]: <> (By Christian J. Santiago Rivera)
+
+## 📚 Student Class
+
+### Objetivo:
+Esta clase representa a un estudiante con un número, nombre e id.
+
+### Precondiciones:
+- Los argumentos `num`, `name` e `id` deben ser proporcionados al inicializar una instancia de la clase Student.
+
+### Postcondiciones:
+- Al inicializar una instancia de la clase Student, se crean los atributos `num`, `name` e `id` con los valores proporcionados.
+- La función `__str__` devuelve una representación en cadena de la instancia de la clase Student en el formato "[num], [name], [id]".
+
+### Descripción de los Argumentos:
+- `num`: Un valor que representa el número del estudiante.
+- `name`: Una cadena que representa el nombre del estudiante.
+- `id`: Un valor que representa el id del estudiante.
+
+### **Autor**: Christian J. Santiago Rivera
+
+
+### **Fecha de Finalización**: 04/04/2024
 
 [comment]: <> (------------------------ 📚 HEADER_BUILDER 📚 ------------------------)
 [comment]: <> (By Eduardo A. Sosa Torres)
@@ -76,6 +101,33 @@ Esta función toma una cadena que representa un curso y una sección, y construy
 ### **Autor**: Eduardo A. Sosa Torres
 
 ### **Fecha de Finalización**: 27/03/2024
+
+[comment]: <> (------------------------ 📚 READ_FILE 📚 ------------------------)
+[comment]: <> (By Azkaria L. Rosado Rodriguez)
+
+## 📚 read_file
+
+### Objetivo:
+La clase read_file se utiliza para leer datos de un archivo específico y extraer informacion relevante.
+
+### Precondiciones:
+- Debe existir un archivo en la dirección especificada. De lo contrario se producirá un error al intentar abrir el archivo.
+- El archivo debe estar codificado en utf-8 con errores ignorados.
+- El archivo debe contar con un formato específico. Las primeras 12 líneas contendrán el encabezado, el resto serán datos tabulados de los estudiantes.
+- La clase Student debe estar definida.
+- Las funciones header_builder(header) y header_text deben estar definidas.
+
+### Postcondiciones:
+- Al ejecutar la función read_file(path_to_file) se espera construir el encabezado.
+- Esa misma función debe haber creado la lista de estudiantes students y cada uno debería estar representado por una instancia de la clase Student con sus atributos.
+- El valor de retorno será header_text, students.
+
+### Descripción de los Argumentos:
+- `path_to_file`: string que representa la vía o "path" hacia el archivo que se pretende leer.
+
+### **Autor**: Azkaria L. Rosado Rodriguez
+
+### **Fecha de Finalización**: 05/04/2024
 
 [comment]: <> (------------------------ 📚 PATH_VERIFIER 📚 ------------------------)
 [comment]: <> (By Ian P. Roman)
