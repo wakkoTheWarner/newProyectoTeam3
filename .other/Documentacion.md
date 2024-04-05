@@ -47,7 +47,7 @@ Esta función construye el encabezado del archivo de salida. Solicita al usuario
 
 ### Precondiciones:
 - El argumento `header` debe ser una lista de cadenas que contiene las líneas del encabezado del archivo de entrada.
-- El archivo 'config.json' debe existir y contener los valores por defecto para el nombre de la universidad, el campus de la universidad, el departamento de la universidad y el nombre del profesor.
+- El usuario debe proporcionar la información de la universidad cuando se le solicite o se utilizarán los valores por defecto.
 - Las funciones `semester_parser` y `course_parser` deben estar definidas y funcionar correctamente.
 
 ### Postcondiciones:
@@ -139,7 +139,8 @@ Esta función verifica la ruta del archivo de entrada o salida proporcionada por
 
 ### Precondiciones:
 - El argumento `check` debe ser un entero que indica si se está verificando la ruta del archivo de entrada (0) o de salida (1).
-- El archivo 'config.json' debe existir y contener las rutas por defecto para los archivos de entrada y salida.
+- El archivo de entrada debe existir en la ruta proporcionada por el usuario y debe ser legible.
+- La ruta de salida proporcionada por el usuario debe ser válida y el programa debe tener permisos para escribir en esa ubicación.
 
 ### Postcondiciones:
 - Si la ruta del archivo es válida y el archivo o directorio existe, la función devuelve la ruta.

@@ -221,20 +221,16 @@
             </ul>
             <hr>
             <ul>
-                <li><a class="h2Tag" href="#main">📚main</a></li>
-                    <ul>
-                        <li><a href="#filePathVerifier">filePathVerifier()</a></li>
-                        <li><a href="#outputFilePathVerifier">outputFilePathVerifier()</a></li>
-                    </ul>
-                <li><a class="h2Tag" href="#FileParser">📕FileParser</a></li>
+                <li><a class="h2Tag" href="#main">📚if __name__ == '__main__':</a></li>
+                <li><a href="#📕-path_verifier">📕path_verifier()</a></li>
+                <li><a href="#-read_file">📕read_file()</a></li>
+                <li><a href="#-header_builder">📕header_builder()</a></li>
                 <ul>
-                    <li><a href="#modifyDuration">modifyDuration()</a></li>
-                    <li><a href="#monthTranslator">monthTranslator()</a></li>
+                    <li><a href="#semester_parser">semester_parser()</a></li>
+                    <li><a href="#course_parser">course_parser()</a></li>
                 </ul>
-                <li><a class="h2Tag" href="#FileReader">📕FileReader</a></li>
-                <li><a class="h2Tag" href="#HeaderMaker">📕HeaderMaker</a></li>
-                <li><a class="h2Tag" href="#FileWriter">📕FileWriter</a></li>
-                <li><a class="h2Tag" href="#Student">📕Student</a></li>
+                <li><a href="#-student-class">📕Student Class</a></li>
+                <li><a href="#writeFile">📕write_file()</a></li>
             </ul>
         </div>
 
@@ -661,183 +657,164 @@
         <p>
             Este documento proporciona una descripción detallada de la estructura y el funcionamiento del código fuente del proyecto. Se divide en varias secciones, cada una de las cuales describe un componente clave del proyecto y su funcionalidad. Las secciones incluyen una descripción general del componente, sus objetivos, precondiciones, postcondiciones, descripción de los argumentos, autor y fecha de finalización.
         </p>
-        <h2 class="collapsable" id="main">📚if __name__ == '__main__'</h2>
-        <p><strong>Objetivo:</strong> La función <code>main()</code> solicita al usuario la ruta de un archivo de entrada, lee y procesa los datos del archivo, solicita información adicional al usuario y, finalmente, escribe los datos procesados y la información adicional en un archivo de salida.</p>
-        <p><strong>Precondiciones:</strong></p>
+        <h2 class="collapsable" id="main">📚 if __name__ == '__main__'</h2>
+        <h3>Objetivo:</h3>
+        <p>Este bloque de código es el punto de entrada principal del programa. Solicita al usuario que ingrese la ruta del archivo de entrada, lee el archivo y almacena los datos, solicita al usuario que ingrese la ruta del archivo de salida, escribe los datos en el archivo de salida y finalmente cierra el programa.</p>
+        <h3>Precondiciones:</h3>
         <ul>
-            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de entrada cuando se le solicite. Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
-            <li>El archivo de entrada debe existir en la ruta proporcionada y ser legible.</li>
-            <li>El usuario debe proporcionar información válida cuando se le solicite.</li>
+        <li>Las funciones <code>path_verifier</code>, <code>read_file</code> y <code>write_file</code> deben estar definidas y funcionar correctamente.</li>
+        <li>El archivo de entrada debe existir en la ruta proporcionada por el usuario y debe ser legible.</li>
+        <li>La ruta de salida proporcionada por el usuario debe ser válida y el programa debe tener permisos para escribir en esa ubicación.</li>
         </ul>
-        <p><strong>Postcondiciones:</strong></p>
+        <h3>Postcondiciones:</h3>
         <ul>
-            <li>Se crea un archivo de salida en la ruta especificada con los datos procesados y la información adicional.</li>
-            <li>Si el archivo de entrada no puede abrirse, el programa termina con un mensaje de error.</li>
+        <li>Si todas las operaciones se completan con éxito, los datos se leen del archivo de entrada, se procesan y se escriben en el archivo de salida en la ubicación especificada.</li>
+        <li>Si ocurre algún error durante el proceso, el programa se cierra.</li>
         </ul>
-        <p><strong>Descripción de los Argumentos:</strong></p>
+        <h3>Descripción de los Argumentos:</h3>
+        <p>Este bloque de código no toma argumentos.</p>
+        <h3><strong>Autor</strong>: Eduardo A. Sosa Torres</h3>
+        <h3><strong>Fecha de Finalización</strong>: 26/03/2024</h3>
+
+        <! ------------- PATH VERIFIER --------------->
+
+        <h2 id="📕-path_verifier">📕 path_verifier</h2>
+        <h3>Objetivo:</h3>
+        <p>Esta función verifica la ruta del archivo de entrada o salida proporcionada por el usuario. Si la ruta es válida y el archivo o directorio existe, la función devuelve la ruta. Si la ruta no es válida o el archivo o directorio no existe, la función solicita al usuario que ingrese una ruta válida. Si el usuario no proporciona una ruta válida después de tres intentos, la función cierra el programa.</p>
+        <h3>Precondiciones:</h3>
         <ul>
-            <li><code>filePath</code>: Una cadena que representa la ruta del archivo de entrada. Se solicita al usuario que introduzca esta ruta.</li>
-            <li><code>nombreInstitucion</code>: Una cadena que representa el nombre de la institución. Se solicita al usuario que introduzca esta información.</li>
-            <li><code>recinto</code>: Una cadena que representa el campus. Se solicita al usuario que introduzca esta información.</li>
-            <li><code>departamento</code>: Una cadena que representa el departamento. Se solicita al usuario que introduzca esta información.</li>
-            <li><code>profesor</code>: Una cadena que representa el nombre del profesor. Se solicita al usuario que introduzca esta información.</li>
-            <li><code>outputFilePath</code>: Una cadena que representa la ruta del archivo de salida. Se solicita al usuario que introduzca esta ruta.</li>
+        <li>El argumento <code>check</code> debe ser un entero que indica si se está verificando la ruta del archivo de entrada (0) o de salida (1).</li>
+        <li>El archivo de entrada debe existir en la ruta proporcionada por el usuario y debe ser legible.</li>
+        <li>La ruta de salida proporcionada por el usuario debe ser válida y el programa debe tener permisos para escribir en esa ubicación.</li>
         </ul>
-        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
-        <h3 id="filePathVerifier">filePathVerifier()</h3>
-        <p><strong>Objetivo:</strong> Esta función verifica y ajusta la ruta del archivo proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .txt, se añade la extensión.</p>
-        <p><strong>Precondiciones:</strong></p>
+        <h3>Postcondiciones:</h3>
         <ul>
-            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo.</li>
-            <li>Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+        <li>Si la ruta del archivo es válida y el archivo o directorio existe, la función devuelve la ruta.</li>
+        <li>Si la ruta del archivo no es válida o el archivo o directorio no existe, la función solicita al usuario que ingrese una ruta válida.</li>
+        <li>Si el usuario no proporciona una ruta válida después de tres intentos, la función cierra el programa.</li>
         </ul>
-        <p><strong>Postcondiciones:</strong></p>
+        <h3>Descripción de los Argumentos:</h3>
         <ul>
-            <li>La función devuelve una cadena de texto que representa la ruta completa del archivo con la extensión .txt.</li>
-            <li>Si la ruta del archivo proporcionada por el usuario contiene comillas dobles, estas se eliminan.</li>
+        <li><code>check</code>: Un entero que indica si se está verificando la ruta del archivo de entrada (0) o de salida (1).</li>
         </ul>
-        <p><strong>Descripción de los Argumentos:</strong></p>
+        <h3><strong>Autor</strong>: Ian P. Roman</h3>
+        <h3><strong>Fecha de Finalización</strong>: 01/04/2024</h3>
+
+        <! ------------- READ FILE --------------->
+
+        <h2 id="-read_file">📕 read_file</h2>
+        <h3>Objetivo:</h3>
+        <p>La clase read_file se utiliza para leer datos de un archivo específico y extraer informacion relevante.</p>
+        <h3>Precondiciones:</h3>
         <ul>
-            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.</li>
+        <li>Debe existir un archivo en la dirección especificada. De lo contrario se producirá un error al intentar abrir el archivo.</li>
+        <li>El archivo debe estar codificado en utf-8 con errores ignorados.</li>
+        <li>El archivo debe contar con un formato específico. Las primeras 12 líneas contendrán el encabezado, el resto serán datos tabulados de los estudiantes.</li>
+        <li>La clase Student debe estar definida.</li>
+        <li>Las funciones header_builder(header) y header_text deben estar definidas.</li>
         </ul>
-        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
-        <h3 id="outputFilePathVerifier">outputFilePathVerifier()</h3>
-        <p><strong>Objetivo:</strong> Esta función verifica y ajusta la ruta del archivo de salida proporcionada por el usuario. Si el usuario no proporciona una ruta, se utiliza una ruta predeterminada. Si el usuario proporciona solo un nombre de archivo, se antepone la ruta del directorio predeterminado. Si el usuario proporciona una ruta completa sin la extensión .csv, se añade la extensión.</p>
-        <p><strong>Precondiciones:</strong></p>
+        <h3>Postcondiciones:</h3>
         <ul>
-            <li>El usuario debe proporcionar una cadena de texto que represente la ruta del archivo de salida.</li>
-            <li>Esta cadena puede estar vacía, contener solo el nombre del archivo o la ruta completa del archivo.</li>
+        <li>Al ejecutar la función read_file(path_to_file) se espera construir el encabezado.</li>
+        <li>Esa misma función debe haber creado la lista de estudiantes students y cada uno debería estar representado por una instancia de la clase Student con sus atributos.</li>
+        <li>El valor de retorno será header_text, students.</li>
         </ul>
-        <p><strong>Postcondiciones:</strong></p>
+        <h3>Descripción de los Argumentos:</h3>
         <ul>
-            <li>La función devuelve una cadena de texto que representa la ruta completa del archivo de salida con la extensión .csv.</li>
-            <li>Si la ruta del archivo de salida proporcionada por el usuario contiene comillas dobles, estas se eliminan.</li>
+        <li><code>path_to_file</code>: string que representa la vía o &quot;path&quot; hacia el archivo que se pretende leer.</li>
         </ul>
-        <p><strong>Descripción de los Argumentos:</strong></p>
+        <h3><strong>Autor</strong>: Azkaria L. Rosado Rodriguez</h3>
+        <h3><strong>Fecha de Finalización</strong>: 05/04/2024</h3>
+
+        <! ------------- HEADER BUILDER --------------->
+
+        <h2 id="-header_builder">📕 header_builder</h2>
+        <h3>Objetivo:</h3>
+        <p>Esta función construye el encabezado del archivo de salida. Solicita al usuario que ingrese información sobre la universidad y el profesor, y utiliza esta información junto con la información del curso y el semestre para construir el encabezado.</p>
+        <h3>Precondiciones:</h3>
         <ul>
-            <li><code>outputFilePath</code>: Una cadena que representa la ruta del archivo de salida que se va a verificar. Esta ruta puede ser absoluta o relativa al directorio de trabajo actual.</li>
+        <li>El argumento <code>header</code> debe ser una lista de cadenas que contiene las líneas del encabezado del archivo de entrada.</li>
+        <li>El usuario debe proporcionar la información de la universidad cuando se le solicite o se utilizarán los valores por defecto.</li>
+        <li>Las funciones <code>semester_parser</code> y <code>course_parser</code> deben estar definidas y funcionar correctamente.</li>
         </ul>
-        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 29-02-2024</p>
-        <h2 class="collapsable" id="FileParser">📕FileParser</h2>
-        <p><strong>Objetivo:</strong> Esta función se utiliza para analizar un archivo y extraer información relevante del curso, incluyendo el nombre del curso, el número de registro del curso (CRN) y la duración del curso.</p>
-        <p><strong>Precondiciones:</strong></p>
+        <h3>Postcondiciones:</h3>
         <ul>
-            <li>La función recibe como argumento una cadena de texto que representa la ruta del archivo a analizar.</li>
-            <li>El archivo debe existir en la ruta proporcionada y debe ser legible.</li>
+        <li>La función devuelve una cadena que representa el encabezado del archivo de salida.</li>
         </ul>
-        <p><strong>Postcondiciones:</strong></p>
+        <h3>Descripción de los Argumentos:</h3>
         <ul>
-            <li>La función devuelve una estructura <code>CourseInfo</code> que contiene la información del curso extraída del archivo.</li>
-            <li>Si el archivo no se puede abrir o leer, o si la información del curso no se puede encontrar o extraer correctamente, la función puede no comportarse como se espera.</li>
+        <li><code>header</code>: Una lista de cadenas que contiene las líneas del encabezado del archivo de entrada.</li>
         </ul>
-        <p><strong>Descripción de argumentos:</strong></p>
+        <h3 id="-autor-eduardo-a-sosa-torres"><strong>Autor</strong>: Eduardo A. Sosa Torres</h3>
+        <h3 id="-fecha-de-finalizaci-n-27-03-2024"><strong>Fecha de Finalización</strong>: 27/03/2024</h3>
+
+        <! SEMESTER PARSER >
+
+        <h2 id="semester_parser">semester_parser</h2>
+        <h3>Objetivo:</h3>
+        <p>Esta función toma una cadena que representa un semestre en inglés y la convierte a una representación en español en el formato [Mes - Mes Año]. La cadena de entrada debe contener los nombres de los meses en inglés y el año. La función devuelve una cadena que representa el semestre en español.</p>
+        <h3>Precondiciones:</h3>
         <ul>
-            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a analizar.</li>
+        <li>El argumento <code>semester</code> debe ser una cadena que contiene los nombres de los meses en inglés y el año.</li>
         </ul>
-        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
-        <h3 id="modifyDuration">modifyDuration</h3>
-        <p><strong>Objetivo:</strong> Esta función se utiliza para modificar la duración de un curso, traduciendo los nombres de los meses al español y ajustando el formato a &quot;MES_INICIO-MES_FINAL AÑO&quot;.</p>
-        <p><strong>Precondiciones:</strong></p>
+        <h3>Postcondiciones:</h3>
         <ul>
-            <li>La función recibe como argumento una cadena de texto que representa la duración del curso en el formato &quot;Fecha de inicio - Fecha de finalización&quot;.</li>
-            <li>Las fechas de inicio y finalización deben estar en el formato &quot;Día Mes, Año&quot;.</li>
+        <li>La función devuelve una cadena que representa el semestre en español en el formato [Mes - Mes Año].</li>
         </ul>
-        <p><strong>Postcondiciones:</strong></p>
+        <h3>Descripción de los Argumentos:</h3>
         <ul>
-            <li>La función devuelve una cadena de texto que representa la duración del curso en el formato &quot;MES_INICIO-MES_FINAL AÑO&quot;.</li>
-            <li>Los nombres de los meses están en español y en mayúsculas.</li>
+        <li><code>semester</code>: Una cadena que contiene los nombres de los meses en inglés y el año.</li>
         </ul>
-        <p><strong>Descripción de argumentos:</strong></p>
+        <h3><strong>Autor</strong>: Eduardo A. Sosa Torres</h3>
+        <h3><strong>Fecha de Finalización</strong>: 27/03/2024</h3>
+
+        <! COURSE PARSER >
+
+        <h2 id="course_parser">course_parser</h2>
+        <h3>Objetivo:</h3>
+        <p>Esta función toma una cadena que representa un curso y una sección, y construye una representación del nombre del curso. La cadena de entrada debe contener el nombre del curso y la sección. La función devuelve una cadena que representa el nombre del curso en el formato [Nombre del Curso (Sección)].</p>
+        <h3>Precondiciones:</h3>
         <ul>
-            <li><code>duration</code>: Una cadena que representa la duración del curso en el formato original, que se modifica al formato deseado con los meses en español.</li>
+        <li>El argumento <code>course</code> debe ser una cadena que contiene el nombre del curso.</li>
+        <li>El argumento <code>section</code> debe ser una cadena que contiene la sección del curso.</li>
         </ul>
-        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
-        <h3 id="monthTranslator">monthTranslator</h3>
-        <p><strong>Objetivo:</strong> Esta función se utiliza para traducir los nombres de los meses al español, recibiendo un nombre de mes en inglés y devolviendo el correspondiente en español.</p>
-        <p><strong>Precondiciones:</strong></p>
+        <h3>Postcondiciones:</h3>
         <ul>
-            <li>La función recibe como argumento una cadena de texto que representa el nombre de un mes en inglés.</li>
+        <li>La función devuelve una cadena que representa el nombre del curso en el formato [Nombre del Curso (Sección)].</li>
         </ul>
-        <p><strong>Postcondiciones:</strong></p>
+        <h3>Descripción de los Argumentos:</h3>
         <ul>
-            <li>La función devuelve una cadena de texto que representa el nombre del mes en español.</li>
-            <li>Si el nombre del mes no coincide con ninguno de los nombres de los meses en inglés, la función devuelve una cadena vacía.</li>
+        <li><code>course</code>: Una cadena que contiene el nombre del curso.</li>
+        <li><code>section</code>: Una cadena que contiene la sección del curso.</li>
         </ul>
-        <p><strong>Descripción de argumentos:</strong></p>
+        <h3><strong>Autor</strong>: Eduardo A. Sosa Torres</h3>
+        <h3><strong>Fecha de Finalización</strong>: 27/03/2024</h3>
+
+        <! ------------- STUDENT CLASS --------------->
+
+        <h2 id="-student-class">📕 Student Class</h2>
+        <h3>Objetivo:</h3>
+        <p>Esta clase representa a un estudiante con un número, nombre e id.</p>
+        <h3>Precondiciones:</h3>
         <ul>
-            <li><code>month</code>: Una cadena que representa el nombre del mes en inglés, que se traduce al español.</li>
+        <li>Los argumentos <code>num</code>, <code>name</code> e <code>id</code> deben ser proporcionados al inicializar una instancia de la clase Student.</li>
         </ul>
-        <p><strong>Autor:</strong> Ian P. Roman<br><strong>Fecha de Finalización:</strong> 02-28-2024</p>
-        <h2 class="collapsable" id="FileReader">📕FileReader</h2>
-        <p><strong>Objetivo:</strong> La clase <code>FileReader</code> se utiliza para leer un archivo de texto en formato CSV (valores separados por comas) y extraer datos de estudiantes. Estos datos incluyen el número de estudiante, el nombre, la identificación del estudiante, el estado de registro, el nivel, los créditos, la calificación de mitad de período, la calificación final y los detalles de la calificación.</p>
-        <p><strong>Precondiciones:</strong></p>
+        <h3>Postcondiciones:</h3>
         <ul>
-            <li>El archivo debe existir en la ruta proporcionada y debe ser legible.</li>
-            <li>El archivo debe estar en formato CSV.</li>
-            <li>Los datos en el archivo deben estar en el formato correcto, ser válidos y estar en el orden correcto.</li>
-            <li>Los datos en el archivo deben estar separados por comas y rodeados por comillas dobles.</li>
+        <li>Al inicializar una instancia de la clase Student, se crean los atributos <code>num</code>, <code>name</code> e <code>id</code> con los valores proporcionados.</li>
+        <li>La función <code>__str__</code> devuelve una representación en cadena de la instancia de la clase Student en el formato &quot;[num], [name], [id]&quot;.</li>
         </ul>
-        <p><strong>Postcondiciones:</strong></p>
+        <h3>Descripción de los Argumentos:</h3>
         <ul>
-            <li>La función devuelve un vector de objetos relacionados a los de la clase <code>Student</code> que contiene los datos de los estudiantes.</li>
-            <li>Si el archivo no se puede abrir o leer correctamente, o si los datos no se pueden extraer correctamente, la función puede no comportarse como se espera.</li>
+        <li><code>num</code>: Un valor que representa el número del estudiante.</li>
+        <li><code>name</code>: Una cadena que representa el nombre del estudiante.</li>
+        <li><code>id</code>: Un valor que representa el id del estudiante.</li>
         </ul>
-        <p><strong>Descripción de argumentos:</strong></p>
-        <ul>
-            <li><code>filePath</code>: Una cadena que representa la ruta del archivo que se va a leer.</li>
-        </ul>
-        <p><strong>Autor:</strong> Christian J Santiago Rivera<br><strong>Fecha de Finalización:</strong> 03-02-2024</p>
-        <h2 class="collapsable" id="HeaderMaker">📕HeaderMaker</h2>
-        <p><strong>Objetivo:</strong> La clase <code>HeaderMaker</code> se utiliza para crear un encabezado con los datos proporcionados, utilizando valores predeterminados en caso de falta de información.</p>
-        <p><strong>Precondiciones:</strong></p>
-        <ul>
-            <li>Es necesario proporcionar el nombre del curso, el semestre y el CRN. El resto de los datos pueden estar vacíos, ya que se completarán con valores predeterminados.</li>
-        </ul>
-        <p><strong>Postcondiciones:</strong></p>
-        <ul>
-            <li>Si el nombre del curso, semestre y CRN están vacíos, el programa imprimirá un mensaje de error.</li>
-            <li>Si se proporcionan datos para el resto de los valores, se crearán copias de ellos.</li>
-        </ul>
-        <p><strong>Descripción de argumentos:</strong></p>
-        <ul>
-            <li><code>universityName</code>, <code>campusLocation</code>, <code>departmentName</code>, <code>semester</code>, <code>professorName</code>, <code>courseName</code>, <code>crn</code>: Diversos datos necesarios para la creación del encabezado, con valores predeterminados para algunos si no se proporcionan.</li>
-        </ul>
-        <p><strong>Autor:</strong> Azkaria L. Rosado Rodriguez<br><strong>Fecha de Finalización:</strong> 02-03-2024</p>
-        <h2 class="collapsable" id="FileWriter">📕FileWriter</h2>
-        <p><strong>Objetivo:</strong> La clase <code>FileWriter</code> se utiliza para crear un archivo de texto en formato CSV con datos de estudiantes.</p>
-        <p><strong>Precondiciones:</strong></p>
-        <ul>
-            <li>El vector <code>students</code> debe contener datos válidos de la clase <code>Student</code>.</li>
-            <li><code>filePath</code> debe representar la ruta del archivo de salida.</li>
-            <li><code>header</code> debe representar el encabezado del archivo.</li>
-        </ul>
-        <p><strong>Postcondiciones:</strong></p>
-        <ul>
-            <li>El archivo creado se encuentra en la ruta especificada.</li>
-            <li>Los datos están en formato CSV y el encabezado al inicio del archivo.</li>
-            <li>El archivo se cierra después de escribir todos los datos.</li>
-        </ul>
-        <p><strong>Descripción de argumentos:</strong></p>
-        <ul>
-            <li><code>students</code>, <code>filePath</code>, <code>header</code>: Parámetros necesarios para la creación del archivo, incluyendo los datos de los estudiantes y la ruta del archivo.</li>
-        </ul>
-        <p><strong>Autor:</strong> Javier Santos Babilonia<br><strong>Fecha de Finalización:</strong> 01-03-2024</p>
-        <h2 class="collapsable" id="Student">📕Student</h2>
-        <p><strong>Objetivo:</strong> La clase <code>Student</code> representa a un estudiante con varios atributos relevantes y proporciona métodos para manipular estos atributos.</p>
-        <p><strong>Precondiciones:</strong></p>
-        <ul>
-            <li>Para el constructor y los métodos <code>set</code>, todos los valores proporcionados deben ser válidos.</li>
-        </ul>
-        <p><strong>Postcondiciones:</strong></p>
-        <ul>
-            <li>Se crea un objeto <code>Student</code> con los atributos especificados.</li>
-            <li>Los métodos <code>get</code> y <code>set</code> permiten leer y modificar los atributos, respectivamente.</li>
-        </ul>
-        <p><strong>Descripción de argumentos:</strong></p>
-        <ul>
-            <li><code>num</code>, <code>name</code>, <code>studentId</code>, <code>registrationStatus</code>, <code>level</code>, <code>credits</code>, <code>midterm</code>, <code>final</code>, <code>gradeDetail</code>: Atributos del estudiante que pueden ser obtenidos o establecidos a través de los métodos de la clase.</li>
-        </ul>
-        <p><strong>Autor:</strong> Eduardo A. Sosa Torres<br><strong>Fecha de Finalización:</strong> 28-02-2024</p>
+        <h3><strong>Autor</strong>: Christian J. Santiago Rivera</h3>
+        <h3><strong>Fecha de Finalización</strong>: 04/04/2024</h3>
+
+        <! ------------- WRITE FILE --------------->
+
     </div>
     </body>
 </html>
