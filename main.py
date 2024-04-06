@@ -348,7 +348,7 @@ def path_verifier(check):
     # Verifica si el usuario desea ingresar la ruta del archivo
     if check == 0:
         # Inicializa las variables
-        default_path = "Resources/Data/"
+        default_path = os.path.join("Resources", "Data", "")
         file_path = ""
         user_confirmation = ""
 
@@ -366,7 +366,7 @@ def path_verifier(check):
                     file_path = file_path + ".txt"
 
                 # Verifica si la ruta del archivo es absoluta o relativa
-                if file_path.find("/") > -1:
+                if os.path.isabs(file_path):
                     print('\033[93m' + "\n" + file_path + '\033[0m')
                 else:
                     # Si la ruta es relativa, se le añade la ruta por defecto
@@ -395,7 +395,7 @@ def path_verifier(check):
     # Verifica si el usuario desea ingresar la ruta del archivo de salida
     elif check == 1:
         # Inicializa las variables
-        default_path = "Resources/Output/"
+        default_path = os.path.join("Resources", "Output", "")
         file_path = ""
         user_confirmation = ""
 
@@ -413,7 +413,7 @@ def path_verifier(check):
                     file_path = file_path + ".csv"
 
                 # Verifica si la ruta del archivo es absoluta o relativa
-                if file_path.find("/") > -1:
+                if os.path.isabs(file_path):
                     print('\033[93m' + "\n" + file_path + '\033[0m')
                 else:
                     # Si la ruta es relativa, se le añade la ruta por defecto
