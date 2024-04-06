@@ -66,7 +66,7 @@ class Student:
 
     def __str__(self):
         # Devuelve una representación en cadena de la clase Student
-        return f"{self.num}, {self.name}, {self.id}"
+        return f"{self.num},{self.name},{self.id}"
 
 # ------------------------------- header_builder ------------------------------- #
 # Objetivo: Esta función construye el encabezado del archivo de salida. Solicita al usuario que ingrese información
