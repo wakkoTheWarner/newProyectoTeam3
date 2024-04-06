@@ -7,10 +7,36 @@
 - [x] semester_parser(): Eduardo A. Sosa Torres
 - [x] course_parser(): Eduardo A. Sosa Torres
 - [x] Student Class: Christian J. Santiago Rivera
-- [ ] write_file(): Javier Santos Babilonia
+- [x] write_file(): Javier Santos Babilonia
 
 # Documentación Completa del Código y Visión General de la Funcionalidad
 Este documento proporciona una descripción detallada de la estructura y el funcionamiento del código fuente del proyecto. Se divide en varias secciones, cada una de las cuales describe un componente clave del proyecto y su funcionalidad. Las secciones incluyen una descripción general del componente, sus objetivos, precondiciones, postcondiciones, descripción de los argumentos, autor y fecha de finalización.
+
+[comment]: <> (------------------------ 📚 WRITE_FILE 📚 ------------------------)
+[comment]: <> (By Javier Santos Babilonia)
+
+## 📚 write_file
+
+### Objetivo:
+- Esta función escribe la información de los estudiantes en un archivo tipo CSV.
+
+### Precondiciones:
+- El argumento `output_path` debe ser una ruta válida en donde el archivo puede ser escrito.
+- El argumento `header` debe ser una representación en cadena del encabezado del archivo CSV.  
+- El argumento`students` debe ser una lista de objetos que representa a los estudiantes.
+
+### Postcondiciones:
+- Se crea un archivo CSV que contiene al encabezado especificado y también debe tener la información de los estudiantes en la ruta que fue indicada por el argumento `output_path`.
+
+### Descripción de los Argumentos:
+- `output_path`: La ruta donde se escribirá el archivo CSV.
+- `header`: El encabezado del archivo CSV que se especificará para que contenga los nombres de las columnas.
+- `students`: Una lista de objetos que representan a los estudiantes. Cada uno de estos objetos deben tener una representación en cadena que se puedan escribir detro del archivo CSV.
+
+### **Autor**: Javier Santos Babilonia
+
+
+### **Fecha de Finalización**: 05/04/2024
 
 [comment]: <> (------------------------ 📚 STUDENT_CLASS 📚 ------------------------)
 [comment]: <> (By Christian J. Santiago Rivera)
@@ -61,6 +87,7 @@ Esta función construye el encabezado del archivo de salida. Solicita al usuario
 ### **Fecha de Finalización**: 27/03/2024
 
 [comment]: <> (------------------------ SEMESTER_PARSER ------------------------)
+[comment]: <> (By Eduardo A. Sosa Torres)
 
 ## semester_parser
 
@@ -81,6 +108,7 @@ Esta función toma una cadena que representa un semestre en inglés y la convier
 ### **Fecha de Finalización**: 27/03/2024
 
 [comment]: <> (------------------------ COURSE_PARSER ------------------------)
+[comment]: <> (By Eduardo A. Sosa Torres)
 
 ## course_parser
 
@@ -172,7 +200,7 @@ Este bloque de código es el punto de entrada principal del programa. Solicita a
 - Si ocurre algún error durante el proceso, el programa se cierra.
 
 ### Descripción de los Argumentos:
-Este bloque de código no toma argumentos.
+- Este bloque de código no toma argumentos.
 
 ### **Autor**: Eduardo A. Sosa Torres
 

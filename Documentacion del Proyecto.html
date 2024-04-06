@@ -230,7 +230,7 @@
                     <li><a href="#course_parser">course_parser()</a></li>
                 </ul>
                 <li><a href="#-student-class">📕Student Class</a></li>
-                <li><a href="#writeFile">📕write_file()</a></li>
+                <li><a href="#-write_file">📕write_file()</a></li>
             </ul>
         </div>
 
@@ -646,8 +646,9 @@
                 <li><code>semester_parser()</code>: Eduardo A. Sosa Torres</li>
                 <li><code>course_parser()</code>: Eduardo A. Sosa Torres</li>
                 <li><code>Clase Student</code>: Christian J. Santiago Rivera</li>
-                <li><code>write_file()</code>: </li>
+                <li><code>write_file()</code>: Javier Santos Babilonia</li>
                 <li><code>README.md</code>: Eduardo A. Sosa Torres</li>
+                <li><code>Documentación del Proyecto.html</code>: Eduardo A. Sosa Torres</li>
             </ul>
         </div>
 
@@ -815,6 +816,29 @@
 
         <! ------------- WRITE FILE --------------->
 
+        <h2 id="-write_file">📚 write_file</h2>
+        <h3>Objetivo:</h3>
+        <ul>
+        <li>Esta función escribe la información de los estudiantes en un archivo tipo CSV.</li>
+        </ul>
+        <h3>Precondiciones:</h3>
+        <ul>
+        <li>El argumento <code>output_path</code> debe ser una ruta válida en donde el archivo puede ser escrito.</li>
+        <li>El argumento <code>header</code> debe ser una representación en cadena del encabezado del archivo CSV.  </li>
+        <li>El argumento<code>students</code> debe ser una lista de objetos que representa a los estudiantes.</li>
+        </ul>
+        <h3>Postcondiciones:</h3>
+        <ul>
+        <li>Se crea un archivo CSV que contiene al encabezado especificado y también debe tener la información de los estudiantes en la ruta que fue indicada por el argumento <code>output_path</code>.</li>
+        </ul>
+        <h3>Descripción de los Argumentos:</h3>
+        <ul>
+        <li><code>output_path</code>: La ruta donde se escribirá el archivo CSV.</li>
+        <li><code>header</code>: El encabezado del archivo CSV que se especificará para que contenga los nombres de las columnas.</li>
+        <li><code>students</code>: Una lista de objetos que representan a los estudiantes. Cada uno de estos objetos deben tener una representación en cadena que se puedan escribir detro del archivo CSV.</li>
+        </ul>
+        <h3><strong>Autor</strong>: Javier Santos Babilonia</h3>
+        <h3><strong>Fecha de Finalización</strong>: 05/04/2024</h3>
     </div>
     </body>
 </html>

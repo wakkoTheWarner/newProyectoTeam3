@@ -371,3 +371,4 @@ This section lists the authors who contributed to the different files in the pro
 - `Student Class`: Christian J. Santiago Rivera
 - `write_file()`: Javier Santos Babilonia
 - `README.md`: Eduardo A. Sosa Torres
+- `Project Documentation.html`: Eduardo A. Sosa Torres

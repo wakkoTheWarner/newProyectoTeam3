@@ -2,16 +2,24 @@ import os
 
 # ------------------------------- write_file ------------------------------- #
 # Objetivo:
+# - Esta función escribe la información de los estudiantes en un archivo tipo CSV.
 #
 # Precondiciones:
+# - El argumento `output_path` debe ser una ruta válida en donde el archivo puede ser escrito.
+# - El argumento `header` debe ser una representación en cadena del encabezado del archivo CSV.
+# - El argumento`students` debe ser una lista de objetos que representa a los estudiantes.
 #
 # Postcondiciones:
+# - Se crea un archivo CSV que contiene al encabezado especificado y también debe tener la información de los estudiantes en la ruta que fue indicada por el argumento `output_path`.
 #
 # Descripción de los Argumentos:
+# - `output_path`: La ruta donde se escribirá el archivo CSV.
+# - `header`: El encabezado del archivo CSV que se especificará para que contenga los nombres de las columnas.
+# - `students`: Una lista de objetos que representan a los estudiantes. Cada uno de estos objetos deben tener una representación en cadena que se puedan escribir detro del archivo CSV.
 #
 # Autor: Javier Santos Babilonia
 #
-# Fecha de Finalización:
+# Fecha de Finalización: 05/04/2024
 def write_file(output_path, header, students):
     # Crea y escribe en el archivo csv
     with open(output_path, "w") as file:
@@ -433,7 +441,7 @@ def path_verifier(check):
 # - Si ocurre algún error durante el proceso, el programa se cierra.
 #
 # Descripción de los Argumentos:
-# Este bloque de código no toma argumentos.
+# - Este bloque de código no toma argumentos.
 #
 # Autor: Eduardo A. Sosa
 #
