@@ -140,7 +140,7 @@ La clase read_file se utiliza para leer datos de un archivo específico y extrae
 
 ### Precondiciones:
 - Debe existir un archivo en la dirección especificada. De lo contrario se producirá un error al intentar abrir el archivo.
-- El archivo debe estar codificado en utf-8 con errores ignorados.
+- El archivo debe estar codificado en utf-8 o ISO-8859-1.
 - El archivo debe contar con un formato específico. Las primeras 12 líneas contendrán el encabezado, el resto serán datos tabulados de los estudiantes.
 - La clase Student debe estar definida.
 - Las funciones header_builder(header) y header_text deben estar definidas.

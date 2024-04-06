@@ -252,7 +252,7 @@ def course_parser(course, section):
 #
 # Precondiciones:
 # - Debe existir un archivo en la dirección especificada. De lo contrario se producirá un error al intentar abrir el archivo.
-# - El archivo debe estar codificado en utf-8 con errores ignorados.
+# - El archivo debe estar codificado en utf-8 o ISO-8859-1.
 # - El archivo debe contar con un formato específico. Las primeras 12 líneas contendrán el encabezado, el resto serán datos tabulados de los estudiantes.
 # - La clase Student debe estar definida.
 # - Las funciones header_builder(header) y header_text deben estar definidas.
@@ -275,24 +275,46 @@ def read_file(path_to_file):
     header_text = ""
     counter = 0
 
-    # Abre el archivo en modo lectura y codificado en utf-8 con errores ignorados.
-    with open(path_to_file, "r", encoding='utf-8', errors='ignore') as file:
-        # Itera sobre cada línea en el archivo
-        for line in file:
-            # Si la línea no está vacía y el contador es menor a 12
-            if line.strip() != "" and counter < 12:
-                # Añade la línea al encabezado
-                header.append(line.strip())
-                # Incrementa el contador
-                counter += 1
-            # Si la línea no está vacía y el contador es mayor a 11
-            elif line.strip() != "" and counter > 11:
-                # Divide la línea en valores
-                values = line.split("\t")
-                # Crea un nuevo estudiante con los valores obtenidos
-                student = Student("\"" + values[0] + "\"", "\"" + values[1].strip() + "\"", "\"" + values[2] + "\"")
-                # Añade el estudiante a la lista de estudiantes
-                students.append(student)
+    # Intenta abrir el archivo y leer los datos
+    try:
+        # Abre el archivo en modo lectura y codificado en utf-8.
+        with open(path_to_file, "r", encoding='utf-8') as file:
+            # Itera sobre cada línea en el archivo
+            for line in file:
+                # Si la línea no está vacía y el contador es menor a 12
+                if line.strip() != "" and counter < 12:
+                    # Añade la línea al encabezado
+                    header.append(line.strip())
+                    # Incrementa el contador
+                    counter += 1
+                # Si la línea no está vacía y el contador es mayor a 11
+                elif line.strip() != "" and counter > 11:
+                    # Divide la línea en valores
+                    values = line.split("\t")
+                    # Crea un nuevo estudiante con los valores obtenidos
+                    student = Student("\"" + values[0] + "\"", "\"" + values[1].strip() + "\"", "\"" + values[2] + "\"")
+                    # Añade el estudiante a la lista de estudiantes
+                    students.append(student)
+    # Si da error con encoding UTF-8 utiliza ISO-8859-1
+    except UnicodeDecodeError:
+        # Abre el archivo en modo lectura y codificado en ISO-8859-1.
+        with open(path_to_file, "r", encoding='ISO-8859-1') as file:
+            # Itera sobre cada línea en el archivo
+            for line in file:
+                # Si la línea no está vacía y el contador es menor a 12
+                if line.strip() != "" and counter < 12:
+                    # Añade la línea al encabezado
+                    header.append(line.strip())
+                    # Incrementa el contador
+                    counter += 1
+                # Si la línea no está vacía y el contador es mayor a 11
+                elif line.strip() != "" and counter > 11:
+                    # Divide la línea en valores
+                    values = line.split("\t")
+                    # Crea un nuevo estudiante con los valores obtenidos
+                    student = Student("\"" + values[0] + "\"", "\"" + values[1].strip() + "\"", "\"" + values[2] + "\"")
+                    # Añade el estudiante a la lista de estudiantes
+                    students.append(student)
 
     # Construye el texto del encabezado
     header_text = header_builder(header)
